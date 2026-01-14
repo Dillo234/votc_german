@@ -1,0 +1,148 @@
+﻿#scope:actor = player
+#scope:recipient = character the player wants to talk to
+log_gamedata_v3 = {
+
+	debug_log = "VOTC:IN/;/init/;/[GetPlayer.GetID]/;/[GetPlayer.GetTitledFirstName]/;/[recipient.GetID]/;/[recipient.GetTitledFirstName]/;/[GetCurrentDate.GetStringShort]/;/[GetGlobalVariable('talk_scene').GetFlagName]/;/[recipient.GetCurrentLocation.GetName]/;/[recipient.GetCurrentLocation.GetController.GetFullNameNicknamedNoTooltipRegnal]/;/[GetCurrentDate.GetDateAsTotalDays]"
+
+	debug_log = log_character_header
+	
+	scope:actor = {
+		log_background = yes
+	}
+	add_to_global_variable_list = {
+		name = mcc_characters_list_v2
+		target = scope:recipient
+	}
+	
+	scope:actor = {
+		every_pinned_character = {
+			if = {
+				limit = {
+					is_at_same_location = scope:actor
+					NOT = { this = scope:recipient }
+				}
+				add_to_global_variable_list = {
+					name = mcc_characters_list_v2
+					target = this
+				}
+			}
+		}	
+	}
+
+	every_in_global_list = {
+		variable = mcc_characters_list_v2
+		log_character_v2 = yes
+	}
+	scope:actor = {
+		log_character_v2 = yes
+	}
+
+	scope:actor = {
+		if = {
+			limit = { 
+				global_variable_list_size = {
+					name = mcc_characters_list_v2
+					value > 0
+				}
+			}
+			ordered_in_global_list = {
+				variable = mcc_characters_list_v2
+				position = 0
+				set_global_variable = {
+					name = mcc_character_0
+					value = this
+				}
+			}
+		}
+		if = {
+			limit = { 
+				global_variable_list_size = {
+					name = mcc_characters_list_v2
+					value > 1
+				}
+			}
+			ordered_in_global_list = {
+				variable = mcc_characters_list_v2
+				position = 1
+				set_global_variable = {
+					name = mcc_character_1
+					value = this
+				}
+			}
+		}
+		if = {
+			limit = { 
+				global_variable_list_size = {
+					name = mcc_characters_list_v2
+					value > 2
+				}
+			}
+			ordered_in_global_list = {
+				variable = mcc_characters_list_v2
+				position = 2
+				set_global_variable = {
+					name = mcc_character_2
+					value = this
+				}
+			}
+		}
+		if = {
+			limit = { 
+				global_variable_list_size = {
+					name = mcc_characters_list_v2
+					value > 3
+				}
+			}
+			ordered_in_global_list = {
+				variable = mcc_characters_list_v2
+				position = 3
+				set_global_variable = {
+					name = mcc_character_3
+					value = this
+				}
+			}
+		}
+		if = {
+			limit = { 
+				global_variable_list_size = {
+					name = mcc_characters_list_v2
+					value > 4
+				}
+			}
+			ordered_in_global_list = {
+				variable = mcc_characters_list_v2
+				position = 4
+				set_global_variable = {
+					name = mcc_character_4
+					value = this
+				}
+			}
+		}
+		if = {
+			limit = { 
+				global_variable_list_size = {
+					name = mcc_characters_list_v2
+					value > 5
+				}
+			}
+			ordered_in_global_list = {
+				variable = mcc_characters_list_v2
+				position = 5
+				set_global_variable = {
+					name = mcc_character_5
+					value = this
+				}
+			}
+		}
+	}
+
+	ordered_in_global_list = {
+		variable = mcc_characters_list_v2
+		position = 3
+
+		set_variable = {
+			name = talk_pose
+			value = flag:happy
+    	}
+	}
+}

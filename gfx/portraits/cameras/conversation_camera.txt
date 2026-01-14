@@ -1,0 +1,30 @@
+###TODO: WHY THE FUCK DOESNT "conversation_camera" WORK? MAKES NO FUCKING SENSE
+
+conversation_camera2 = {
+	camera = {
+		position = cylindrical{ 460 150 -20 } # Radius, height, angle
+		#position_node = camera_torso_look_at
+
+		look_at = {	0 110 0 } # L/R, U/D, F/B
+		#look_at_node = camera_torso_look_at
+		fov = 21
+		camera_near_far = { 10 5000 }
+	}
+
+	unknown = "gfx/0.dds"
+}
+
+conversation_camera2_front = {
+	camera = {
+		position = cylindrical{ 450 170 -20 } # Radius, height, angle
+		#position_node = camera_torso_look_at
+
+		look_at = {	0 113 5 } # L/R, U/D, F/B
+		#look_at_node = camera_torso_look_at
+		fov = 21
+		camera_near_far = { 10 5000 }
+	}
+
+	unknown = "gfx/0.dds"
+}
+

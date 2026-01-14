@@ -1,0 +1,133 @@
+namespace = invite_to_talk_event
+
+invite_to_talk_event.1002 = {
+	immediate = { 
+		scope:actor = {
+			trigger_event = invite_to_talk_event.1003
+		} 
+	}
+}
+
+invite_to_talk_event.1003 = {
+	type = character_event
+	theme = faith
+	title = talk_event.1001.title
+	desc = invite_to_talk_event.1003.desc
+	left_portrait = {
+		character = scope:recipient
+	}
+	
+	option ={
+		name = talk_scene_throneroom_string
+		
+		trigger = {can_talk_in_throneroom = yes}
+		
+		set_global_variable = {
+			name = talk_scene
+			value = flag:talk_scene_throneroom
+		}
+		
+		trigger_event = talk_event.9001	
+	}
+	
+	option ={
+		name = talk_scene_garden_string
+		
+		
+		trigger = {can_talk_in_garden = yes}
+		
+		set_global_variable = {
+			name = talk_scene
+			value = flag:talk_scene_garden
+		}
+		trigger_event = talk_event.9001
+	}
+	
+	option ={
+		name = talk_scene_bedchamber_string
+		trigger = {can_talk_in_bedchamber = yes}
+		
+		set_global_variable = {
+			name = talk_scene
+			value = flag:talk_scene_bedchamber
+		}
+		
+		
+		trigger_event = talk_event.9001
+	}	
+	
+	option ={
+		name = talk_scene_dungeon_string
+		
+		trigger = {can_talk_in_dungeon = yes}
+		
+		set_global_variable = {
+			name = talk_scene
+			value = flag:talk_scene_dungeon
+		}
+		trigger_event = talk_event.9001
+	}
+	
+	option ={
+		name = talk_scene_feast_string
+		
+		trigger = {can_talk_in_feast = yes}
+		
+		set_global_variable = {
+			name = talk_scene
+			value = flag:talk_scene_feast
+		}
+		trigger_event = talk_event.9001
+	}
+
+	option ={
+		name = talk_scene_alley_string
+		
+		trigger = {can_talk_in_alley = yes}
+		
+		set_global_variable = {
+			name = talk_scene
+			value = flag:talk_scene_alley
+		}
+		
+		trigger_event = talk_event.9001	
+	}
+
+	option ={
+		name = talk_scene_armycamp_string
+		
+		trigger = {can_talk_in_armycamp = yes}
+		
+		set_global_variable = {
+			name = talk_scene
+			value = flag:talk_scene_armycamp
+		}
+		
+		trigger_event = talk_event.9001	
+	}
+	option ={
+		name = talk_scene_hunt_string
+		
+		trigger = {can_talk_in_hunt = yes}
+		
+		set_global_variable = {
+			name = talk_scene
+			value = flag:talk_scene_hunt
+		}
+		
+		trigger_event = talk_event.9001	
+	}
+
+
+	
+	option ={
+		name = talk_event.1001.exit
+		scope:recipient = {
+			add_opinion = {
+				target = scope:actor
+				modifier = disrespect_opinion
+				opinion = -10
+			}
+		}
+	}
+}
