@@ -1,25 +1,83 @@
 ﻿log_character_v2 = {
 	debug_log = log_character
 
-	log_relations = yes
+	#log_relations = yes
 	
-	log_opinion_breakdown = yes
+	#log_opinion_breakdown = yes
 
-	log_new_relations = yes
+	#log_new_relations = yes
 
-	log_opinions = yes
+	#log_new_relations_test = yes
 
-	log_personality_traits = yes
+	#log_opinions = yes
 
-	log_memories = yes
+	#log_personality_traits = yes
+
+	#log_memories = yes
 
 	log_secrets = yes
 
-	log_dna = yes
+	# log_ksecrets = yes
+
+	#log_dna = yes
+	#log_test = yes
+}
+
+log_test = {
+	set_global_variable = {
+		name = revotc_mcc_tmp_var
+		value = this
+	}
+	debug_log = "VOTC:TEST/;/[GetGlobalVariable('revotc_mcc_tmp_var').GetCharacter.GetID]"
 }
 
 log_relations = {
 	debug_log = "VOTC:IN/;/relations/;/[THIS.Char.GetID]/;/STARTMULTILINE#[THIS.Char.GetRelationToStringExtended(GetPlayer)]#ENDMULTILINE/;/"
+}
+
+log_new_relations_test = {
+	save_scope_as = mcc_tmp_char
+	every_in_global_list = {
+    	variable = mcc_characters_list_v2
+    	if = {
+			limit = {
+				is_at_same_location = scope:actor
+				NOT = { this = prev }
+			}
+			if = {
+				limit = {
+					has_relation_to = scope:mcc_tmp_char
+				}
+				debug_log = "VOTC:IN/;/new_relations/;/[PREV.Char.GetID]/;/[THIS.Char.GetID]/;/yes/;/STARTMULTILINE#[THIS.Char.GetRelationToStringExtended(PREV.Char.Self)]#ENDMULTILINE/;/"
+			}
+			else = {
+				debug_log = "VOTC:IN/;/new_relations/;/[PREV.Char.GetID]/;/[THIS.Char.GetID]/;/no/;/STARTMULTILINE#[THIS.Char.GetRelationToString(PREV.Char.Self)]#ENDMULTILINE/;/"
+			}
+		}
+	}
+	scope:actor = {
+		if = {
+			limit = {
+				NOT = {
+					is_target_in_global_variable_list = {
+						name = mcc_characters_list_v2
+						target = this
+					}
+					this = prev
+				}
+			}
+			if = {
+				limit = {
+					has_relation_to = scope:mcc_tmp_char
+				}
+				debug_log = "VOTC:IN/;/new_relations/;/[PREV.Char.GetID]/;/[THIS.Char.GetID]/;/yes/;/STARTMULTILINE#[THIS.Char.GetRelationToStringExtended(PREV.Char.Self)]#ENDMULTILINE/;/"
+			}
+			else = {
+				debug_log = "VOTC:IN/;/new_relations/;/[PREV.Char.GetID]/;/[THIS.Char.GetID]/;/no/;/STARTMULTILINE#[THIS.Char.GetRelationToString(PREV.Char.Self)]#ENDMULTILINE/;/"
+			}
+		}
+	}
+	## debug_log = "VOTC:IN/;/new_relations/;/[THIS.Char.GetID]/;/STARTMULTILINE#[THIS.Char.GetRelationToStringExtended(GetPlayer)]#ENDMULTILINE/;/"
 }
 
 log_new_relations = {
@@ -91,14 +149,138 @@ log_memories = {
 }
 
 log_secrets = {
+	set_global_variable = {
+		name = revotc_mcc_tmp_var
+		value = this
+	}
+	save_scope_as = revotc_mcc_tmp_var
     every_secret = {
-			debug_log = "VOTC:IN/;/secret/;/[PREV.Char.GetID]/;/[THIS.Secret.GetName]/;/[THIS.Secret.GetDesc]/;/[THIS.Secret.GetCategoryName]"
+		debug_log = "VOTC:IN/;/secret/;/[PREV.Char.GetID]/;/[THIS.Secret.GetNameNoTooltip]/;/[THIS.Secret.GetDesc]/;/[THIS.Secret.GetCategoryName]/;/[GetSecretType(THIS.Secret)]"
+		
+		# Log secret target if exists (personal secrets don't have targets)
+		if = {
+			limit = {
+				exists = secret_target
+			}
+			secret_target = {
+				debug_log = "VOTC:IN/;/secret_target/;/[GetGlobalVariable('revotc_mcc_tmp_var').GetCharacter.GetID]/;/[PREV.Secret.GetName]/;/[THIS.Char.GetID]/;/[THIS.Char.GetTitledFirstName]"
+			}
+		}
+		
+		# Log all knowers of this secret
+		every_secret_knower = {
+			save_scope_as = mcc_sec_k
+			limit = {
+				NOT = { this = scope:revotc_mcc_tmp_var }
+			}
+			debug_log = "VOTC:IN/;/secret_knower/;/[GetGlobalVariable('revotc_mcc_tmp_var').GetCharacter.GetID]/;/[PREV.Secret.GetName]/;/[THIS.Char.GetID]/;/[THIS.Char.GetTitledFirstName]"
+			
+			# Log if knower spent this secret
+			if = {
+				limit = {
+					prev = {
+						is_spent_by = scope:mcc_sec_k
+					}
+				}
+				debug_log = "VOTC:IN/;/secret_spent/;/yes"
+			}
+			else = {
+				debug_log = "VOTC:IN/;/secret_spent/;/no"
+			}
+
+			# Log if knower can expose this secret
+			if = {
+				limit = {
+					prev = {
+						can_be_exposed_by = scope:mcc_sec_k
+					}
+				}
+				debug_log = "VOTC:IN/;/secret_can_be_exposed/;/yes"
+			}
+			else = {
+				debug_log = "VOTC:IN/;/secret_can_be_exposed/;/no"
+			}
+		}
+
+		save_scope_as = cottest
+		# Log log participants this secret is is_shunned_for or is_criminal_for
+		every_in_global_list = {
+    		variable = mcc_characters_list_v2
+			limit = {
+				is_at_same_location = scope:actor
+				NOT = { this = scope:revotc_mcc_tmp_var }
+			}
+
+			save_scope_as = mcc_sec_k
+
+			if = {
+				limit = {
+					scope:cottest = {
+						is_shunned_for = mcc_sec_k
+					}
+				}
+				debug_log = "VOTC:IN/;/secret_is_shunned_for/;/[THIS.Char.GetID]"
+			}
+
+			if = {
+				limit = {
+					scope:cottest = {
+						is_criminal_for = mcc_sec_k
+					}
+				}
+				debug_log = "VOTC:IN/;/is_criminal_for/;/[THIS.Char.GetID]"
+			}
+		}
+		scope:actor = {
+			if = {
+				limit = {
+					NOT = {
+						is_target_in_global_variable_list = {
+							name = mcc_characters_list_v2
+							target = this
+						}
+						this = revotc_mcc_tmp_var
+					}
+				}
+
+				if = {
+					limit = {
+						scope:cottest = {
+							is_shunned_for = scope:actor
+						}
+					}
+					debug_log = "VOTC:IN/;/secret_is_shunned_for/;/[THIS.Char.GetID]"
+				}
+
+				if = {
+					limit = {
+						scope:cottest = {
+							is_criminal_for = scope:actor
+						}
+					}
+					debug_log = "VOTC:IN/;/is_criminal_for/;/[THIS.Char.GetID]"
+				}
+			}
+		}
+
+
+		debug_log = "VOTC:IN/;/secret_eob/;/"
     }
 }
 
 log_ksecrets = {
     every_known_secret = {
-			debug_log = "VOTC:IN/;/k_secret/;/[PREV.Char.GetID]/;/[THIS.Secret.GetName]/;/[THIS.Secret.GetDesc]/;/[THIS.Secret.GetCategoryName]"
+			debug_log = "VOTC:IN/;/k_secret/;/[PREV.Char.GetID]/;/[THIS.Secret.GetName]/;/[THIS.Secret.GetDesc]/;/[THIS.Secret.GetCategoryName]/;/[GetSecretType(THIS.Secret)]"
+			
+			# Log secret owner
+			secret_owner = {
+				debug_log = "VOTC:IN/;/k_secret_owner/;/[PREV.Char.GetID]/;/[THIS.Secret.GetName]/;/[THIS.Char.GetID]/;/[THIS.Char.GetTitledFirstName]"
+			}
+			
+			# Log secret target if exists
+			secret_target = {
+				debug_log = "VOTC:IN/;/k_secret_target/;/[PREV.Char.GetID]/;/[THIS.Secret.GetName]/;/[THIS.Char.GetID]/;/[THIS.Char.GetTitledFirstName]"
+			}
     }
 }
 
