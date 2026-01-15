@@ -3,32 +3,36 @@
 
 	#log_relations = yes
 	
-	#log_opinion_breakdown = yes
+	log_opinion_breakdown = yes
 
 	#log_new_relations = yes
 
-	#log_new_relations_test = yes
+	log_new_relations_test = yes
 
-	#log_opinions = yes
+	log_opinions = yes
 
-	#log_personality_traits = yes
+	log_personality_traits = yes
 
-	#log_memories = yes
+	log_memories = yes
 
 	log_secrets = yes
 
-	# log_ksecrets = yes
+	log_ksecrets = yes
+
+	log_modifiers = yes
+	log_stress = yes
 
 	#log_dna = yes
 	#log_test = yes
 }
 
 log_test = {
-	set_global_variable = {
-		name = revotc_mcc_tmp_var
-		value = this
+	if = {
+		limit = {
+			has_character_modifier = matilda_of_canossa_modifier
+		}
+		debug_log = "VOTC:IN/;/modifier/;/[THIS.Char.GetID]/;/matilda_of_canossa_modifier"
 	}
-	debug_log = "VOTC:TEST/;/[GetGlobalVariable('revotc_mcc_tmp_var').GetCharacter.GetID]"
 }
 
 log_relations = {
@@ -80,35 +84,6 @@ log_new_relations_test = {
 	## debug_log = "VOTC:IN/;/new_relations/;/[THIS.Char.GetID]/;/STARTMULTILINE#[THIS.Char.GetRelationToStringExtended(GetPlayer)]#ENDMULTILINE/;/"
 }
 
-log_new_relations = {
-	save_scope_as = mcc_tmp_char
-	every_in_global_list = {
-    	variable = mcc_characters_list_v2
-    	if = {
-			limit = {
-				is_at_same_location = scope:actor
-				NOT = { this = prev }
-			}
-			debug_log = "VOTC:IN/;/new_relations/;/[PREV.Char.GetID]/;/[THIS.Char.GetID]/;/STARTMULTILINE#[THIS.Char.GetRelationToString(PREV.Char.Self)]#ENDMULTILINE/;/"
-		}
-	}
-	scope:actor = {
-		if = {
-			limit = {
-				NOT = {
-					is_target_in_global_variable_list = {
-						name = mcc_characters_list_v2
-						target = this
-					}
-				}
-			}
-			debug_log = "VOTC:IN/;/new_relations/;/[PREV.Char.GetID]/;/[THIS.Char.GetID]/;/STARTMULTILINE#[THIS.Char.GetRelationToString(PREV.Char.Self)]#ENDMULTILINE/;/"
-		}
-	}
-	## debug_log = "VOTC:IN/;/new_relations/;/[THIS.Char.GetID]/;/STARTMULTILINE#[THIS.Char.GetRelationToStringExtended(GetPlayer)]#ENDMULTILINE/;/"
-}
-
-
 log_opinions = {
 	save_scope_as = mcc_tmp_char
 	scope:actor = {
@@ -126,7 +101,6 @@ log_opinions = {
 	}	
 	## debug_log = "VOTC:IN/;/new_relations/;/[THIS.Char.GetID]/;/STARTMULTILINE#[THIS.Char.GetRelationToStringExtended(GetPlayer)]#ENDMULTILINE/;/"
 }
-
 
 log_opinion_breakdown = {
 	debug_log = "VOTC:IN/;/opinionBreakdown/;/[THIS.Char.GetID]/;/STARTMULTILINE#[THIS.Char.GetOpinionBreakdownText(GetPlayer)]#ENDMULTILINE/;/"
@@ -157,6 +131,21 @@ log_secrets = {
     every_secret = {
 		debug_log = "VOTC:IN/;/secret/;/[PREV.Char.GetID]/;/[THIS.Secret.GetNameNoTooltip]/;/[THIS.Secret.GetDesc]/;/[THIS.Secret.GetCategoryName]/;/[GetSecretType(THIS.Secret)]"
 		
+		# Log this secret is is_shunned_for or is_criminal_for liege, court_owner or province owner
+		if = {
+			limit = {
+				is_criminal_for = prev
+			}
+
+			debug_log = "VOTC:IN/;/secret_is_criminal/;/"
+		}
+		else_if = {
+			limit = {
+				is_shunned_for = prev
+			}
+			debug_log = "VOTC:IN/;/secret_is_shunned/;/"
+		}
+
 		# Log secret target if exists (personal secrets don't have targets)
 		if = {
 			limit = {
@@ -202,106 +191,87 @@ log_secrets = {
 			}
 		}
 
-		save_scope_as = cottest
-		# Log log participants this secret is is_shunned_for or is_criminal_for
-		every_in_global_list = {
-    		variable = mcc_characters_list_v2
-			limit = {
-				is_at_same_location = scope:actor
-				NOT = { this = scope:revotc_mcc_tmp_var }
-			}
-
-			save_scope_as = mcc_sec_k
-
-			if = {
-				limit = {
-					scope:cottest = {
-						is_shunned_for = mcc_sec_k
-					}
-				}
-				debug_log = "VOTC:IN/;/secret_is_shunned_for/;/[THIS.Char.GetID]"
-			}
-
-			if = {
-				limit = {
-					scope:cottest = {
-						is_criminal_for = mcc_sec_k
-					}
-				}
-				debug_log = "VOTC:IN/;/is_criminal_for/;/[THIS.Char.GetID]"
-			}
-		}
-		scope:actor = {
-			if = {
-				limit = {
-					NOT = {
-						is_target_in_global_variable_list = {
-							name = mcc_characters_list_v2
-							target = this
-						}
-						this = revotc_mcc_tmp_var
-					}
-				}
-
-				if = {
-					limit = {
-						scope:cottest = {
-							is_shunned_for = scope:actor
-						}
-					}
-					debug_log = "VOTC:IN/;/secret_is_shunned_for/;/[THIS.Char.GetID]"
-				}
-
-				if = {
-					limit = {
-						scope:cottest = {
-							is_criminal_for = scope:actor
-						}
-					}
-					debug_log = "VOTC:IN/;/is_criminal_for/;/[THIS.Char.GetID]"
-				}
-			}
-		}
-
 
 		debug_log = "VOTC:IN/;/secret_eob/;/"
     }
 }
 
 log_ksecrets = {
+		set_global_variable = {
+			name = revotc_mcc_tmp_var
+			value = this
+		}
+		save_scope_as = revotc_mcc_tmp_var
+
     every_known_secret = {
-			debug_log = "VOTC:IN/;/k_secret/;/[PREV.Char.GetID]/;/[THIS.Secret.GetName]/;/[THIS.Secret.GetDesc]/;/[THIS.Secret.GetCategoryName]/;/[GetSecretType(THIS.Secret)]"
-			
-			# Log secret owner
-			secret_owner = {
-				debug_log = "VOTC:IN/;/k_secret_owner/;/[PREV.Char.GetID]/;/[THIS.Secret.GetName]/;/[THIS.Char.GetID]/;/[THIS.Char.GetTitledFirstName]"
+		debug_log = "VOTC:IN/;/k_secret/;/[PREV.Char.GetID]/;/[THIS.Secret.GetNameNoTooltip]/;/[THIS.Secret.GetDesc]/;/[THIS.Secret.GetCategoryName]/;/[GetSecretType(THIS.Secret)]"
+		secret_owner = {
+			debug_log = "VOTC:IN/;/k_secret_owner/;/[THIS.Char.GetID]/;/[THIS.Char.GetTitledFirstName]"
+		}
+		# Log this secret is is_shunned_for or is_criminal_for 
+		if = {
+			limit = {
+				is_criminal_for = secret_owner
 			}
-			
-			# Log secret target if exists
+
+			debug_log = "VOTC:IN/;/k_secret_is_criminal/;/"
+		}
+		else_if = {
+			limit = {
+				is_shunned_for = secret_owner
+			}
+			debug_log = "VOTC:IN/;/k_secret_is_shunned/;/"
+		}
+
+		# Log secret target if exists (personal secrets don't have targets)
+		if = {
+			limit = {
+				exists = secret_target
+			}
 			secret_target = {
-				debug_log = "VOTC:IN/;/k_secret_target/;/[PREV.Char.GetID]/;/[THIS.Secret.GetName]/;/[THIS.Char.GetID]/;/[THIS.Char.GetTitledFirstName]"
+				debug_log = "VOTC:IN/;/k_secret_target/;/[THIS.Char.GetID]/;/[THIS.Char.GetTitledFirstName]"
 			}
+		}
+		
+		# Log if character spent this secret
+		if = {
+			limit = {
+					is_spent_by = prev
+			}
+			debug_log = "VOTC:IN/;/k_secret_spent/;/yes"
+		}
+		else = {
+			debug_log = "VOTC:IN/;/k_secret_spent/;/no"
+		}
+
+		# Log if knower can expose this secret
+		if = {
+			limit = {
+					can_be_exposed_by = prev
+			}
+			debug_log = "VOTC:IN/;/k_secret_can_be_exposed/;/yes"
+		}
+		else = {
+			debug_log = "VOTC:IN/;/k_secret_can_be_exposed/;/no"
+		}
+
+
+		debug_log = "VOTC:IN/;/k_secret_eob/;/"
     }
+}
+
+log_modifiers = {
+	# Auto-generated by generate_modifiers_list.py
+	# Checks all 5992 modifiers and logs those the character has
+	log_modifiers_generated = yes
+}
+
+log_stress = {
+	# Log stress value, level, and progress
+	# Format: VOTC:IN/;/stress/;/char_id/;/stress_value/;/stress_level/;/stress_progress
+	debug_log = "VOTC:IN/;/stress/;/[THIS.Char.GetID]/;/[THIS.Char.GetStress]/;/[THIS.Char.GetStressLevel]/;/[THIS.Char.GetStressProgress]"
 }
 
 log_dna = {
 	debug_log = "dna_test[THIS.Char.CopyCharacterPersistentDna]"
-}
-
-log_new_relations_bump = {
-	save_scope_as = mcc_tmp_char
-	scope:actor = {
-		every_pinned_character = {
-			if = {
-				limit = {
-					is_at_same_location = scope:actor
-					NOT = { this = scope:mcc_tmp_char }
-				}
-				scope:mcc_tmp_char = {
-					debug_log = "VOTC:IN/;/new_relations/;/[THIS.Char.GetID]/;/[PREV.Char.GetID]/;/STARTMULTILINE#[PREV.Char.GetRelationToStringExtended(THIS.Char.Self)]#ENDMULTILINE/;/"
-				}
-			}
-		}
-	}	
-	## debug_log = "VOTC:IN/;/new_relations/;/[THIS.Char.GetID]/;/STARTMULTILINE#[THIS.Char.GetRelationToStringExtended(GetPlayer)]#ENDMULTILINE/;/"
 }

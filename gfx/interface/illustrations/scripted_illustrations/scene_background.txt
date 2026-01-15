@@ -3381,339 +3381,339 @@ talk_background = {
 		}
 	}
 
-	texture = {
-		reference = "event_scenes/ep3_feast_byzantine.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_feast
-			trigger_if = {
-				limit = {
-					NOT = { exists = scope:activity }
-				}
-				root.location = {
-					culture ?= { has_building_gfx = byzantine_building_gfx }
-				}
-			}
-			trigger_else = {
-				scope:activity = {
-					activity_root.location = {
-						culture ?= { has_building_gfx = byzantine_building_gfx }
-					}
-				}
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_ep3_byzantine_feast"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_feast
-			trigger_if = {
-				limit = {
-					NOT = { exists = scope:activity }
-				}
-				root.location = {
-					culture ?= { has_building_gfx = byzantine_building_gfx }
-				}
-			}
-			trigger_else = {
-				scope:activity = {
-					activity_root.location = {
-						culture ?= { has_building_gfx = byzantine_building_gfx }
-					}
-				}
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/fp1_viking_feast.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_feast
-			OR = {
-				scope:activity = {
-					activity_root.location = {
-						culture ?= { has_building_gfx = norse_building_gfx }
-					}
-				}
-				should_use_tribal_realm_palace_graphics_trigger = yes
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_event_fp1_viking_feast"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_feast
-			OR = {
-				scope:activity = {
-					activity_root.location = {
-						culture ?= { has_building_gfx = norse_building_gfx }
-					}
-				}
-				should_use_tribal_realm_palace_graphics_trigger = yes
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/ep2_feast_indian.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_feast
-			trigger_if = {
-				limit = {
-					NOT = { exists = scope:activity }
-				}
-				OR = {
-					root.location = {
-						culture ?= { has_graphical_india_culture_group_trigger = yes }
-					}
-					root.location ?= { steppe_building_gfx_use_indian_trigger = yes }
-				}
-			}
-			trigger_else = {
-				OR = {
-					scope:activity = {
-						activity_root.location = {
-							culture ?= { has_graphical_india_culture_group_trigger = yes }
-						}
-					}
-					scope:activity = {
-						activity_root.location ?= { steppe_building_gfx_use_indian_trigger = yes }
-					}
-				}	
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_indian_feast"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_feast
-			trigger_if = {
-				limit = {
-					NOT = { exists = scope:activity }
-				}
-				OR = {
-					root.location = {
-						culture ?= { has_graphical_india_culture_group_trigger = yes }
-					}
-					root.location ?= { steppe_building_gfx_use_indian_trigger = yes }
-				}
-			}
-			trigger_else = {
-				OR = {
-					scope:activity = {
-						activity_root.location = {
-							culture ?= { has_graphical_india_culture_group_trigger = yes }
-						}
-					}
-					scope:activity = {
-						activity_root.location ?= { steppe_building_gfx_use_indian_trigger = yes }
-					}
-				}	
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/ep2_feast_sub_saharan.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_feast
-			trigger_if = {
-				limit = {
-					NOT = { exists = scope:activity }
-				}
-				root.location = {
-					culture ?= { has_building_gfx = african_building_gfx }
-				}
-			}
-			trigger_else = {
-				scope:activity = {
-					activity_root.location = {
-						culture ?= { has_building_gfx = african_building_gfx }
-					}
-				}
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_sub-saharan_feast"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_feast
-			trigger_if = {
-				limit = {
-					NOT = { exists = scope:activity }
-				}
-				root.location = {
-					culture ?= { has_building_gfx = african_building_gfx }
-				}
-			}
-			trigger_else = {
-				scope:activity = {
-					activity_root.location = {
-						culture ?= { has_building_gfx = african_building_gfx }
-					}
-				}
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/ep2_feast_mena.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_feast
-			trigger_if = {
-				limit = {
-					NOT = { exists = scope:activity }
-				}
-				OR = {
-					root.location = {
-						culture ?= {
-							OR = {
-							has_graphical_mena_culture_group_trigger = yes
-							has_building_gfx = iberian_building_gfx
-							has_building_gfx = iranian_building_gfx
-							}
-							}
-					}
-					root.location ?= {
-						steppe_building_gfx_use_mena_trigger = yes
-					}
-				}
-			}
-			trigger_else = {
-				OR = {
-					scope:activity = {
-						activity_root.location = {
-							culture ?= {
-								OR = {
-								has_graphical_mena_culture_group_trigger = yes
-								has_building_gfx = iberian_building_gfx
-								has_building_gfx = iranian_building_gfx
-								}
-								}
-						}
-					}
-					scope:activity = {
-						activity_root.location ?= {
-							steppe_building_gfx_use_mena_trigger = yes
-							}
-					}
-				}
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_mena_feast"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_feast
-			trigger_if = {
-				limit = {
-					NOT = { exists = scope:activity }
-				}
-				OR = {
-					root.location = {
-						culture ?= {
-							OR = {
-							has_graphical_mena_culture_group_trigger = yes
-							has_building_gfx = iberian_building_gfx
-							has_building_gfx = iranian_building_gfx
-							}
-							}
-					}
-					root.location ?= {
-						steppe_building_gfx_use_mena_trigger = yes
-					}
-				}
-			}
-			trigger_else = {
-				OR = {
-					scope:activity = {
-						activity_root.location = {
-							culture ?= {
-								OR = {
-								has_graphical_mena_culture_group_trigger = yes
-								has_building_gfx = iberian_building_gfx
-								has_building_gfx = iranian_building_gfx
-								}
-								}
-						}
-					}
-					scope:activity = {
-						activity_root.location ?= {
-							steppe_building_gfx_use_mena_trigger = yes
-							}
-					}
-				}
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/tgp_feast_asia.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_feast
-			trigger_if = {
-				limit = {
-					NOT = { exists = scope:activity }
-				}
-				root.location ?= {
-					OR = {
-						culture ?= {
-							has_graphical_east_asia_culture_group_trigger = yes
-						}
-						steppe_building_gfx_use_east_asian_trigger = yes
-					}
-				}
-			}
-			trigger_else = {
-				scope:activity = {
-					activity_root.location ?= {
-						OR = {
-						culture ?= {
-						has_graphical_east_asia_culture_group_trigger = yes
-						}
-						steppe_building_gfx_use_east_asian_trigger = yes
-						}
-						}
-				}
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_tgp_feast_asia"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_feast
-			trigger_if = {
-				limit = {
-					NOT = { exists = scope:activity }
-				}
-				root.location ?= {
-					OR = {
-						culture ?= {
-							has_graphical_east_asia_culture_group_trigger = yes
-						}
-						steppe_building_gfx_use_east_asian_trigger = yes
-					}
-				}
-			}
-			trigger_else = {
-				scope:activity = {
-					activity_root.location ?= {
-						OR = {
-						culture ?= {
-						has_graphical_east_asia_culture_group_trigger = yes
-						}
-						steppe_building_gfx_use_east_asian_trigger = yes
-						}
-						}
-				}
-			}
-		}
-	}
+#	texture = {
+#		reference = "event_scenes/ep3_feast_byzantine.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_feast
+#			trigger_if = {
+#				limit = {
+#					NOT = { exists = scope:activity }
+#				}
+#				root.location = {
+#					culture ?= { has_building_gfx = byzantine_building_gfx }
+#				}
+#			}
+#			trigger_else = {
+#				scope:activity = {
+#					activity_root.location = {
+#						culture ?= { has_building_gfx = byzantine_building_gfx }
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_ep3_byzantine_feast"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_feast
+#			trigger_if = {
+#				limit = {
+#					NOT = { exists = scope:activity }
+#				}
+#				root.location = {
+#					culture ?= { has_building_gfx = byzantine_building_gfx }
+#				}
+#			}
+#			trigger_else = {
+#				scope:activity = {
+#					activity_root.location = {
+#						culture ?= { has_building_gfx = byzantine_building_gfx }
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/fp1_viking_feast.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_feast
+#			OR = {
+#				scope:activity = {
+#					activity_root.location = {
+#						culture ?= { has_building_gfx = norse_building_gfx }
+#					}
+#				}
+#				should_use_tribal_realm_palace_graphics_trigger = yes
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_event_fp1_viking_feast"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_feast
+#			OR = {
+#				scope:activity = {
+#					activity_root.location = {
+#						culture ?= { has_building_gfx = norse_building_gfx }
+#					}
+#				}
+#				should_use_tribal_realm_palace_graphics_trigger = yes
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/ep2_feast_indian.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_feast
+#			trigger_if = {
+#				limit = {
+#					NOT = { exists = scope:activity }
+#				}
+#				OR = {
+#					root.location = {
+#						culture ?= { has_graphical_india_culture_group_trigger = yes }
+#					}
+#					root.location ?= { steppe_building_gfx_use_indian_trigger = yes }
+#				}
+#			}
+#			trigger_else = {
+#				OR = {
+#					scope:activity = {
+#						activity_root.location = {
+#							culture ?= { has_graphical_india_culture_group_trigger = yes }
+#						}
+#					}
+#					scope:activity = {
+#						activity_root.location ?= { steppe_building_gfx_use_indian_trigger = yes }
+#					}
+#				}	
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_indian_feast"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_feast
+#			trigger_if = {
+#				limit = {
+#					NOT = { exists = scope:activity }
+#				}
+#				OR = {
+#					root.location = {
+#						culture ?= { has_graphical_india_culture_group_trigger = yes }
+#					}
+#					root.location ?= { steppe_building_gfx_use_indian_trigger = yes }
+#				}
+#			}
+#			trigger_else = {
+#				OR = {
+#					scope:activity = {
+#						activity_root.location = {
+#							culture ?= { has_graphical_india_culture_group_trigger = yes }
+#						}
+#					}
+#					scope:activity = {
+#						activity_root.location ?= { steppe_building_gfx_use_indian_trigger = yes }
+#					}
+#				}	
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/ep2_feast_sub_saharan.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_feast
+#			trigger_if = {
+#				limit = {
+#					NOT = { exists = scope:activity }
+#				}
+#				root.location = {
+#					culture ?= { has_building_gfx = african_building_gfx }
+#				}
+#			}
+#			trigger_else = {
+#				scope:activity = {
+#					activity_root.location = {
+#						culture ?= { has_building_gfx = african_building_gfx }
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_sub-saharan_feast"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_feast
+#			trigger_if = {
+#				limit = {
+#					NOT = { exists = scope:activity }
+#				}
+#				root.location = {
+#					culture ?= { has_building_gfx = african_building_gfx }
+#				}
+#			}
+#			trigger_else = {
+#				scope:activity = {
+#					activity_root.location = {
+#						culture ?= { has_building_gfx = african_building_gfx }
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/ep2_feast_mena.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_feast
+#			trigger_if = {
+#				limit = {
+#					NOT = { exists = scope:activity }
+#				}
+#				OR = {
+#					root.location = {
+#						culture ?= {
+#							OR = {
+#							has_graphical_mena_culture_group_trigger = yes
+#							has_building_gfx = iberian_building_gfx
+#							has_building_gfx = iranian_building_gfx
+#							}
+#							}
+#					}
+#					root.location ?= {
+#						steppe_building_gfx_use_mena_trigger = yes
+#					}
+#				}
+#			}
+#			trigger_else = {
+#				OR = {
+#					scope:activity = {
+#						activity_root.location = {
+#							culture ?= {
+#								OR = {
+#								has_graphical_mena_culture_group_trigger = yes
+#								has_building_gfx = iberian_building_gfx
+#								has_building_gfx = iranian_building_gfx
+#								}
+#								}
+#						}
+#					}
+#					scope:activity = {
+#						activity_root.location ?= {
+#							steppe_building_gfx_use_mena_trigger = yes
+#							}
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_mena_feast"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_feast
+#			trigger_if = {
+#				limit = {
+#					NOT = { exists = scope:activity }
+#				}
+#				OR = {
+#					root.location = {
+#						culture ?= {
+#							OR = {
+#							has_graphical_mena_culture_group_trigger = yes
+#							has_building_gfx = iberian_building_gfx
+#							has_building_gfx = iranian_building_gfx
+#							}
+#							}
+#					}
+#					root.location ?= {
+#						steppe_building_gfx_use_mena_trigger = yes
+#					}
+#				}
+#			}
+#			trigger_else = {
+#				OR = {
+#					scope:activity = {
+#						activity_root.location = {
+#							culture ?= {
+#								OR = {
+#								has_graphical_mena_culture_group_trigger = yes
+#								has_building_gfx = iberian_building_gfx
+#								has_building_gfx = iranian_building_gfx
+#								}
+#								}
+#						}
+#					}
+#					scope:activity = {
+#						activity_root.location ?= {
+#							steppe_building_gfx_use_mena_trigger = yes
+#							}
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/tgp_feast_asia.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_feast
+#			trigger_if = {
+#				limit = {
+#					NOT = { exists = scope:activity }
+#				}
+#				root.location ?= {
+#					OR = {
+#						culture ?= {
+#							has_graphical_east_asia_culture_group_trigger = yes
+#						}
+#						steppe_building_gfx_use_east_asian_trigger = yes
+#					}
+#				}
+#			}
+#			trigger_else = {
+#				scope:activity = {
+#					activity_root.location ?= {
+#						OR = {
+#						culture ?= {
+#						has_graphical_east_asia_culture_group_trigger = yes
+#						}
+#						steppe_building_gfx_use_east_asian_trigger = yes
+#						}
+#						}
+#				}
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_tgp_feast_asia"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_feast
+#			trigger_if = {
+#				limit = {
+#					NOT = { exists = scope:activity }
+#				}
+#				root.location ?= {
+#					OR = {
+#						culture ?= {
+#							has_graphical_east_asia_culture_group_trigger = yes
+#						}
+#						steppe_building_gfx_use_east_asian_trigger = yes
+#					}
+#				}
+#			}
+#			trigger_else = {
+#				scope:activity = {
+#					activity_root.location ?= {
+#						OR = {
+#						culture ?= {
+#						has_graphical_east_asia_culture_group_trigger = yes
+#						}
+#						steppe_building_gfx_use_east_asian_trigger = yes
+#						}
+#						}
+#				}
+#			}
+#		}
+#	}
 
 	texture = {
 		reference = "event_scenes/feast.dds"
@@ -9084,1824 +9084,1824 @@ talk_background = {
 		}
 	}
 
-	texture = {
-		reference = "event_scenes/ep2_hunt_snowy_forest.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_hunt_activity_camp
-			scope:activity = {
-				activity_root.location ?= { hunt_snowy_forest_trigger = yes }
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_hunt_snowy_forest"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_hunt_activity_camp
-			scope:activity = {
-				activity_root.location ?= { hunt_snowy_forest_trigger = yes }
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/mountains.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_hunt_activity_camp
-			scope:activity = {
-				activity_root.location ?= { graphical_wilderness_mountains_trigger = yes }
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_event_mountains"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_hunt_activity_camp
-			scope:activity = {
-				activity_root.location ?= { graphical_wilderness_mountains_trigger = yes }
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/bp1_jungle.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_hunt_activity_camp
-			scope:activity = {
-				activity_root.location ?= { graphical_wilderness_jungle_trigger = yes }
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_event_bp1_jungle"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_hunt_activity_camp
-			scope:activity = {
-				activity_root.location ?= { graphical_wilderness_jungle_trigger = yes }
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/mpo_hunt_steppe.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_hunt_activity_camp
-			scope:activity = {
-			activity_host = { government_has_flag = government_is_nomadic }
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_mpo_hunt_steppe"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_hunt_activity_camp
-			scope:activity = {
-			activity_host = { government_has_flag = government_is_nomadic }
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/steppe.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_hunt_activity_camp
-			scope:activity = {
-				activity_root.location ?= { graphical_wilderness_steppe_trigger = yes }
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_event_steppe"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_hunt_activity_camp
-			scope:activity = {
-				activity_root.location ?= { graphical_wilderness_steppe_trigger = yes }
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/desert.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_hunt_activity_camp
-			scope:activity = {
-				activity_root.location ?= { graphical_wilderness_desert_trigger = yes }
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_event_bp1_desert"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_hunt_activity_camp
-			scope:activity = {
-				activity_root.location ?= { graphical_wilderness_desert_trigger = yes }
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/drylands.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_hunt_activity_camp
-			scope:activity = {
-				activity_root.location ?= { graphical_drylands_trigger = yes }
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_event_desert"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_hunt_activity_camp
-			scope:activity = {
-				activity_root.location ?= { graphical_drylands_trigger = yes }
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/ep2_hunt_poachers_camp.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_hunt_activity_camp
-		}
-	}
-
-	environment = {
-		reference = "environment_event_forest_pine"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_hunt_activity_camp
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/ep2_wedding_ceremony_indian.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_wedding_ceremony
-			trigger_if = {
-				limit = { exists = scope:activity }
-				scope:activity ?= { has_activity_type = activity_wedding }
-			}
-			OR = {
-				root.location = {
-					culture ?= { has_graphical_india_culture_group_trigger = yes }
-				}
-				root.location ?= { steppe_building_gfx_use_indian_trigger = yes }
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_indian_wedding"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_wedding_ceremony
-			trigger_if = {
-				limit = { exists = scope:activity }
-				scope:activity ?= { has_activity_type = activity_wedding }
-			}
-			OR = {
-				root.location = {
-					culture ?= { has_graphical_india_culture_group_trigger = yes }
-				}
-				root.location ?= { steppe_building_gfx_use_indian_trigger = yes }
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/tgp_wedding_ceremony_asia.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_wedding_ceremony
-			trigger_if = {
-				limit = { exists = scope:activity }
-				scope:activity ?= { has_activity_type = activity_wedding }
-			}
-			root.location ?= {
-				OR = {
-					culture ?= { has_graphical_east_asia_culture_group_trigger = yes }
-					steppe_building_gfx_use_east_asian_trigger = yes
-				}
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_tgp_wedding_ceremony_asia"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_wedding_ceremony
-			trigger_if = {
-				limit = { exists = scope:activity }
-				scope:activity ?= { has_activity_type = activity_wedding }
-			}
-			root.location ?= {
-				OR = {
-					culture ?= { has_graphical_east_asia_culture_group_trigger = yes }
-					steppe_building_gfx_use_east_asian_trigger = yes
-				}
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/ep2_wedding_ceremony_mena.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_wedding_ceremony
-			trigger_if = {
-				limit = { exists = scope:activity }
-				scope:activity ?= { has_activity_type = activity_wedding }
-			}
-			OR = {
-				root.location = {
-					culture ?= { has_graphical_mena_culture_group_trigger = yes }
-				}
-				root.location = {
-					culture ?= { has_graphical_steppe_culture_group_trigger = yes }
-				}
-				root.location = {
-					culture ?= { has_graphical_african_culture_group_trigger = yes }
-				}
-				root.location = {
-					culture ?= { has_building_gfx = iranian_building_gfx }
-				}
-				root.location ?= { steppe_building_gfx_use_mena_trigger = yes }
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_mena_wedding"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_wedding_ceremony
-			trigger_if = {
-				limit = { exists = scope:activity }
-				scope:activity ?= { has_activity_type = activity_wedding }
-			}
-			OR = {
-				root.location = {
-					culture ?= { has_graphical_mena_culture_group_trigger = yes }
-				}
-				root.location = {
-					culture ?= { has_graphical_steppe_culture_group_trigger = yes }
-				}
-				root.location = {
-					culture ?= { has_graphical_african_culture_group_trigger = yes }
-				}
-				root.location = {
-					culture ?= { has_building_gfx = iranian_building_gfx }
-				}
-				root.location ?= { steppe_building_gfx_use_mena_trigger = yes }
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/ep2_wedding_ceremony_western.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_wedding_ceremony
-		}
-	}
-
-	environment = {
-		reference = "environment_western_wedding"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_wedding_ceremony
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/ep2_village_festival_western.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_tournament }
-				}
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_village_festival"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_tournament }
-				}
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/tgp_tanabata_festival_night_japan.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_tour }
-					root.location ?= {
-						OR = {
-							culture = { has_graphical_japanese_culture_group_trigger = yes }
-							steppe_building_gfx_use_japanese_trigger = yes
-						}
-					}
-				}
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_tgp_tanabata_festival_night_japan"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_tour }
-					root.location ?= {
-						OR = {
-							culture = { has_graphical_japanese_culture_group_trigger = yes }
-							steppe_building_gfx_use_japanese_trigger = yes
-						}
-					}
-				}
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/tgp_wedding_ceremony_asia.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_tour }
-					root.location ?= {
-						OR = {
-							culture = { has_graphical_east_asia_culture_group_trigger = yes }
-							steppe_building_gfx_use_east_asian_trigger = yes
-						}
-					}
-				}
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_tgp_wedding_ceremony_asia"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_tour }
-					root.location ?= {
-						OR = {
-							culture = { has_graphical_east_asia_culture_group_trigger = yes }
-							steppe_building_gfx_use_east_asian_trigger = yes
-						}
-					}
-				}
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/ep2_feast_steppe.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_tour }
-					involved_activity = {
-						activity_root.location = {
-							culture = { has_building_gfx = steppe_building_gfx }
-						}
-					}
-				}
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_steppe_feast"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_tour }
-					involved_activity = {
-						activity_root.location = {
-							culture = { has_building_gfx = steppe_building_gfx }
-						}
-					}
-				}
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/ep2_feast_sub_saharan.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_tour }
-					OR = {
-						root.location = {
-							culture ?= { has_building_gfx = iranian_building_gfx }
-						}
-					root.location = {
-						culture ?= { has_graphical_mena_culture_group_trigger = yes }
-					}
-					root.location = {
-						culture ?= { has_graphical_african_culture_group_trigger = yes }
-					}
-					root.location ?= { steppe_building_gfx_use_mena_trigger = yes }
-					}
-				}
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_sub-saharan_feast"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_tour }
-					OR = {
-						root.location = {
-							culture ?= { has_building_gfx = iranian_building_gfx }
-						}
-					root.location = {
-						culture ?= { has_graphical_mena_culture_group_trigger = yes }
-					}
-					root.location = {
-						culture ?= { has_graphical_african_culture_group_trigger = yes }
-					}
-					root.location ?= { steppe_building_gfx_use_mena_trigger = yes }
-					}
-				}
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/ep2_feast_indian.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_tour }
-					OR = {
-						steppe_building_gfx_use_indian_trigger = yes
-						root.location = {
-							culture ?= { has_graphical_india_culture_group_trigger = yes }
-						}
-					}
-				}
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_indian_feast"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_tour }
-					OR = {
-						steppe_building_gfx_use_indian_trigger = yes
-						root.location = {
-							culture ?= { has_graphical_india_culture_group_trigger = yes }
-						}
-					}
-				}
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/ep2_village_festival_western.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_tour }
-				}
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_village_festival"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_tour }
-				}
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/ep2_wedding_ceremony_mena.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_wedding }
-					capital_province = {
-						culture = { has_building_gfx = iberian_building_gfx }
-					}
-				}
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_mena_wedding"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_wedding }
-					capital_province = {
-						culture = { has_building_gfx = iberian_building_gfx }
-					}
-				}
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/ep2_wedding_ceremony_western.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_wedding }
-					root.location = {
-						culture = { has_building_gfx = norse_building_gfx }
-					}
-				}
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_western_wedding"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_wedding }
-					root.location = {
-						culture = { has_building_gfx = norse_building_gfx }
-					}
-				}
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/ep2_wedding_ceremony_mena.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_wedding }
-					OR = {
-						root.location = {
-							culture ?= { has_building_gfx = iranian_building_gfx }
-						}
-					root.location = {
-						culture ?= { has_graphical_mena_culture_group_trigger = yes }
-					}
-					root.location = {
-						culture ?= { has_graphical_steppe_culture_group_trigger = yes }
-					}
-					root.location = {
-						culture ?= { has_graphical_african_culture_group_trigger = yes }
-					}
-					root.location ?= { steppe_building_gfx_use_mena_trigger = yes }
-					}
-				}
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_mena_wedding"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_wedding }
-					OR = {
-						root.location = {
-							culture ?= { has_building_gfx = iranian_building_gfx }
-						}
-					root.location = {
-						culture ?= { has_graphical_mena_culture_group_trigger = yes }
-					}
-					root.location = {
-						culture ?= { has_graphical_steppe_culture_group_trigger = yes }
-					}
-					root.location = {
-						culture ?= { has_graphical_african_culture_group_trigger = yes }
-					}
-					root.location ?= { steppe_building_gfx_use_mena_trigger = yes }
-					}
-				}
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/ep2_wedding_ceremony_indian.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_wedding }
-					OR = {
-						steppe_building_gfx_use_indian_trigger = yes
-						root.location = {
-							culture ?= { has_graphical_india_culture_group_trigger = yes }
-						}
-					}
-				}
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_indian_wedding"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_wedding }
-					OR = {
-						steppe_building_gfx_use_indian_trigger = yes
-						root.location = {
-							culture ?= { has_graphical_india_culture_group_trigger = yes }
-						}
-					}
-				}
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/tgp_wedding_ceremony_asia.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_wedding }
-					root.location ?= {
-						OR = {
-							culture = { has_graphical_east_asia_culture_group_trigger = yes }
-							steppe_building_gfx_use_east_asian_trigger = yes
-						}
-					}
-				}
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_tgp_wedding_ceremony_asia"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_wedding }
-					root.location ?= {
-						OR = {
-							culture = { has_graphical_east_asia_culture_group_trigger = yes }
-							steppe_building_gfx_use_east_asian_trigger = yes
-						}
-					}
-				}
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/ep2_wedding_ceremony_western.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_wedding }
-				}
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_western_wedding"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_wedding }
-				}
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/ep2_hunt_snowy_forest.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity = {
-						has_activity_type = activity_hunt
-						activity_root.location ?= {
-							OR = {
-								has_province_modifier = winter_normal_modifier
-								has_province_modifier = winter_harsh_modifier
-							}
-						OR = {
-							graphical_wilderness_forest_trigger = yes
-							graphical_wilderness_forest_pine_trigger = yes
-						}
-					}
-					}
-				}
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_hunt_snowy_forest"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity = {
-						has_activity_type = activity_hunt
-						activity_root.location ?= {
-							OR = {
-								has_province_modifier = winter_normal_modifier
-								has_province_modifier = winter_harsh_modifier
-							}
-						OR = {
-							graphical_wilderness_forest_trigger = yes
-							graphical_wilderness_forest_pine_trigger = yes
-						}
-					}
-					}
-				}
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/ep2_hunt_forest_managed.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity = {
-						has_activity_type = activity_hunt
-						activity_root.location ?= {
-							OR = {
-								has_building_or_higher = royal_forest_01
-								has_building_or_higher = hunting_grounds_01
-							}
-					}
-					}
-				}
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_ep2_forest_managed"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity = {
-						has_activity_type = activity_hunt
-						activity_root.location ?= {
-							OR = {
-								has_building_or_higher = royal_forest_01
-								has_building_or_higher = hunting_grounds_01
-							}
-					}
-					}
-				}
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/forest_pine.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity = {
-						has_activity_type = activity_hunt
-						activity_root.location ?= { graphical_wilderness_forest_pine_trigger = yes }
-					}
-				}
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_event_forest_pine"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity = {
-						has_activity_type = activity_hunt
-						activity_root.location ?= { graphical_wilderness_forest_pine_trigger = yes }
-					}
-				}
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/forest.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity = {
-						has_activity_type = activity_hunt
-						activity_root.location ?= { graphical_wilderness_forest_trigger = yes }
-					}
-				}
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_event_forest"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity = {
-						has_activity_type = activity_hunt
-						activity_root.location ?= { graphical_wilderness_forest_trigger = yes }
-					}
-				}
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/ep2_hunt_generic.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= {
-						has_activity_type = activity_hunt
-						activity_root.location = {
-							culture = { has_graphical_east_asia_culture_group_trigger = yes }
-						}
-					}
-				}
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_generic_hunt"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= {
-						has_activity_type = activity_hunt
-						activity_root.location = {
-							culture = { has_graphical_east_asia_culture_group_trigger = yes }
-						}
-					}
-				}
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/ep2_hunt_generic.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_hunt }
-				}
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_generic_hunt"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_hunt }
-				}
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/ep3_hagia_sophia.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_pilgrimage }
-					involved_activity = {
-						activity_root.location ?= { has_building_or_higher = hagia_sophia_01 }
-					}
-				}
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_ep3_hagia_sophia"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_pilgrimage }
-					involved_activity = {
-						activity_root.location ?= { has_building_or_higher = hagia_sophia_01 }
-					}
-				}
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/fp3_temple.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_pilgrimage }
-					religion = religion:zoroastrianism_religion
-				}
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_event_fp3_temple"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_pilgrimage }
-					religion = religion:zoroastrianism_religion
-				}
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/mpo_temple_steppe.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_pilgrimage }
-					OR = {
-						religion = {
-							OR = {
-								this = religion:tengrism_religion
-								this = religion:magyar_religion
-								this = religion:siberian_religion
-							}
-					}
-					AND = {
-						religion = religion:buddhism_religion
-						involved_activity = {
-							activity_root.location = {
-								OR = {
-									geographical_region = world_steppe_east
-									geographical_region = world_steppe_central
-									geographical_region = world_steppe_west
-									geographical_region = world_asia_north_east
-								}
-						}
-					}
-					}
-					AND = {
-						religion = religion:buddhism_religion
-						involved_activity = {
-							activity_root.location = {
-								OR = {
-									geographical_region = world_tibet
-									geographical_region = world_steppe_tarim
-								}
-						}
-					}
-					involved_activity = {
-						activity_root.location = {
-							county = {
-								title_province ?= {
-									OR = {
-										has_holding_type = tribal_holding
-										has_holding_type = nomad_holding
-										has_holding_type = herder_holding
-									}
-							}
-					}
-					}
-					}
-					}
-					}
-				}
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_mpo_temple_steppe"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_pilgrimage }
-					OR = {
-						religion = {
-							OR = {
-								this = religion:tengrism_religion
-								this = religion:magyar_religion
-								this = religion:siberian_religion
-							}
-					}
-					AND = {
-						religion = religion:buddhism_religion
-						involved_activity = {
-							activity_root.location = {
-								OR = {
-									geographical_region = world_steppe_east
-									geographical_region = world_steppe_central
-									geographical_region = world_steppe_west
-									geographical_region = world_asia_north_east
-								}
-						}
-					}
-					}
-					AND = {
-						religion = religion:buddhism_religion
-						involved_activity = {
-							activity_root.location = {
-								OR = {
-									geographical_region = world_tibet
-									geographical_region = world_steppe_tarim
-								}
-						}
-					}
-					involved_activity = {
-						activity_root.location = {
-							county = {
-								title_province ?= {
-									OR = {
-										has_holding_type = tribal_holding
-										has_holding_type = nomad_holding
-										has_holding_type = herder_holding
-									}
-							}
-					}
-					}
-					}
-					}
-					}
-				}
-			}
-		}
-	}
-
-	# Orthodox and Oriental Christians
-	texture = {
-		reference = "event_scenes/ep3_holysite_orthodox.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_pilgrimage }
-					religion = religion:christianity_religion
-					involved_activity = {
-						activity_root.location ?= {
-							OR = {
-								faith = faith:orthodox
-								geographical_region = graphical_mena
-								geographical_region = graphical_india
-								geographical_region = world_europe_south_east
-								geographical_region = world_asia_minor
-							}
-					}
-					}
-				}
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_ep3_holysite_orthodox"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_pilgrimage }
-					religion = religion:christianity_religion
-					involved_activity = {
-						activity_root.location ?= {
-							OR = {
-								faith = faith:orthodox
-								geographical_region = graphical_mena
-								geographical_region = graphical_india
-								geographical_region = world_europe_south_east
-								geographical_region = world_asia_minor
-							}
-					}
-					}
-				}
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/tgp_holysite_asia.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_pilgrimage }
-					involved_activity = {
-						activity_root.location = {
-							OR = {
-								steppe_building_gfx_use_east_asian_trigger = yes
-								culture = { has_graphical_east_asia_culture_group_trigger = yes }
-							}
-					}
-					}
-				}
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_tgp_holysite_asia"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_pilgrimage }
-					involved_activity = {
-						activity_root.location = {
-							OR = {
-								steppe_building_gfx_use_east_asian_trigger = yes
-								culture = { has_graphical_east_asia_culture_group_trigger = yes }
-							}
-					}
-					}
-				}
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/ep2_holysite_mena.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_pilgrimage }
-					involved_activity = {
-						activity_root.location = {
-							OR = {
-								steppe_building_gfx_use_mena_trigger = yes
-								culture = { has_graphical_mena_culture_group_trigger = yes }
-							}
-					}
-					}
-				}
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_generic_holy_site_mena"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_pilgrimage }
-					involved_activity = {
-						activity_root.location = {
-							OR = {
-								steppe_building_gfx_use_mena_trigger = yes
-								culture = { has_graphical_mena_culture_group_trigger = yes }
-							}
-					}
-					}
-				}
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/ep2_holysite_indian.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_pilgrimage }
-					involved_activity = {
-						activity_root.location = {
-							OR = {
-								steppe_building_gfx_use_indian_trigger = yes
-								culture = { has_graphical_india_culture_group_trigger = yes }
-							}
-					}
-					}
-				}
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_indian_holy_site"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_pilgrimage }
-					involved_activity = {
-						activity_root.location = {
-							OR = {
-								steppe_building_gfx_use_indian_trigger = yes
-								culture = { has_graphical_india_culture_group_trigger = yes }
-							}
-					}
-					}
-				}
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/fp2_temple.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_pilgrimage }
-					involved_activity = {
-						activity_root.location = {
-							culture = { has_graphical_iberian_culture_group_trigger = yes }
-						}
-					}
-				}
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_event_fp2_temple"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_pilgrimage }
-					involved_activity = {
-						activity_root.location = {
-							culture = { has_graphical_iberian_culture_group_trigger = yes }
-						}
-					}
-				}
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/ep2_holysite_western.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_pilgrimage }
-					involved_activity = {
-						activity_root.location = {
-							OR = {
-								steppe_building_gfx_use_western_trigger = yes
-								culture = { has_graphical_western_culture_group_trigger = yes }
-							}
-					}
-					}
-					NOT = {
-						religion ?= { is_in_family = rf_pagan }
-					}
-				}
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_western_holy_site"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_pilgrimage }
-					involved_activity = {
-						activity_root.location = {
-							OR = {
-								steppe_building_gfx_use_western_trigger = yes
-								culture = { has_graphical_western_culture_group_trigger = yes }
-							}
-					}
-					}
-					NOT = {
-						religion ?= { is_in_family = rf_pagan }
-					}
-				}
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/ep2_holysite_tribal.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_pilgrimage }
-					OR = {
-						involved_activity = {
-							activity_root.location = {
-								county = {
-									holder ?= {
-										OR = {
-											government_has_flag = government_is_tribal
-											government_has_flag = government_is_nomadic
-											government_has_flag = government_is_herder
-										}
-								}
-						}
-					}
-					}
-					involved_activity = {
-						activity_root.location = {
-							culture = { has_graphical_steppe_culture_group_trigger = yes }
-						}
-					}
-					}
-				}
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_event_garden"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_pilgrimage }
-					OR = {
-						involved_activity = {
-							activity_root.location = {
-								county = {
-									holder ?= {
-										OR = {
-											government_has_flag = government_is_tribal
-											government_has_flag = government_is_nomadic
-											government_has_flag = government_is_herder
-										}
-								}
-						}
-					}
-					}
-					involved_activity = {
-						activity_root.location = {
-							culture = { has_graphical_steppe_culture_group_trigger = yes }
-						}
-					}
-					}
-				}
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/fp1_tribal_temple.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_pilgrimage }
-					involved_activity = {
-						activity_root.location = {
-							culture = { has_graphical_norse_culture_group_trigger = yes }
-						}
-					}
-				}
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_event_fp1_tribal_temple"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_pilgrimage }
-					involved_activity = {
-						activity_root.location = {
-							culture = { has_graphical_norse_culture_group_trigger = yes }
-						}
-					}
-				}
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/ep2_holysite_tribal.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_pilgrimage }
-					involved_activity = {
-						activity_root.location = {
-							county = {
-								holder ?= {
-									OR = {
-										government_has_flag = government_is_tribal
-										government_has_flag = government_is_nomadic
-										government_has_flag = government_is_herder
-									}
-							}
-					}
-					}
-					}
-				}
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_event_garden"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_pilgrimage }
-					involved_activity = {
-						activity_root.location = {
-							county = {
-								holder ?= {
-									OR = {
-										government_has_flag = government_is_tribal
-										government_has_flag = government_is_nomadic
-										government_has_flag = government_is_herder
-									}
-							}
-					}
-					}
-					}
-				}
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/temple.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_pilgrimage }
-				}
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_event_temple"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_pilgrimage }
-				}
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/ep3_feast_byzantine.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_feast }
-					involved_activity = {
-						activity_root.location = {
-							culture ?= { has_graphical_mediterranean_culture_group_trigger = yes }
-						}
-					}
-				}
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_ep3_byzantine_feast"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_feast }
-					involved_activity = {
-						activity_root.location = {
-							culture ?= { has_graphical_mediterranean_culture_group_trigger = yes }
-						}
-					}
-				}
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/fp1_viking_feast.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_feast }
-					involved_activity = {
-						activity_root.location = {
-							culture = { has_building_gfx = norse_building_gfx }
-						}
-					}
-				}
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_event_fp1_viking_feast"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_feast }
-					involved_activity = {
-						activity_root.location = {
-							culture = { has_building_gfx = norse_building_gfx }
-						}
-					}
-				}
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/ep2_feast_indian.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_feast }
-					involved_activity = {
-						activity_root.location = {
-							culture = { has_building_gfx = indian_building_gfx }
-						}
-					}
-				}
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_indian_feast"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_feast }
-					involved_activity = {
-						activity_root.location = {
-							culture = { has_building_gfx = indian_building_gfx }
-						}
-					}
-				}
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/ep2_feast_mena.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_feast }
-					OR = {
-						involved_activity = {
-							activity_root.location = {
-								culture = { has_building_gfx = arabic_group_building_gfx }
-							}
-					}
-					involved_activity = {
-						activity_root.location = {
-							culture = { has_building_gfx = berber_group_building_gfx }
-						}
-					}
-					involved_activity = {
-						activity_root.location = {
-							culture = { has_building_gfx = iberian_building_gfx }
-						}
-					}
-					involved_activity = {
-						activity_root.location = {
-							culture ?= { has_building_gfx = iranian_building_gfx }
-						}
-					}
-					}
-				}
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_mena_feast"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_feast }
-					OR = {
-						involved_activity = {
-							activity_root.location = {
-								culture = { has_building_gfx = arabic_group_building_gfx }
-							}
-					}
-					involved_activity = {
-						activity_root.location = {
-							culture = { has_building_gfx = berber_group_building_gfx }
-						}
-					}
-					involved_activity = {
-						activity_root.location = {
-							culture = { has_building_gfx = iberian_building_gfx }
-						}
-					}
-					involved_activity = {
-						activity_root.location = {
-							culture ?= { has_building_gfx = iranian_building_gfx }
-						}
-					}
-					}
-				}
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/ep2_feast_steppe.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_feast }
-					involved_activity = {
-						activity_root.location = {
-							culture = { has_building_gfx = steppe_building_gfx }
-						}
-					}
-				}
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_steppe_feast"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_feast }
-					involved_activity = {
-						activity_root.location = {
-							culture = { has_building_gfx = steppe_building_gfx }
-						}
-					}
-				}
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/ep2_feast_sub_saharan.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_feast }
-					culture = { has_building_gfx = african_building_gfx }
-				}
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_sub-saharan_feast"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_feast }
-					culture = { has_building_gfx = african_building_gfx }
-				}
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/tgp_feast_asia.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_feast }
-					involved_activity = {
-						activity_root.location = {
-							OR = {
-								steppe_building_gfx_use_east_asian_trigger = yes
-								culture = { has_graphical_east_asia_culture_group_trigger = yes }
-							}
-					}
-					}
-				}
-			}
-		}
-	}
-
-	environment = {
-		reference = "environment_tgp_feast_asia"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-			location = {
-				province_owner = {
-					involved_activity ?= { has_activity_type = activity_feast }
-					involved_activity = {
-						activity_root.location = {
-							OR = {
-								steppe_building_gfx_use_east_asian_trigger = yes
-								culture = { has_graphical_east_asia_culture_group_trigger = yes }
-							}
-					}
-					}
-				}
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/feast.dds"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-		}
-	}
-
-	environment = {
-		reference = "environment_event_feast"
-		trigger = {
-			global_var:talk_scene = flag:talk_scene_involved_activity
-		}
-	}
+#	texture = {
+#		reference = "event_scenes/ep2_hunt_snowy_forest.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_hunt_activity_camp
+#			scope:activity = {
+#				activity_root.location ?= { hunt_snowy_forest_trigger = yes }
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_hunt_snowy_forest"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_hunt_activity_camp
+#			scope:activity = {
+#				activity_root.location ?= { hunt_snowy_forest_trigger = yes }
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/mountains.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_hunt_activity_camp
+#			scope:activity = {
+#				activity_root.location ?= { graphical_wilderness_mountains_trigger = yes }
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_event_mountains"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_hunt_activity_camp
+#			scope:activity = {
+#				activity_root.location ?= { graphical_wilderness_mountains_trigger = yes }
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/bp1_jungle.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_hunt_activity_camp
+#			scope:activity = {
+#				activity_root.location ?= { graphical_wilderness_jungle_trigger = yes }
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_event_bp1_jungle"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_hunt_activity_camp
+#			scope:activity = {
+#				activity_root.location ?= { graphical_wilderness_jungle_trigger = yes }
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/mpo_hunt_steppe.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_hunt_activity_camp
+#			scope:activity = {
+#			activity_host = { government_has_flag = government_is_nomadic }
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_mpo_hunt_steppe"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_hunt_activity_camp
+#			scope:activity = {
+#			activity_host = { government_has_flag = government_is_nomadic }
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/steppe.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_hunt_activity_camp
+#			scope:activity = {
+#				activity_root.location ?= { graphical_wilderness_steppe_trigger = yes }
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_event_steppe"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_hunt_activity_camp
+#			scope:activity = {
+#				activity_root.location ?= { graphical_wilderness_steppe_trigger = yes }
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/desert.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_hunt_activity_camp
+#			scope:activity = {
+#				activity_root.location ?= { graphical_wilderness_desert_trigger = yes }
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_event_bp1_desert"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_hunt_activity_camp
+#			scope:activity = {
+#				activity_root.location ?= { graphical_wilderness_desert_trigger = yes }
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/drylands.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_hunt_activity_camp
+#			scope:activity = {
+#				activity_root.location ?= { graphical_drylands_trigger = yes }
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_event_desert"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_hunt_activity_camp
+#			scope:activity = {
+#				activity_root.location ?= { graphical_drylands_trigger = yes }
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/ep2_hunt_poachers_camp.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_hunt_activity_camp
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_event_forest_pine"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_hunt_activity_camp
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/ep2_wedding_ceremony_indian.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_wedding_ceremony
+#			trigger_if = {
+#				limit = { exists = scope:activity }
+#				scope:activity ?= { has_activity_type = activity_wedding }
+#			}
+#			OR = {
+#				root.location = {
+#					culture ?= { has_graphical_india_culture_group_trigger = yes }
+#				}
+#				root.location ?= { steppe_building_gfx_use_indian_trigger = yes }
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_indian_wedding"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_wedding_ceremony
+#			trigger_if = {
+#				limit = { exists = scope:activity }
+#				scope:activity ?= { has_activity_type = activity_wedding }
+#			}
+#			OR = {
+#				root.location = {
+#					culture ?= { has_graphical_india_culture_group_trigger = yes }
+#				}
+#				root.location ?= { steppe_building_gfx_use_indian_trigger = yes }
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/tgp_wedding_ceremony_asia.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_wedding_ceremony
+#			trigger_if = {
+#				limit = { exists = scope:activity }
+#				scope:activity ?= { has_activity_type = activity_wedding }
+#			}
+#			root.location ?= {
+#				OR = {
+#					culture ?= { has_graphical_east_asia_culture_group_trigger = yes }
+#					steppe_building_gfx_use_east_asian_trigger = yes
+#				}
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_tgp_wedding_ceremony_asia"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_wedding_ceremony
+#			trigger_if = {
+#				limit = { exists = scope:activity }
+#				scope:activity ?= { has_activity_type = activity_wedding }
+#			}
+#			root.location ?= {
+#				OR = {
+#					culture ?= { has_graphical_east_asia_culture_group_trigger = yes }
+#					steppe_building_gfx_use_east_asian_trigger = yes
+#				}
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/ep2_wedding_ceremony_mena.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_wedding_ceremony
+#			trigger_if = {
+#				limit = { exists = scope:activity }
+#				scope:activity ?= { has_activity_type = activity_wedding }
+#			}
+#			OR = {
+#				root.location = {
+#					culture ?= { has_graphical_mena_culture_group_trigger = yes }
+#				}
+#				root.location = {
+#					culture ?= { has_graphical_steppe_culture_group_trigger = yes }
+#				}
+#				root.location = {
+#					culture ?= { has_graphical_african_culture_group_trigger = yes }
+#				}
+#				root.location = {
+#					culture ?= { has_building_gfx = iranian_building_gfx }
+#				}
+#				root.location ?= { steppe_building_gfx_use_mena_trigger = yes }
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_mena_wedding"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_wedding_ceremony
+#			trigger_if = {
+#				limit = { exists = scope:activity }
+#				scope:activity ?= { has_activity_type = activity_wedding }
+#			}
+#			OR = {
+#				root.location = {
+#					culture ?= { has_graphical_mena_culture_group_trigger = yes }
+#				}
+#				root.location = {
+#					culture ?= { has_graphical_steppe_culture_group_trigger = yes }
+#				}
+#				root.location = {
+#					culture ?= { has_graphical_african_culture_group_trigger = yes }
+#				}
+#				root.location = {
+#					culture ?= { has_building_gfx = iranian_building_gfx }
+#				}
+#				root.location ?= { steppe_building_gfx_use_mena_trigger = yes }
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/ep2_wedding_ceremony_western.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_wedding_ceremony
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_western_wedding"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_wedding_ceremony
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/ep2_village_festival_western.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_tournament }
+#				}
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_village_festival"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_tournament }
+#				}
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/tgp_tanabata_festival_night_japan.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_tour }
+#					root.location ?= {
+#						OR = {
+#							culture = { has_graphical_japanese_culture_group_trigger = yes }
+#							steppe_building_gfx_use_japanese_trigger = yes
+#						}
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_tgp_tanabata_festival_night_japan"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_tour }
+#					root.location ?= {
+#						OR = {
+#							culture = { has_graphical_japanese_culture_group_trigger = yes }
+#							steppe_building_gfx_use_japanese_trigger = yes
+#						}
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/tgp_wedding_ceremony_asia.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_tour }
+#					root.location ?= {
+#						OR = {
+#							culture = { has_graphical_east_asia_culture_group_trigger = yes }
+#							steppe_building_gfx_use_east_asian_trigger = yes
+#						}
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_tgp_wedding_ceremony_asia"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_tour }
+#					root.location ?= {
+#						OR = {
+#							culture = { has_graphical_east_asia_culture_group_trigger = yes }
+#							steppe_building_gfx_use_east_asian_trigger = yes
+#						}
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/ep2_feast_steppe.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_tour }
+#					involved_activity = {
+#						activity_root.location = {
+#							culture = { has_building_gfx = steppe_building_gfx }
+#						}
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_steppe_feast"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_tour }
+#					involved_activity = {
+#						activity_root.location = {
+#							culture = { has_building_gfx = steppe_building_gfx }
+#						}
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/ep2_feast_sub_saharan.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_tour }
+#					OR = {
+#						root.location = {
+#							culture ?= { has_building_gfx = iranian_building_gfx }
+#						}
+#					root.location = {
+#						culture ?= { has_graphical_mena_culture_group_trigger = yes }
+#					}
+#					root.location = {
+#						culture ?= { has_graphical_african_culture_group_trigger = yes }
+#					}
+#					root.location ?= { steppe_building_gfx_use_mena_trigger = yes }
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_sub-saharan_feast"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_tour }
+#					OR = {
+#						root.location = {
+#							culture ?= { has_building_gfx = iranian_building_gfx }
+#						}
+#					root.location = {
+#						culture ?= { has_graphical_mena_culture_group_trigger = yes }
+#					}
+#					root.location = {
+#						culture ?= { has_graphical_african_culture_group_trigger = yes }
+#					}
+#					root.location ?= { steppe_building_gfx_use_mena_trigger = yes }
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/ep2_feast_indian.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_tour }
+#					OR = {
+#						steppe_building_gfx_use_indian_trigger = yes
+#						root.location = {
+#							culture ?= { has_graphical_india_culture_group_trigger = yes }
+#						}
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_indian_feast"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_tour }
+#					OR = {
+#						steppe_building_gfx_use_indian_trigger = yes
+#						root.location = {
+#							culture ?= { has_graphical_india_culture_group_trigger = yes }
+#						}
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/ep2_village_festival_western.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_tour }
+#				}
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_village_festival"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_tour }
+#				}
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/ep2_wedding_ceremony_mena.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_wedding }
+#					capital_province = {
+#						culture = { has_building_gfx = iberian_building_gfx }
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_mena_wedding"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_wedding }
+#					capital_province = {
+#						culture = { has_building_gfx = iberian_building_gfx }
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/ep2_wedding_ceremony_western.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_wedding }
+#					root.location = {
+#						culture = { has_building_gfx = norse_building_gfx }
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_western_wedding"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_wedding }
+#					root.location = {
+#						culture = { has_building_gfx = norse_building_gfx }
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/ep2_wedding_ceremony_mena.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_wedding }
+#					OR = {
+#						root.location = {
+#							culture ?= { has_building_gfx = iranian_building_gfx }
+#						}
+#					root.location = {
+#						culture ?= { has_graphical_mena_culture_group_trigger = yes }
+#					}
+#					root.location = {
+#						culture ?= { has_graphical_steppe_culture_group_trigger = yes }
+#					}
+#					root.location = {
+#						culture ?= { has_graphical_african_culture_group_trigger = yes }
+#					}
+#					root.location ?= { steppe_building_gfx_use_mena_trigger = yes }
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_mena_wedding"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_wedding }
+#					OR = {
+#						root.location = {
+#							culture ?= { has_building_gfx = iranian_building_gfx }
+#						}
+#					root.location = {
+#						culture ?= { has_graphical_mena_culture_group_trigger = yes }
+#					}
+#					root.location = {
+#						culture ?= { has_graphical_steppe_culture_group_trigger = yes }
+#					}
+#					root.location = {
+#						culture ?= { has_graphical_african_culture_group_trigger = yes }
+#					}
+#					root.location ?= { steppe_building_gfx_use_mena_trigger = yes }
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/ep2_wedding_ceremony_indian.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_wedding }
+#					OR = {
+#						steppe_building_gfx_use_indian_trigger = yes
+#						root.location = {
+#							culture ?= { has_graphical_india_culture_group_trigger = yes }
+#						}
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_indian_wedding"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_wedding }
+#					OR = {
+#						steppe_building_gfx_use_indian_trigger = yes
+#						root.location = {
+#							culture ?= { has_graphical_india_culture_group_trigger = yes }
+#						}
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/tgp_wedding_ceremony_asia.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_wedding }
+#					root.location ?= {
+#						OR = {
+#							culture = { has_graphical_east_asia_culture_group_trigger = yes }
+#							steppe_building_gfx_use_east_asian_trigger = yes
+#						}
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_tgp_wedding_ceremony_asia"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_wedding }
+#					root.location ?= {
+#						OR = {
+#							culture = { has_graphical_east_asia_culture_group_trigger = yes }
+#							steppe_building_gfx_use_east_asian_trigger = yes
+#						}
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/ep2_wedding_ceremony_western.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_wedding }
+#				}
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_western_wedding"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_wedding }
+#				}
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/ep2_hunt_snowy_forest.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity = {
+#						has_activity_type = activity_hunt
+#						activity_root.location ?= {
+#							OR = {
+#								has_province_modifier = winter_normal_modifier
+#								has_province_modifier = winter_harsh_modifier
+#							}
+#						OR = {
+#							graphical_wilderness_forest_trigger = yes
+#							graphical_wilderness_forest_pine_trigger = yes
+#						}
+#					}
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_hunt_snowy_forest"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity = {
+#						has_activity_type = activity_hunt
+#						activity_root.location ?= {
+#							OR = {
+#								has_province_modifier = winter_normal_modifier
+#								has_province_modifier = winter_harsh_modifier
+#							}
+#						OR = {
+#							graphical_wilderness_forest_trigger = yes
+#							graphical_wilderness_forest_pine_trigger = yes
+#						}
+#					}
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/ep2_hunt_forest_managed.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity = {
+#						has_activity_type = activity_hunt
+#						activity_root.location ?= {
+#							OR = {
+#								has_building_or_higher = royal_forest_01
+#								has_building_or_higher = hunting_grounds_01
+#							}
+#					}
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_ep2_forest_managed"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity = {
+#						has_activity_type = activity_hunt
+#						activity_root.location ?= {
+#							OR = {
+#								has_building_or_higher = royal_forest_01
+#								has_building_or_higher = hunting_grounds_01
+#							}
+#					}
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/forest_pine.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity = {
+#						has_activity_type = activity_hunt
+#						activity_root.location ?= { graphical_wilderness_forest_pine_trigger = yes }
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_event_forest_pine"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity = {
+#						has_activity_type = activity_hunt
+#						activity_root.location ?= { graphical_wilderness_forest_pine_trigger = yes }
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/forest.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity = {
+#						has_activity_type = activity_hunt
+#						activity_root.location ?= { graphical_wilderness_forest_trigger = yes }
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_event_forest"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity = {
+#						has_activity_type = activity_hunt
+#						activity_root.location ?= { graphical_wilderness_forest_trigger = yes }
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/ep2_hunt_generic.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= {
+#						has_activity_type = activity_hunt
+#						activity_root.location = {
+#							culture = { has_graphical_east_asia_culture_group_trigger = yes }
+#						}
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_generic_hunt"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= {
+#						has_activity_type = activity_hunt
+#						activity_root.location = {
+#							culture = { has_graphical_east_asia_culture_group_trigger = yes }
+#						}
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/ep2_hunt_generic.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_hunt }
+#				}
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_generic_hunt"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_hunt }
+#				}
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/ep3_hagia_sophia.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_pilgrimage }
+#					involved_activity = {
+#						activity_root.location ?= { has_building_or_higher = hagia_sophia_01 }
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_ep3_hagia_sophia"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_pilgrimage }
+#					involved_activity = {
+#						activity_root.location ?= { has_building_or_higher = hagia_sophia_01 }
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/fp3_temple.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_pilgrimage }
+#					religion = religion:zoroastrianism_religion
+#				}
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_event_fp3_temple"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_pilgrimage }
+#					religion = religion:zoroastrianism_religion
+#				}
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/mpo_temple_steppe.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_pilgrimage }
+#					OR = {
+#						religion = {
+#							OR = {
+#								this = religion:tengrism_religion
+#								this = religion:magyar_religion
+#								this = religion:siberian_religion
+#							}
+#					}
+#					AND = {
+#						religion = religion:buddhism_religion
+#						involved_activity = {
+#							activity_root.location = {
+#								OR = {
+#									geographical_region = world_steppe_east
+#									geographical_region = world_steppe_central
+#									geographical_region = world_steppe_west
+#									geographical_region = world_asia_north_east
+#								}
+#						}
+#					}
+#					}
+#					AND = {
+#						religion = religion:buddhism_religion
+#						involved_activity = {
+#							activity_root.location = {
+#								OR = {
+#									geographical_region = world_tibet
+#									geographical_region = world_steppe_tarim
+#								}
+#						}
+#					}
+#					involved_activity = {
+#						activity_root.location = {
+#							county = {
+#								title_province ?= {
+#									OR = {
+#										has_holding_type = tribal_holding
+#										has_holding_type = nomad_holding
+#										has_holding_type = herder_holding
+#									}
+#							}
+#					}
+#					}
+#					}
+#					}
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_mpo_temple_steppe"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_pilgrimage }
+#					OR = {
+#						religion = {
+#							OR = {
+#								this = religion:tengrism_religion
+#								this = religion:magyar_religion
+#								this = religion:siberian_religion
+#							}
+#					}
+#					AND = {
+#						religion = religion:buddhism_religion
+#						involved_activity = {
+#							activity_root.location = {
+#								OR = {
+#									geographical_region = world_steppe_east
+#									geographical_region = world_steppe_central
+#									geographical_region = world_steppe_west
+#									geographical_region = world_asia_north_east
+#								}
+#						}
+#					}
+#					}
+#					AND = {
+#						religion = religion:buddhism_religion
+#						involved_activity = {
+#							activity_root.location = {
+#								OR = {
+#									geographical_region = world_tibet
+#									geographical_region = world_steppe_tarim
+#								}
+#						}
+#					}
+#					involved_activity = {
+#						activity_root.location = {
+#							county = {
+#								title_province ?= {
+#									OR = {
+#										has_holding_type = tribal_holding
+#										has_holding_type = nomad_holding
+#										has_holding_type = herder_holding
+#									}
+#							}
+#					}
+#					}
+#					}
+#					}
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	# Orthodox and Oriental Christians
+#	texture = {
+#		reference = "event_scenes/ep3_holysite_orthodox.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_pilgrimage }
+#					religion = religion:christianity_religion
+#					involved_activity = {
+#						activity_root.location ?= {
+#							OR = {
+#								faith = faith:orthodox
+#								geographical_region = graphical_mena
+#								geographical_region = graphical_india
+#								geographical_region = world_europe_south_east
+#								geographical_region = world_asia_minor
+#							}
+#					}
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_ep3_holysite_orthodox"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_pilgrimage }
+#					religion = religion:christianity_religion
+#					involved_activity = {
+#						activity_root.location ?= {
+#							OR = {
+#								faith = faith:orthodox
+#								geographical_region = graphical_mena
+#								geographical_region = graphical_india
+#								geographical_region = world_europe_south_east
+#								geographical_region = world_asia_minor
+#							}
+#					}
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/tgp_holysite_asia.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_pilgrimage }
+#					involved_activity = {
+#						activity_root.location = {
+#							OR = {
+#								steppe_building_gfx_use_east_asian_trigger = yes
+#								culture = { has_graphical_east_asia_culture_group_trigger = yes }
+#							}
+#					}
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_tgp_holysite_asia"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_pilgrimage }
+#					involved_activity = {
+#						activity_root.location = {
+#							OR = {
+#								steppe_building_gfx_use_east_asian_trigger = yes
+#								culture = { has_graphical_east_asia_culture_group_trigger = yes }
+#							}
+#					}
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/ep2_holysite_mena.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_pilgrimage }
+#					involved_activity = {
+#						activity_root.location = {
+#							OR = {
+#								steppe_building_gfx_use_mena_trigger = yes
+#								culture = { has_graphical_mena_culture_group_trigger = yes }
+#							}
+#					}
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_generic_holy_site_mena"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_pilgrimage }
+#					involved_activity = {
+#						activity_root.location = {
+#							OR = {
+#								steppe_building_gfx_use_mena_trigger = yes
+#								culture = { has_graphical_mena_culture_group_trigger = yes }
+#							}
+#					}
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/ep2_holysite_indian.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_pilgrimage }
+#					involved_activity = {
+#						activity_root.location = {
+#							OR = {
+#								steppe_building_gfx_use_indian_trigger = yes
+#								culture = { has_graphical_india_culture_group_trigger = yes }
+#							}
+#					}
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_indian_holy_site"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_pilgrimage }
+#					involved_activity = {
+#						activity_root.location = {
+#							OR = {
+#								steppe_building_gfx_use_indian_trigger = yes
+#								culture = { has_graphical_india_culture_group_trigger = yes }
+#							}
+#					}
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/fp2_temple.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_pilgrimage }
+#					involved_activity = {
+#						activity_root.location = {
+#							culture = { has_graphical_iberian_culture_group_trigger = yes }
+#						}
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_event_fp2_temple"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_pilgrimage }
+#					involved_activity = {
+#						activity_root.location = {
+#							culture = { has_graphical_iberian_culture_group_trigger = yes }
+#						}
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/ep2_holysite_western.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_pilgrimage }
+#					involved_activity = {
+#						activity_root.location = {
+#							OR = {
+#								steppe_building_gfx_use_western_trigger = yes
+#								culture = { has_graphical_western_culture_group_trigger = yes }
+#							}
+#					}
+#					}
+#					NOT = {
+#						religion ?= { is_in_family = rf_pagan }
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_western_holy_site"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_pilgrimage }
+#					involved_activity = {
+#						activity_root.location = {
+#							OR = {
+#								steppe_building_gfx_use_western_trigger = yes
+#								culture = { has_graphical_western_culture_group_trigger = yes }
+#							}
+#					}
+#					}
+#					NOT = {
+#						religion ?= { is_in_family = rf_pagan }
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/ep2_holysite_tribal.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_pilgrimage }
+#					OR = {
+#						involved_activity = {
+#							activity_root.location = {
+#								county = {
+#									holder ?= {
+#										OR = {
+#											government_has_flag = government_is_tribal
+#											government_has_flag = government_is_nomadic
+#											government_has_flag = government_is_herder
+#										}
+#								}
+#						}
+#					}
+#					}
+#					involved_activity = {
+#						activity_root.location = {
+#							culture = { has_graphical_steppe_culture_group_trigger = yes }
+#						}
+#					}
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_event_garden"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_pilgrimage }
+#					OR = {
+#						involved_activity = {
+#							activity_root.location = {
+#								county = {
+#									holder ?= {
+#										OR = {
+#											government_has_flag = government_is_tribal
+#											government_has_flag = government_is_nomadic
+#											government_has_flag = government_is_herder
+#										}
+#								}
+#						}
+#					}
+#					}
+#					involved_activity = {
+#						activity_root.location = {
+#							culture = { has_graphical_steppe_culture_group_trigger = yes }
+#						}
+#					}
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/fp1_tribal_temple.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_pilgrimage }
+#					involved_activity = {
+#						activity_root.location = {
+#							culture = { has_graphical_norse_culture_group_trigger = yes }
+#						}
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_event_fp1_tribal_temple"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_pilgrimage }
+#					involved_activity = {
+#						activity_root.location = {
+#							culture = { has_graphical_norse_culture_group_trigger = yes }
+#						}
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/ep2_holysite_tribal.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_pilgrimage }
+#					involved_activity = {
+#						activity_root.location = {
+#							county = {
+#								holder ?= {
+#									OR = {
+#										government_has_flag = government_is_tribal
+#										government_has_flag = government_is_nomadic
+#										government_has_flag = government_is_herder
+#									}
+#							}
+#					}
+#					}
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_event_garden"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_pilgrimage }
+#					involved_activity = {
+#						activity_root.location = {
+#							county = {
+#								holder ?= {
+#									OR = {
+#										government_has_flag = government_is_tribal
+#										government_has_flag = government_is_nomadic
+#										government_has_flag = government_is_herder
+#									}
+#							}
+#					}
+#					}
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/temple.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_pilgrimage }
+#				}
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_event_temple"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_pilgrimage }
+#				}
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/ep3_feast_byzantine.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_feast }
+#					involved_activity = {
+#						activity_root.location = {
+#							culture ?= { has_graphical_mediterranean_culture_group_trigger = yes }
+#						}
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_ep3_byzantine_feast"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_feast }
+#					involved_activity = {
+#						activity_root.location = {
+#							culture ?= { has_graphical_mediterranean_culture_group_trigger = yes }
+#						}
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/fp1_viking_feast.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_feast }
+#					involved_activity = {
+#						activity_root.location = {
+#							culture = { has_building_gfx = norse_building_gfx }
+#						}
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_event_fp1_viking_feast"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_feast }
+#					involved_activity = {
+#						activity_root.location = {
+#							culture = { has_building_gfx = norse_building_gfx }
+#						}
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/ep2_feast_indian.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_feast }
+#					involved_activity = {
+#						activity_root.location = {
+#							culture = { has_building_gfx = indian_building_gfx }
+#						}
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_indian_feast"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_feast }
+#					involved_activity = {
+#						activity_root.location = {
+#							culture = { has_building_gfx = indian_building_gfx }
+#						}
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/ep2_feast_mena.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_feast }
+#					OR = {
+#						involved_activity = {
+#							activity_root.location = {
+#								culture = { has_building_gfx = arabic_group_building_gfx }
+#							}
+#					}
+#					involved_activity = {
+#						activity_root.location = {
+#							culture = { has_building_gfx = berber_group_building_gfx }
+#						}
+#					}
+#					involved_activity = {
+#						activity_root.location = {
+#							culture = { has_building_gfx = iberian_building_gfx }
+#						}
+#					}
+#					involved_activity = {
+#						activity_root.location = {
+#							culture ?= { has_building_gfx = iranian_building_gfx }
+#						}
+#					}
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_mena_feast"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_feast }
+#					OR = {
+#						involved_activity = {
+#							activity_root.location = {
+#								culture = { has_building_gfx = arabic_group_building_gfx }
+#							}
+#					}
+#					involved_activity = {
+#						activity_root.location = {
+#							culture = { has_building_gfx = berber_group_building_gfx }
+#						}
+#					}
+#					involved_activity = {
+#						activity_root.location = {
+#							culture = { has_building_gfx = iberian_building_gfx }
+#						}
+#					}
+#					involved_activity = {
+#						activity_root.location = {
+#							culture ?= { has_building_gfx = iranian_building_gfx }
+#						}
+#					}
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/ep2_feast_steppe.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_feast }
+#					involved_activity = {
+#						activity_root.location = {
+#							culture = { has_building_gfx = steppe_building_gfx }
+#						}
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_steppe_feast"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_feast }
+#					involved_activity = {
+#						activity_root.location = {
+#							culture = { has_building_gfx = steppe_building_gfx }
+#						}
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/ep2_feast_sub_saharan.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_feast }
+#					culture = { has_building_gfx = african_building_gfx }
+#				}
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_sub-saharan_feast"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_feast }
+#					culture = { has_building_gfx = african_building_gfx }
+#				}
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/tgp_feast_asia.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_feast }
+#					involved_activity = {
+#						activity_root.location = {
+#							OR = {
+#								steppe_building_gfx_use_east_asian_trigger = yes
+#								culture = { has_graphical_east_asia_culture_group_trigger = yes }
+#							}
+#					}
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_tgp_feast_asia"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#			location = {
+#				province_owner = {
+#					involved_activity ?= { has_activity_type = activity_feast }
+#					involved_activity = {
+#						activity_root.location = {
+#							OR = {
+#								steppe_building_gfx_use_east_asian_trigger = yes
+#								culture = { has_graphical_east_asia_culture_group_trigger = yes }
+#							}
+#					}
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	texture = {
+#		reference = "event_scenes/feast.dds"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#		}
+#	}
+#
+#	environment = {
+#		reference = "environment_event_feast"
+#		trigger = {
+#			global_var:talk_scene = flag:talk_scene_involved_activity
+#		}
+#	}
 
 	texture = {
 		reference = "event_scenes/mpo_tent_interior_mongol.dds"
