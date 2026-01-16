@@ -1,4 +1,4 @@
-﻿log_character_v2 = {
+log_character_v2 = {
 	debug_log = log_character
 
 #	#log_relations = yes
@@ -24,9 +24,15 @@
 #	log_legitimacy = yes
 #	log_income = yes
 	log_treasury = yes
+	log_influence = yes
+	log_herd = yes
 
 	#log_dna = yes
 	#log_test = yes
+}
+
+log_test = {
+	debug_log = income
 }
 
 log_relations = {
@@ -297,6 +303,28 @@ log_treasury = {
 	}
 	else = {
 		debug_log = "VOTC:IN/;/treasury/;/[THIS.Char.GetID]/;/no"
+	}
+}
+
+log_influence = {
+	# Log influence information
+	# Format: VOTC:IN/;/influence/;/char_id/;/influence_amount/;/STARTMULTILINE#influence_tooltip#ENDMULTILINE
+	debug_log = "VOTC:IN/;/influence/;/[THIS.Char.GetID]/;/[THIS.Char.GetInfluence]/;/STARTMULTILINE#[THIS.Char.GetInfluenceTooltipWithBalance]#ENDMULTILINE"
+}
+
+log_herd = {
+	# Log herd information
+	# Format: VOTC:IN/;/herd/;/char_id/;/has_domicile/;/herd_amount/;/STARTMULTILINE#herd_breakdown#ENDMULTILINE
+	if = {
+		limit = {
+			exists = domicile
+		}
+		domicile = {
+			debug_log = "VOTC:IN/;/herd/;/[THIS.Char.GetID]/;/yes/;/[Domicile.GetHerd]/;/STARTMULTILINE#[Domicile.GetHerdBreakdown]#ENDMULTILINE"
+		}
+	}
+	else = {
+		debug_log = "VOTC:IN/;/herd/;/[THIS.Char.GetID]/;/no"
 	}
 }
 
