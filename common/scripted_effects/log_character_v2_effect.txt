@@ -22,13 +22,11 @@
 #	log_modifiers = yes
 #	log_stress = yes
 #	log_legitimacy = yes
+#	log_income = yes
+	log_treasury = yes
 
 	#log_dna = yes
-	log_test = yes
-}
-
-log_test = {
-	debug_log = income
+	#log_test = yes
 }
 
 log_relations = {
@@ -279,6 +277,26 @@ log_legitimacy = {
 	}
 	else = {
 		debug_log = "VOTC:IN/;/legitimacy/;/[THIS.Char.GetID]/;/invalid"
+	}
+}
+
+log_income = {
+	# Log gold, balance, and balance breakdown
+	# Format: VOTC:IN/;/income/;/char_id/;/gold/;/balance/;/STARTMULTILINE#balance_breakdown#ENDMULTILINE
+	debug_log = "VOTC:IN/;/income/;/[THIS.Char.GetID]/;/[THIS.Char.GetGold]/;/[THIS.Char.GetBalance]/;/STARTMULTILINE#[THIS.Char.GetBalanceBreakdown]#ENDMULTILINE"
+}
+
+log_treasury = {
+	# Log treasury information
+	# Format: VOTC:IN/;/treasury/;/char_id/;/has_treasury/;/treasury_amount/;/STARTMULTILINE#treasury_tooltip#ENDMULTILINE
+	if = {
+		limit = {
+			has_treasury = yes
+		}
+		debug_log = "VOTC:IN/;/treasury/;/[THIS.Char.GetID]/;/yes/;/[THIS.Char.GetTreasury]/;/STARTMULTILINE#[THIS.Char.GetTreasuryTooltipWithBalance]#ENDMULTILINE"
+	}
+	else = {
+		debug_log = "VOTC:IN/;/treasury/;/[THIS.Char.GetID]/;/no"
 	}
 }
 
