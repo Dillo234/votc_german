@@ -1,4 +1,4 @@
-#datacontext is the talking partner, use the 'talk_first_scope' global variable to scope the player
+﻿#datacontext is the talking partner, use the 'talk_first_scope' global variable to scope the player
 log_background = {
 	
 	##########################################
@@ -14,7 +14,7 @@ log_background = {
 				province_owner = {
 					OR = {
 						primary_title = title:e_byzantium
-						primary_title = title:e_roman_empire
+						primary_title = title:h_roman_empire
 						AND = {
 							culture = {
 								OR = {
@@ -45,7 +45,7 @@ log_background = {
 					liege = {
 						OR = {
 							primary_title = title:e_byzantium
-							primary_title = title:e_roman_empire 
+							primary_title = title:h_roman_empire 
 							AND = {
 								culture = {
 									OR = {
@@ -77,7 +77,7 @@ log_background = {
 					top_liege = {
 						OR = {
 							primary_title = title:e_byzantium
-							primary_title = title:e_roman_empire 
+							primary_title = title:h_roman_empire 
 							AND = {
 								culture = {
 									OR = {

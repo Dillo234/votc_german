@@ -1,4 +1,4 @@
-namespace = revotc_silence_ck3_errors_event
+﻿namespace = revotc_silence_ck3_errors_event
 
 revotc_silence_ck3_errors_event.0001 = {
     hidden = yes

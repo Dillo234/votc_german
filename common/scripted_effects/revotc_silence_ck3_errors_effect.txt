@@ -1,4 +1,4 @@
-revotc_silence_ck3_errors_effect = {
+﻿revotc_silence_ck3_errors_effect = {
     save_scope_as = $ERROR$
     add_to_list = $ERROR$
     clear_variable_list = $ERROR$

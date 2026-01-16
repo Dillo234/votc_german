@@ -1,4 +1,4 @@
-namespace = talk_event
+﻿namespace = talk_event
 
 ## 
 ##9000 - 9999 hidden events

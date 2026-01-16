@@ -12,9 +12,9 @@ window = {
 		on_finish = "[GetVariableSystem.Set( 'blur', '1' )]"
 		
 	}
-
+	datacontext = "[GetIllustration('talk_background')]"
 	background = {
-		texture = "[GetIllustration('talk_background').GetTexture(GetPlayer.MakeScope)]"
+		texture = "[Illustration.GetTexture(GetPlayer.MakeScope)]"
 	}
 	
 	conversation_partner_v2 = {

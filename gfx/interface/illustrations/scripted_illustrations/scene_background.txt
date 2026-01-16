@@ -7142,7 +7142,7 @@ talk_background = {
 		}
 	}
 
-	texture = {
+		texture = {
 		reference = "event_scenes/fp2_throneroom.dds"
 		trigger = {
 			global_var:talk_scene = flag:talk_scene_throne_room
@@ -7457,7 +7457,7 @@ talk_background = {
 			location = {
 				province_owner = {
 					domicile ?= { is_domicile_type = east_asian_estate }
-					has_graphical_steppe_culture_group_trigger = yes
+					root.location.culture = { has_graphical_steppe_culture_group_trigger = yes }
 				}
 			}
 		}
@@ -7470,7 +7470,7 @@ talk_background = {
 			location = {
 				province_owner = {
 					domicile ?= { is_domicile_type = east_asian_estate }
-					has_graphical_steppe_culture_group_trigger = yes
+					root.location.culture = { has_graphical_steppe_culture_group_trigger = yes }
 				}
 			}
 		}

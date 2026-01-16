@@ -1,0 +1,1014 @@
+﻿alpha_interaction = {
+	category = interaction_category_friendly
+	use_diplomatic_range = yes
+	ignores_pending_interaction_block = yes
+	interface_priority = 200
+	common_interaction = yes
+	desc = mcc_interaction.desc
+
+
+	ai_will_do = {
+		base = 0
+	}
+
+	is_valid = {
+		OR = {
+			custom_description = {
+				text = not_in_same_province
+				scope:actor.location = scope:recipient.location
+				
+			}
+			scope:actor = {
+				is_available_adult = yes
+			}
+			
+		}
+	}
+	
+	on_accept = {
+	
+	#set talk_scene global var
+		if = {
+			limit = {
+				scope:talk_scene_alley_night = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_alley_night
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_alley_day = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_alley_day
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_armory = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_armory
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_battlefield = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_battlefield
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_temple = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_temple
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_corridor_night        = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_corridor_night       
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_corridor_day = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_corridor_day
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_council_chamber       = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_council_chamber      
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_courtyard = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_courtyard
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_dungeon = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_dungeon
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_ocean = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_ocean
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_terrain_travel        = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_terrain_travel       
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_docks = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_docks
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_farmland = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_farmland
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_feast = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_feast
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_gallows = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_gallows
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_garden = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_garden
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_market = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_market
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_village = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_village
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_burning_building = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_burning_building
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_sitting_room = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_sitting_room
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_bedchamber = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_bedchamber
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_study = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_study
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_relaxing_room = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_relaxing_room
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_physicians_study = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_physicians_study
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_tavern = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_tavern
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_throne_room = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_throne_room
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_estate = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_estate
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_army_camp = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_army_camp
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_bath_house = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_bath_house
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_runestone = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_runestone
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_runestone_circle = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_runestone_circle
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_beached_longships = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_beached_longships
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_kitchen = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_kitchen
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_bonfire = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_bonfire
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_wine_cellar = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_wine_cellar
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_crossroads_inn = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_crossroads_inn
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_cave = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_cave
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_tournament = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_tournament
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_holy_site = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_holy_site
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_travel_bridge = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_travel_bridge
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_hunt_forest_hut = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_hunt_forest_hut
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_hunt_forest_cave = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_hunt_forest_cave
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_hunt_foggy_forest = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_hunt_foggy_forest
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_dog_kennels = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_dog_kennels
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_hunt_poachers_camp = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_hunt_poachers_camp
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_hunt_activity_camp = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_hunt_activity_camp
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_wedding_ceremony = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_wedding_ceremony
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_involved_activity = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_involved_activity
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_nursery = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_nursery
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_courtyard = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_courtyard
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_university = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_university
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_catacombs = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_catacombs
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_condemned_village = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_condemned_village
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_funeral_pyre = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_funeral_pyre
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_legendary_battlefield = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_legendary_battlefield
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_constantinople = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_constantinople
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_city_gate = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_city_gate
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_relaxing_tent = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_relaxing_tent
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_survey = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_survey
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_terrain_settlement = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_terrain_settlement
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_terrain_settlement_no_owner = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_terrain_settlement_no_owner
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_campfire = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_campfire
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_camp = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_camp
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_camp_night = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_camp_night
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_military_tent = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_military_tent
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_village_festival = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_village_festival
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_coast = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_coast
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_city_steppe = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_city_steppe
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_examination_room = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_examination_room
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_chinese_city = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_chinese_city
+			}
+		}
+		if = {
+			limit = {
+				scope:talk_scene_japanese_city = yes
+			}
+			set_global_variable = {
+				name = talk_scene
+				value = flag:talk_scene_japanese_city
+			}
+		}		
+		##
+		
+		if = {
+			limit = {
+				OR = {
+scope:talk_scene_alley_night = yes
+scope:talk_scene_alley_day = yes
+scope:talk_scene_armory = yes
+scope:talk_scene_battlefield = yes
+scope:talk_scene_temple = yes
+scope:talk_scene_corridor_night        = yes
+scope:talk_scene_corridor_day = yes
+scope:talk_scene_council_chamber       = yes
+scope:talk_scene_courtyard = yes
+scope:talk_scene_dungeon = yes
+scope:talk_scene_ocean = yes
+scope:talk_scene_terrain_travel        = yes
+scope:talk_scene_docks = yes
+scope:talk_scene_farmland = yes
+scope:talk_scene_feast = yes
+scope:talk_scene_gallows = yes
+scope:talk_scene_garden = yes
+scope:talk_scene_market = yes
+scope:talk_scene_village = yes
+scope:talk_scene_burning_building = yes
+scope:talk_scene_sitting_room = yes
+scope:talk_scene_bedchamber = yes
+scope:talk_scene_study = yes
+scope:talk_scene_relaxing_room = yes
+scope:talk_scene_physicians_study = yes
+scope:talk_scene_tavern = yes
+scope:talk_scene_throne_room = yes
+scope:talk_scene_estate = yes
+scope:talk_scene_army_camp = yes
+scope:talk_scene_bath_house = yes
+scope:talk_scene_runestone = yes
+scope:talk_scene_runestone_circle = yes
+scope:talk_scene_beached_longships = yes
+scope:talk_scene_kitchen = yes
+scope:talk_scene_bonfire = yes
+scope:talk_scene_wine_cellar = yes
+scope:talk_scene_crossroads_inn = yes
+scope:talk_scene_cave = yes
+scope:talk_scene_tournament = yes
+scope:talk_scene_holy_site = yes
+scope:talk_scene_travel_bridge = yes
+scope:talk_scene_hunt_forest_hut = yes
+scope:talk_scene_hunt_forest_cave = yes
+scope:talk_scene_hunt_foggy_forest = yes
+scope:talk_scene_dog_kennels = yes
+scope:talk_scene_hunt_poachers_camp = yes
+scope:talk_scene_hunt_activity_camp = yes
+scope:talk_scene_wedding_ceremony = yes
+scope:talk_scene_involved_activity = yes
+scope:talk_scene_nursery = yes
+scope:talk_scene_courtyard = yes
+scope:talk_scene_university = yes
+scope:talk_scene_catacombs = yes
+scope:talk_scene_condemned_village = yes
+scope:talk_scene_funeral_pyre = yes
+scope:talk_scene_legendary_battlefield = yes
+scope:talk_scene_constantinople = yes
+scope:talk_scene_city_gate = yes
+scope:talk_scene_relaxing_tent = yes
+scope:talk_scene_survey = yes
+scope:talk_scene_terrain_settlement = yes
+scope:talk_scene_terrain_settlement_no_owner = yes
+scope:talk_scene_campfire = yes
+scope:talk_scene_camp = yes
+scope:talk_scene_camp_night = yes
+scope:talk_scene_military_tent = yes
+scope:talk_scene_village_festival = yes
+scope:talk_scene_coast = yes
+scope:talk_scene_city_steppe = yes
+scope:talk_scene_examination_room = yes
+scope:talk_scene_chinese_city = yes
+scope:talk_scene_japanese_city = yes				}
+			}
+			scope:actor = { 
+				trigger_event = mcc_event_v2.1002
+			}
+		}
+		else = {
+			if = {
+				limit = {
+					scope:talk_travel = yes
+				}
+				
+				scope:actor = {
+					start_travel_plan = {
+					destination = scope:recipient.location
+					on_arrival_event = mcc_event_v2.1001
+					}
+				}
+				
+			}
+			
+		}
+		
+		
+	}
+	
+	
+	
+	send_option = {
+		flag = talk_scene_alley_night
+	}
+	send_option = {
+		flag = talk_scene_alley_day
+	}
+	send_option = {
+		flag = talk_scene_armory
+	}
+	send_option = {
+		flag = talk_scene_battlefield
+	}
+	send_option = {
+		flag = talk_scene_temple
+	}
+	send_option = {
+		flag = talk_scene_corridor_night       
+	}
+	send_option = {
+		flag = talk_scene_corridor_day
+	}
+	send_option = {
+		flag = talk_scene_council_chamber      
+	}
+	send_option = {
+		flag = talk_scene_courtyard
+	}
+	send_option = {
+		flag = talk_scene_dungeon
+	}
+	send_option = {
+		flag = talk_scene_ocean
+	}
+	send_option = {
+		flag = talk_scene_terrain_travel       
+	}
+	send_option = {
+		flag = talk_scene_docks
+	}
+	send_option = {
+		flag = talk_scene_farmland
+	}
+	send_option = {
+		flag = talk_scene_feast
+	}
+	send_option = {
+		flag = talk_scene_gallows
+	}
+	send_option = {
+		flag = talk_scene_garden
+	}
+	send_option = {
+		flag = talk_scene_market
+	}
+	send_option = {
+		flag = talk_scene_village
+	}
+	send_option = {
+		flag = talk_scene_burning_building
+	}
+	send_option = {
+		flag = talk_scene_sitting_room
+	}
+	send_option = {
+		flag = talk_scene_bedchamber
+	}
+	send_option = {
+		flag = talk_scene_study
+	}
+	send_option = {
+		flag = talk_scene_relaxing_room
+	}
+	send_option = {
+		flag = talk_scene_physicians_study
+	}
+	send_option = {
+		flag = talk_scene_tavern
+	}
+	send_option = {
+		flag = talk_scene_throne_room
+	}
+	send_option = {
+		flag = talk_scene_estate
+	}
+	send_option = {
+		flag = talk_scene_army_camp
+	}
+	send_option = {
+		flag = talk_scene_bath_house
+	}
+	send_option = {
+		flag = talk_scene_runestone
+	}
+	send_option = {
+		flag = talk_scene_runestone_circle
+	}
+	send_option = {
+		flag = talk_scene_beached_longships
+	}
+	send_option = {
+		flag = talk_scene_kitchen
+	}
+	send_option = {
+		flag = talk_scene_bonfire
+	}
+	send_option = {
+		flag = talk_scene_wine_cellar
+	}
+	send_option = {
+		flag = talk_scene_crossroads_inn
+	}
+	send_option = {
+		flag = talk_scene_cave
+	}
+	send_option = {
+		flag = talk_scene_tournament
+	}
+	send_option = {
+		flag = talk_scene_holy_site
+	}
+	send_option = {
+		flag = talk_scene_travel_bridge
+	}
+	send_option = {
+		flag = talk_scene_hunt_forest_hut
+	}
+	send_option = {
+		flag = talk_scene_hunt_forest_cave
+	}
+	send_option = {
+		flag = talk_scene_hunt_foggy_forest
+	}
+	send_option = {
+		flag = talk_scene_dog_kennels
+	}
+	send_option = {
+		flag = talk_scene_hunt_poachers_camp
+	}
+	send_option = {
+		flag = talk_scene_hunt_activity_camp
+	}
+	send_option = {
+		flag = talk_scene_wedding_ceremony
+	}
+	send_option = {
+		flag = talk_scene_involved_activity
+	}
+	send_option = {
+		flag = talk_scene_nursery
+	}
+	send_option = {
+		flag = talk_scene_courtyard
+	}
+	send_option = {
+		flag = talk_scene_university
+	}
+	send_option = {
+		flag = talk_scene_catacombs
+	}
+	send_option = {
+		flag = talk_scene_condemned_village
+	}
+	send_option = {
+		flag = talk_scene_funeral_pyre
+	}
+	send_option = {
+		flag = talk_scene_legendary_battlefield
+	}
+	send_option = {
+		flag = talk_scene_constantinople
+	}
+	send_option = {
+		flag = talk_scene_city_gate
+	}
+	send_option = {
+		flag = talk_scene_relaxing_tent
+	}
+	send_option = {
+		flag = talk_scene_survey
+	}
+	send_option = {
+		flag = talk_scene_terrain_settlement
+	}
+	send_option = {
+		flag = talk_scene_terrain_settlement_no_owner
+	}
+	send_option = {
+		flag = talk_scene_campfire
+	}
+	send_option = {
+		flag = talk_scene_camp
+	}
+	send_option = {
+		flag = talk_scene_camp_night
+	}
+	send_option = {
+		flag = talk_scene_military_tent
+	}
+	send_option = {
+		flag = talk_scene_village_festival
+	}
+	send_option = {
+		flag = talk_scene_coast
+	}
+	send_option = {
+		flag = talk_scene_city_steppe
+	}
+	send_option = {
+		flag = talk_scene_examination_room
+	}
+	send_option = {
+		flag = talk_scene_chinese_city
+	}
+	send_option = {
+		flag = talk_scene_japanese_city
+	}
+		send_option = {
+		is_shown = {
+			NOT = {scope:actor.location = scope:recipient.location}
+		}
+		flag = talk_travel
+	}
+	
+	
+	on_accept = {
+		scope:actor = {
+			trigger_event = mcc_event_v2.1002
+		}
+	}
+	auto_accept = yes
+	
+}

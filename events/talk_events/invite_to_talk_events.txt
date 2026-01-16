@@ -1,4 +1,4 @@
-namespace = invite_to_talk_event
+﻿namespace = invite_to_talk_event
 
 invite_to_talk_event.1002 = {
 	immediate = { 

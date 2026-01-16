@@ -1,4 +1,4 @@
-###TODO: WHY THE FUCK DOESNT "conversation_camera" WORK? MAKES NO FUCKING SENSE
+﻿###TODO: WHY THE FUCK DOESNT "conversation_camera" WORK? MAKES NO FUCKING SENSE
 
 conversation_camera2 = {
 	camera = {
