@@ -1,4 +1,4 @@
-log_character_v2 = {
+﻿log_character_v2 = {
 	debug_log = log_character
 
 #	#log_relations = yes
@@ -319,9 +319,7 @@ log_herd = {
 		limit = {
 			exists = domicile
 		}
-		domicile = {
-			debug_log = "VOTC:IN/;/herd/;/[THIS.Char.GetID]/;/yes/;/[Domicile.GetHerd]/;/STARTMULTILINE#[Domicile.GetHerdBreakdown]#ENDMULTILINE"
-		}
+		debug_log = "VOTC:IN/;/herd/;/[THIS.Char.GetID]/;/yes/;/[THIS.Char.GetDomicile.GetHerd]/;/STARTMULTILINE#[THIS.Char.GetDomicile.GetHerdBreakdown]#ENDMULTILINE"
 	}
 	else = {
 		debug_log = "VOTC:IN/;/herd/;/[THIS.Char.GetID]/;/no"
