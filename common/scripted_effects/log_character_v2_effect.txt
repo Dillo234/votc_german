@@ -1,38 +1,34 @@
 ﻿log_character_v2 = {
 	debug_log = log_character
 
-	#log_relations = yes
-	
-	log_opinion_breakdown = yes
-
-	#log_new_relations = yes
-
-	log_new_relations_test = yes
-
-	log_opinions = yes
-
-	log_personality_traits = yes
-
-	log_memories = yes
-
-	log_secrets = yes
-
-	log_ksecrets = yes
-
-	log_modifiers = yes
-	log_stress = yes
+#	#log_relations = yes
+#	
+#	log_opinion_breakdown = yes
+#
+#	#log_new_relations = yes
+#
+#	log_new_relations_test = yes
+#
+#	log_opinions = yes
+#
+#	log_personality_traits = yes
+#
+#	log_memories = yes
+#
+#	log_secrets = yes
+#
+#	log_ksecrets = yes
+#
+#	log_modifiers = yes
+#	log_stress = yes
+#	log_legitimacy = yes
 
 	#log_dna = yes
-	#log_test = yes
+	log_test = yes
 }
 
 log_test = {
-	if = {
-		limit = {
-			has_character_modifier = matilda_of_canossa_modifier
-		}
-		debug_log = "VOTC:IN/;/modifier/;/[THIS.Char.GetID]/;/matilda_of_canossa_modifier"
-	}
+	debug_log = income
 }
 
 log_relations = {
@@ -270,6 +266,20 @@ log_stress = {
 	# Log stress value, level, and progress
 	# Format: VOTC:IN/;/stress/;/char_id/;/stress_value/;/stress_level/;/stress_progress
 	debug_log = "VOTC:IN/;/stress/;/[THIS.Char.GetID]/;/[THIS.Char.GetStress]/;/[THIS.Char.GetStressLevel]/;/[THIS.Char.GetStressProgress]"
+}
+
+log_legitimacy = {
+	# Log legitimacy value, level, type, and expectations
+	# Format: VOTC:IN/;/legitimacy/;/char_id/;/legitimacy_value/;/legitimacy_level/;/legitimacy_type/;/avg_powerful_vassal_expectation/;/avg_vassal_expectation/;/liege_expectation
+	if = {
+		limit = {
+			is_valid_for_legitimacy_change = yes
+		}
+		debug_log = "VOTC:IN/;/legitimacy/;/[THIS.Char.GetID]/;/[THIS.Char.GetLegitimacy]/;/[THIS.Char.GetLegitimacyLevel.GetIndex]/;/[THIS.Char.GetLegitimacyType.GetName]/;/[THIS.Char.GetAveragePowerfulVassalLegitimacyExpectation.GetIndex]/;/[THIS.Char.GetAverageVassalLegitimacyExpectation.GetIndex]/;/[THIS.Char.GetLegitimacyExpectationsOfLiege]"
+	}
+	else = {
+		debug_log = "VOTC:IN/;/legitimacy/;/[THIS.Char.GetID]/;/invalid"
+	}
 }
 
 log_dna = {
