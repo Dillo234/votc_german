@@ -89,28 +89,28 @@ mcc_event_v2.1002 = {
 	desc = mcc_event.1002.desc
 	window = character_event
 
-	immediate = {
-		clear_variable_list = mcc_characters
-		scope:actor.location = {
-			every_character_in_location = {
-				limit = { 
-					is_alive = yes
-					not = { any_player = { this = prev } }
-				}
-				scope:actor = {
-					add_to_variable_list = {
-						name = mcc_characters
-						target = prev
-					}
-				}
-			}
-		}
-	}
-	
-	widget = {
-        gui = "mcc_select_characters"
-        container = "custom_widgets_container"
-    }
+#	immediate = {
+#		clear_variable_list = mcc_characters
+#		scope:actor.location = {
+#			every_character_in_location = {
+#				limit = { 
+#					is_alive = yes
+#					not = { any_player = { this = prev } }
+#				}
+#				scope:actor = {
+#					add_to_variable_list = {
+#						name = mcc_characters
+#						target = prev
+#					}
+#				}
+#			}
+#		}
+#	}
+#	
+#	widget = {
+#        gui = "mcc_select_characters"
+#        container = "custom_widgets_container"
+#    }
 
 	option ={
 		name = mcc_characters_selection_done_string
