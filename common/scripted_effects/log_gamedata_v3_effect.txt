@@ -31,6 +31,9 @@ log_gamedata_v3 = {
 
 	every_in_global_list = {
 		variable = mcc_characters_list_v2
+		limit = {
+			NOT = { this = scope:actor }
+		}
 		log_character_v2 = yes
 	}
 	scope:actor = {
