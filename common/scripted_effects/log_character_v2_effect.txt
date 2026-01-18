@@ -15,13 +15,13 @@
 #
 #	log_memories = yes
 
-	log_secrets = yes
+#	log_secrets = yes
+#
+#	log_ksecrets = yes
 
-	log_ksecrets = yes
-
-#	log_modifiers = yes
-#	log_stress = yes
-#	log_legitimacy = yes
+	log_modifiers = yes
+	log_stress = yes
+	log_legitimacy = yes
 #	log_income = yes
 #	log_treasury = yes
 #	log_influence = yes
@@ -292,7 +292,7 @@ log_legitimacy = {
 		debug_log = "VOTC:IN/;/legitimacy/;/[THIS.Char.GetID]/;/[THIS.Char.GetLegitimacy]/;/[THIS.Char.GetLegitimacyLevel.GetIndex]/;/[THIS.Char.GetLegitimacyType.GetName]/;/[THIS.Char.GetAveragePowerfulVassalLegitimacyExpectation.GetIndex]/;/[THIS.Char.GetAverageVassalLegitimacyExpectation.GetIndex]/;/[THIS.Char.GetLegitimacyExpectationsOfLiege]"
 	}
 	else = {
-		debug_log = "VOTC:IN/;/legitimacy/;/[THIS.Char.GetID]/;/invalid"
+		debug_log = "VOTC:IN/;/legitimacy/;/[THIS.Char.GetID]/;/no"
 	}
 }
 
