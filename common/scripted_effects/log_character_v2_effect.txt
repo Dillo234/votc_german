@@ -19,17 +19,16 @@
 #
 #	log_ksecrets = yes
 
-	log_modifiers = yes
-	log_stress = yes
-	log_legitimacy = yes
+#	log_modifiers = yes
+#	log_stress = yes
+#	log_legitimacy = yes
 #	log_income = yes
 #	log_treasury = yes
 #	log_influence = yes
 #	log_herd = yes
 
-	#log_troops = yes
-
-#	log_title_laws = yes
+	log_troops = yes
+	log_title_laws = yes
 	#log_test = yes
 }
 
@@ -295,7 +294,7 @@ log_legitimacy = {
 		debug_log = "VOTC:IN/;/legitimacy/;/[THIS.Char.GetID]/;/no"
 	}
 }
-
+##########
 log_income = {
 	# Log gold, balance, and balance breakdown
 	# Format: VOTC:IN/;/income/;/char_id/;/gold/;/balance/;/STARTMULTILINE#balance_breakdown#ENDMULTILINE
@@ -335,17 +334,17 @@ log_herd = {
 		debug_log = "VOTC:IN/;/herd/;/[THIS.Char.GetID]/;/[THIS.Char.GetDomicile.GetHerd]/;/STARTMULTILINE#[THIS.Char.GetDomicile.GetHerdBreakdown]#ENDMULTILINE"
 	}
 }
-
+##########
 log_troops = {
-	debug_log = "VOTC:IN/;/levies_vassals/;/[THIS.ScriptValue('levies_total')]"
+	debug_log = "VOTC:IN/;/levies_vassals/;/[THIS.Char.GetID]/;/[THIS.ScriptValue('levies_total')]"
 	every_directly_owned_province = {
-		debug_log = "VOTC:IN/;/levies_dom/;/[THIS.Province.GetHolding.GetMaxLevySize]"
+		debug_log = "VOTC:IN/;/levies_dom/;/[PREV.Char.GetID]/;/[THIS.Province.GetHolding.GetMaxLevySize]"
 	}
-	debug_log = "VOTC:IN/;/levies_theo/;/[THIS.Char.GetLeviesFromTheocraticLease]"
+	debug_log = "VOTC:IN/;/levies_theo/;/[THIS.Char.GetID]/;/[THIS.Char.GetLeviesFromTheocraticLease]"
 	every_maa_regiment = {
-		#Format: VOTC:IN/;/maa/;/MAA_name/;/MAA_is_personal/;/MenAlive
-		debug_log = "VOTC:IN/;/maa/;/[THIS.Regiment.GetNameNoTooltip]/;/[THIS.Regiment.IsPersonal]/;/[THIS.Regiment.CalcMenAliveCount]"
+		debug_log = "VOTC:IN/;/maa/;/[PREV.Char.GetID]/;/[THIS.Regiment.GetNameNoTooltip]/;/[THIS.Regiment.IsPersonal]/;/[THIS.Regiment.CalcMenAliveCount]"
 	}
+	debug_log = "VOTC:IN/;/troops_eob/;/[THIS.Char.GetID]/;/"
 }
 
 log_title_laws = {
