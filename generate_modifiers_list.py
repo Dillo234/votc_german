@@ -18,6 +18,26 @@ OUTPUT_FILE = MOD_DIR / "common/scripted_effects/log_modifiers_generated.txt"
 # Collect all modifier names
 modifier_names: Set[str] = set()
 
+def load_blacklist() -> Set[str]:
+    """Load the blacklist of invalid modifiers from invalid_modifiers.txt if it exists."""
+    blacklist = set()
+    blacklist_file = MOD_DIR / "invalid_modifiers.txt"
+    
+    if blacklist_file.exists():
+        try:
+            with open(blacklist_file, 'r', encoding='utf-8') as f:
+                for line in f:
+                    line = line.strip()
+                    if line:  # Skip empty lines
+                        blacklist.add(line)
+            print(f"Loaded {len(blacklist)} modifiers from blacklist")
+        except Exception as e:
+            print(f"Error loading blacklist: {e}")
+    else:
+        print("No blacklist file found, will include all modifiers")
+    
+    return blacklist
+
 def find_modifiers_in_directory(directory: Path) -> Set[str]:
     """Find all modifier definitions in a directory."""
     modifiers = set()
@@ -74,7 +94,7 @@ def find_all_modifiers() -> List[str]:
     print(f"\nTotal unique modifiers: {len(unique_modifiers)}")
     return unique_modifiers
 
-def generate_scripted_effect(modifiers: List[str]) -> str:
+def generate_scripted_effect(modifiers: List[str], blacklist: Set[str]) -> str:
     """Generate a scripted effect that checks each modifier."""
     output = []
     
@@ -87,8 +107,15 @@ def generate_scripted_effect(modifiers: List[str]) -> str:
     output.append("\t# Format: VOTC:IN/;/modifier/;/char_id/;/modifier_id/;/localized_name/;/localized_desc")
     output.append("")
     
-    # Generate check for each modifier
+    # Generate check for each modifier that's not in the blacklist
+    skipped_count = 0
     for i, modifier in enumerate(modifiers):
+        if modifier in blacklist:
+            skipped_count += 1
+            output.append(f"\t# Skipped blacklisted modifier: {modifier}")
+            output.append("")
+            continue
+            
         output.append(f"\t# Check for {modifier}")
         output.append(f"\tif = {{")
         output.append(f"\t\tlimit = {{")
@@ -101,12 +128,20 @@ def generate_scripted_effect(modifiers: List[str]) -> str:
     
     output.append("}")
     
+    # Add summary comment at the end
+    output.append("")
+    output.append(f"# Generated checks for {len(modifiers) - skipped_count} modifiers")
+    output.append(f"# Skipped {skipped_count} blacklisted modifiers")
+    
     return "\n".join(output)
 
 def main():
     print("="*60)
     print("Generating modifiers list for logging")
     print("="*60)
+    
+    # Load blacklist if it exists
+    blacklist = load_blacklist()
     
     # Find all modifiers
     modifiers = find_all_modifiers()
@@ -117,7 +152,7 @@ def main():
     
     # Generate scripted effect
     print("\nGenerating scripted effect...")
-    effect_content = generate_scripted_effect(modifiers)
+    effect_content = generate_scripted_effect(modifiers, blacklist)
     
     # Write to file
     print(f"\nWriting to {OUTPUT_FILE}...")
@@ -125,16 +160,33 @@ def main():
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
         f.write(effect_content)
     
-    print(f"Done! Generated checks for {len(modifiers)} modifiers")
+    included_count = len(modifiers) - len([m for m in modifiers if m in blacklist])
+    print(f"Done! Generated checks for {included_count} modifiers (skipped {len(modifiers) - included_count} blacklisted)")
     print(f"Output: {OUTPUT_FILE}")
     
     # Also print summary
     print("\n" + "="*60)
     print("First 10 modifiers:")
-    for mod in modifiers[:10]:
-        print(f"  - {mod}")
+    count = 0
+    for mod in modifiers:
+        if mod not in blacklist:
+            print(f"  - {mod}")
+            count += 1
+            if count >= 10:
+                break
+    
     if len(modifiers) > 10:
-        print(f"  ... and {len(modifiers) - 10} more")
+        remaining = len([m for m in modifiers if m not in blacklist]) - count
+        if remaining > 0:
+            print(f"  ... and {remaining} more")
+    
+    if blacklist:
+        print(f"\nBlacklisted modifiers (first 5):")
+        for mod in list(blacklist)[:5]:
+            print(f"  - {mod}")
+        if len(blacklist) > 5:
+            print(f"  ... and {len(blacklist) - 5} more")
+    
     print("="*60)
 
 if __name__ == "__main__":

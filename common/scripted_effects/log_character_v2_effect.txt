@@ -1,34 +1,34 @@
 ﻿log_character_v2 = {
 	debug_log = log_character
 
-#	#log_relations = yes
-#	
-#	log_opinion_breakdown = yes
-#
-#	#log_new_relations = yes
-#
-#	log_new_relations_test = yes
-#
-#	log_opinions = yes
-#
-#	log_personality_traits = yes
-#
-#	log_memories = yes
+	#log_relations = yes
+	
+	log_opinion_breakdown = yes
 
-#	log_secrets = yes
-#	log_ksecrets = yes
+	#log_new_relations = yes
 
-#	log_modifiers = yes
-#	log_stress = yes
-#	log_legitimacy = yes
+	log_new_relations_test = yes
+
+	log_opinions = yes
+
+	log_personality_traits = yes
+
+	log_memories = yes
+
+	log_secrets = yes
+	log_ksecrets = yes
+
+	log_modifiers = yes
+	log_stress = yes
+	log_legitimacy = yes
 
 	log_income = yes
 	log_treasury = yes
 	log_influence = yes
 	log_herd = yes
 
-#	log_troops = yes
-#	log_title_laws = yes
+	log_troops = yes
+	log_title_laws = yes
 	#log_test = yes
 }
 
