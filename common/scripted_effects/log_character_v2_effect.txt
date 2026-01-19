@@ -16,19 +16,19 @@
 #	log_memories = yes
 
 #	log_secrets = yes
-#
 #	log_ksecrets = yes
 
 #	log_modifiers = yes
 #	log_stress = yes
 #	log_legitimacy = yes
-#	log_income = yes
-#	log_treasury = yes
-#	log_influence = yes
-#	log_herd = yes
 
-	log_troops = yes
-	log_title_laws = yes
+	log_income = yes
+	log_treasury = yes
+	log_influence = yes
+	log_herd = yes
+
+#	log_troops = yes
+#	log_title_laws = yes
 	#log_test = yes
 }
 
@@ -303,15 +303,12 @@ log_income = {
 
 log_treasury = {
 	# Log treasury information
-	# Format: VOTC:IN/;/treasury/;/char_id/;/has_treasury/;/treasury_amount/;/STARTMULTILINE#treasury_tooltip#ENDMULTILINE
+	# Format: VOTC:IN/;/treasury/;/char_id/;/treasury_amount/;/STARTMULTILINE#treasury_tooltip#ENDMULTILINE
 	if = {
 		limit = {
 			has_treasury = yes
 		}
-		debug_log = "VOTC:IN/;/treasury/;/[THIS.Char.GetID]/;/yes/;/[THIS.Char.GetTreasury]/;/STARTMULTILINE#[THIS.Char.GetTreasuryTooltipWithBalance]#ENDMULTILINE"
-	}
-	else = {
-		debug_log = "VOTC:IN/;/treasury/;/[THIS.Char.GetID]/;/no"
+		debug_log = "VOTC:IN/;/treasury/;/[THIS.Char.GetID]/;/[THIS.Char.GetTreasury]/;/STARTMULTILINE#[THIS.Char.GetTreasuryTooltipWithBalance]#ENDMULTILINE"
 	}
 }
 
@@ -330,6 +327,7 @@ log_herd = {
 	if = {
 		limit = {
 			exists = domicile
+			government_has_flag = government_is_nomadic
 		}
 		debug_log = "VOTC:IN/;/herd/;/[THIS.Char.GetID]/;/[THIS.Char.GetDomicile.GetHerd]/;/STARTMULTILINE#[THIS.Char.GetDomicile.GetHerdBreakdown]#ENDMULTILINE"
 	}
