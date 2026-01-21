@@ -29,7 +29,9 @@
 
 	log_troops = yes
 	log_title_laws = yes
-	#log_test = yes
+
+	log_relatives = yes
+#	#log_test = yes
 }
 
 log_test = {
@@ -87,24 +89,70 @@ log_new_relations_test = {
 
 log_opinions = {
 	save_scope_as = mcc_tmp_char
-	scope:actor = {
-		every_pinned_character = {
-			if = {
-				limit = {
-					is_at_same_location = scope:actor
-					NOT = { this = scope:mcc_tmp_char }
-				}
+	every_in_global_list = {
+    	variable = mcc_characters_list_v2
+    	if = {
+			limit = {
+				is_at_same_location = scope:actor
+				NOT = { this = prev }
+			}
 				scope:mcc_tmp_char = {
 					debug_log = "VOTC:IN/;/opinions/;/[THIS.Char.GetID]/;/[PREV.Char.GetID]/;/[THIS.Char.GetOpinionOf(PREV.Char.Self)]/;/"
 				}
+		}
+	}
+	scope:actor = {
+		if = {
+			limit = {
+				NOT = {
+					is_target_in_global_variable_list = {
+						name = mcc_characters_list_v2
+						target = this
+					}
+					this = prev
+				}
+			}
+			scope:mcc_tmp_char = {
+				debug_log = "VOTC:IN/;/opinions/;/[THIS.Char.GetID]/;/[PREV.Char.GetID]/;/[THIS.Char.GetOpinionOf(PREV.Char.Self)]/;/"
 			}
 		}
-	}	
-	## debug_log = "VOTC:IN/;/new_relations/;/[THIS.Char.GetID]/;/STARTMULTILINE#[THIS.Char.GetRelationToStringExtended(GetPlayer)]#ENDMULTILINE/;/"
+	}
 }
 
+#log_opinion_breakdown = {
+#	debug_log = "VOTC:IN/;/opinionBreakdown/;/[THIS.Char.GetID]/;/STARTMULTILINE#[THIS.Char.GetOpinionBreakdownText(GetPlayer)]#ENDMULTILINE/;/"
+#}
+
 log_opinion_breakdown = {
-	debug_log = "VOTC:IN/;/opinionBreakdown/;/[THIS.Char.GetID]/;/STARTMULTILINE#[THIS.Char.GetOpinionBreakdownText(GetPlayer)]#ENDMULTILINE/;/"
+	save_scope_as = mcc_tmp_char
+	every_in_global_list = {
+    	variable = mcc_characters_list_v2
+    	if = {
+			limit = {
+				is_at_same_location = scope:actor
+				NOT = { this = prev }
+			}
+			scope:mcc_tmp_char = {
+				debug_log = "VOTC:IN/;/opinionBreakdown/;/[THIS.Char.GetID]/;/[PREV.Char.GetID]/;/STARTMULTILINE#[THIS.Char.GetOpinionBreakdownText(PREV.Char)]#ENDMULTILINE/;/"
+			}
+		}
+	}
+	scope:actor = {
+		if = {
+			limit = {
+				NOT = {
+					is_target_in_global_variable_list = {
+						name = mcc_characters_list_v2
+						target = this
+					}
+					this = prev
+				}
+			}
+			scope:mcc_tmp_char = {
+				debug_log = "VOTC:IN/;/opinionBreakdown/;/[THIS.Char.GetID]/;/[PREV.Char.GetID]/;/STARTMULTILINE#[THIS.Char.GetOpinionBreakdownText(PREV.Char)]#ENDMULTILINE/;/"
+			}
+		}
+	}
 }
 
 log_personality_traits = {
@@ -356,4 +404,83 @@ log_title_laws = {
 	debug_log = "VOTC:IN/;/laws/;/[THIS.Char.GetID]/;/[THIS.Char.GetActiveLawInGroupWithFlag('treasury_budget_military').GetNameNoTooltip]"
 	debug_log = "VOTC:IN/;/laws/;/[THIS.Char.GetID]/;/[THIS.Char.GetActiveLawInGroupWithFlag('treasury_budget_ministry').GetNameNoTooltip]"
 	debug_log = "VOTC:IN/;/laws/;/[THIS.Char.GetID]/;/[THIS.Char.GetActiveLawInGroupWithFlag('treasury_budget_salary').GetNameNoTooltip]"
+}
+
+log_relatives = {
+	set_global_variable = {
+		name = revotc_mcc_tmp_var
+		value = this
+	}
+	save_scope_as = revotc_mcc_tmp_var
+	every_parent = {
+		even_if_dead = yes
+		debug_log = "VOTC:IN/;/parents/;/[PREV.Char.GetID]/;/[THIS.Char.GetID]/;/[THIS.Char.GetTitledFirstNameNicknamedNoTooltipRegnal]/;/[THIS.Char.GetBirthDate.GetDateAsTotalDays]/;/[THIS.Char.GetBirthDate.GetString]/;/"
+		if = {
+			limit = { is_alive = no }
+			debug_log = "VOTC:IN/;/parent_death/;/[PREV.Char.GetID]/;/[THIS.Char.GetID]/;/[THIS.Char.GetDeathDate.GetDateAsTotalDays]/;/[THIS.Char.GetDeathDate.GetStringShort]/;/[THIS.Char.GetDeathReason]/;/"
+		}
+	}
+	every_child = {
+		even_if_dead = yes
+		debug_log = "VOTC:IN/;/kids/;/[PREV.Char.GetID]/;/[THIS.Char.GetID]/;/[THIS.Char.GetTitledFirstNameNicknamedNoTooltipRegnal]/;/[THIS.Char.GetSheHe]/;/[THIS.Char.GetBirthDate.GetDateAsTotalDays]/;/[THIS.Char.GetBirthDate.GetString]/;/"
+		# kid other parent
+		if = {
+			limit = {
+				any_parent = {
+					even_if_dead = yes
+					count = 2 
+				}
+			}
+			every_parent = {
+				even_if_dead = yes
+				limit = {
+					NOT = { this = scope:revotc_mcc_tmp_var }
+				}
+				debug_log = "VOTC:IN/;/kid_other_parent/;/[GetGlobalVariable('revotc_mcc_tmp_var').GetCharacter.GetID]/;/[PREV.Char.GetID]/;/[THIS.Char.GetID]/;/[THIS.Char.GetTitledFirstNameNicknamedNoTooltipRegnal]"
+			}
+		}
+
+
+		if = {
+			limit = { is_alive = no }
+			debug_log = "VOTC:IN/;/kid_death/;/[PREV.Char.GetID]/;/[THIS.Char.GetID]/;/[THIS.Char.GetDeathDate.GetDateAsTotalDays]/;/[THIS.Char.GetDeathDate.GetStringShort]/;/[THIS.Char.GetDeathReason]/;/"
+		}
+		every_character_trait = {
+			debug_log = "VOTC:IN/;/kid_trait/;/[GetGlobalVariable('revotc_mcc_tmp_var').GetCharacter.GetID]/;/[PREV.Char.GetID]/;/[THIS.Trait.GetTraitCategoryLabel]/;/[THIS.Trait.GetNameNoTooltip(PREV.Char)]/;/[THIS.Trait.GetDescription(PREV.Char)]"
+		}
+
+		# kid marital status
+		if = {
+			limit = { 
+				is_concubine = yes
+			}
+			debug_log = "VOTC:IN/;/kid_is_concubine/;/[PREV.Char.GetID]/;/[THIS.Char.GetID]/;/[THIS.Char.GetConsort.GetID]/;/[THIS.Char.GetConsort.GetFullNameNicknamedNoTooltip]/;/"
+		}
+		else_if = {
+			limit = { 
+				any_consort = { count > 0 }
+			}
+			every_consort = {
+				if = {
+					limit = { 
+						is_concubine = yes
+					}
+					debug_log = "VOTC:IN/;/kid_concubine/;/[GetGlobalVariable('revotc_mcc_tmp_var').GetCharacter.GetID]/;/[PREV.Char.GetID]/;/[THIS.Char.GetID]/;/[THIS.Char.GetFullNameNicknamedNoTooltip]"
+				}
+				else = {
+					debug_log = "VOTC:IN/;/kid_spouse/;/[GetGlobalVariable('revotc_mcc_tmp_var').GetCharacter.GetID]/;/[PREV.Char.GetID]/;/[THIS.Char.GetID]/;/[THIS.Char.GetFullNameNicknamedNoTooltip]"
+				}
+			}
+		}
+		else_if = {
+			limit = { is_betrothed = yes }
+			betrothed = {
+				debug_log = "VOTC:IN/;/kid_betrothed/;/[GetGlobalVariable('revotc_mcc_tmp_var').GetCharacter.GetID]/;/[PREV.Char.GetID]/;/[THIS.Char.GetID]/;/[THIS.Char.GetFullNameNicknamedNoTooltip]"
+			}
+		}
+		else = { 
+			debug_log = "VOTC:IN/;/kid_unmarried/;/[PREV.Char.GetID]/;/[THIS.Char.GetID]/;/"
+		}
+		debug_log = "VOTC:IN/;/kid_eob/;/[PREV.Char.GetID]/;/[THIS.Char.GetID]/;/"
+	}
 }

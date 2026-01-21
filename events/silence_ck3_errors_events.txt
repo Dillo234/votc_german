@@ -6,6 +6,7 @@ revotc_silence_ck3_errors_event.0001 = {
 
     immediate = {
         hidden_effect = {
+			revotc_silence_ck3_errors_effect = { ERROR = revotc_mcc_tmp_var }
 			revotc_silence_ck3_errors_effect = { ERROR = idle }
 			revotc_silence_ck3_errors_effect = { ERROR = sad }
 			revotc_silence_ck3_errors_effect = { ERROR = sadness }
