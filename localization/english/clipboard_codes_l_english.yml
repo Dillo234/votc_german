@@ -9,3 +9,5 @@ talk_event.9003.desc:0 "VOTC:EFFECT_ACCEPTED"
 ##testing
 
 #talk_event.9001.desc:0 "[THIS.Char.GetPrimaryTitle]"
+
+message_event.361.desc:0 "VOTC:LETTER"

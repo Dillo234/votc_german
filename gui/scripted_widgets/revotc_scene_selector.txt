@@ -1,0 +1,1 @@
+gui/custom_gui/revotc_scene_selector.gui = revotc_scene_selector

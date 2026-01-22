@@ -1,0 +1,22 @@
+hbox = {
+	name = "event_window_widget_message_1"
+	layoutpolicy_horizontal = expanding
+	margin = { 10 0 }
+
+	state = {
+        name = pause
+        trigger_when = "[Not(IsGamePaused)]"
+        on_start = "[OnPause]"
+    }
+
+	state = {
+        name = widget_show
+        trigger_on_create = yes
+
+
+		on_start = "[ExecuteConsoleCommand('gui.createwidget gui/custom_gui/revotc_letter.gui revotc_letter')]"
+	}
+
+
+	expand = {}
+} 
