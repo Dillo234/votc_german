@@ -1,6 +1,6 @@
 ﻿window = {
-    visible = "[GetVariableSystem.Exists('revotc_scene_selector_opened')]"
-	name = "revotc_scene_selector"
+    visible = "[GetVariableSystem.Exists('votc_scene_selector_opened')]"
+	name = "votc_scene_selector"
 	size = { 100% 100% }
 	parentanchor = center
 	movable = no
@@ -22,12 +22,12 @@
 
             blockoverride "header_text"
             {
-                text = revotc_scene_selector_title
+                text = votc_scene_selector_title
             }
 
             blockoverride "button_close"
             {
-                onclick = "[GetVariableSystem.Clear('revotc_scene_selector_opened')]"
+                onclick = "[GetVariableSystem.Clear('votc_scene_selector_opened')]"
             }
         }
         hbox = {
@@ -39,7 +39,7 @@
                 layoutpolicy_vertical = expanding
                 
                 scrollbox = {
-                    name = "revotc_select_start_scene"
+                    name = "votc_select_start_scene"
                     layoutpolicy_horizontal = expanding
                     layoutpolicy_vertical = expanding
                     wheelstep = 99999999
@@ -57,14 +57,14 @@
                                     size = { 324 184 }
                                         button_standard_clean = {
                                             size = { 320 180 }
-                                            onclick = "[GetScriptedGui('revotc_select_talk_scene').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('selected_scene', MakeScopeFlag(Scope.GetFlagName)).End)]"
-                                            onclick = "[GetVariableSystem.Clear('revotc_scene_selector_opened')]"
+                                            onclick = "[GetScriptedGui('votc_select_talk_scene').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('selected_scene', MakeScopeFlag(Scope.GetFlagName)).End)]"
+                                            onclick = "[GetVariableSystem.Clear('votc_scene_selector_opened')]"
                                             vbox = {
                                                 layoutpolicy_horizontal = expanding
                                                 layoutpolicy_vertical = expanding
 
                                                 background = {
-                                                    name = "revotc_scene_background"
+                                                    name = "votc_scene_background"
                                                     texture = "[GetIllustration(Scope.GetFlagName).GetTexture( GetPlayer.MakeScope )]"
                                                     using = Mask_Rough_Edges
                                                     fittype = centercrop

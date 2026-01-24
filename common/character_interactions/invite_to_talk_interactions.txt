@@ -4,6 +4,7 @@
 	ignores_pending_interaction_block = yes
 	interface_priority = 200
 	common_interaction = yes
+	icon = offer_confederation_interaction
 	desc = invite_to_talk_interaction.desc
 
 	ai_will_do = {
@@ -11,17 +12,14 @@
 	}
 
 	is_valid = {
-		OR = {
 			custom_description = {
 				text = not_in_same_province
-				scope:actor.location = scope:recipient.location
+				NOT = { scope:actor.location = scope:recipient.location }
 				
 			}
 			scope:actor = {
 				is_available_adult = yes
 			}
-			
-		}
 	}
 	
 	on_accept = {

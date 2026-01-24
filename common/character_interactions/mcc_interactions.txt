@@ -4,6 +4,7 @@
 	ignores_pending_interaction_block = yes
 	interface_priority = 200
 	common_interaction = yes
+	icon = council
 	desc = mcc_interaction.desc
 
 
@@ -12,16 +13,8 @@
 	}
 
 	is_valid = {
-		OR = {
-			custom_description = {
-				text = not_in_same_province
-				scope:actor.location = scope:recipient.location
-				
-			}
-			scope:actor = {
-				is_available_adult = yes
-			}
-			
+		scope:actor = {
+			is_available_adult = yes
 		}
 	}
 	

@@ -1,5 +1,5 @@
 ﻿hbox = {
-	name = "revotc_scene_selector_widget"
+	name = "votc_scene_selector_widget"
 	layoutpolicy_horizontal = expanding
 	margin = { 10 0 }
 	
@@ -10,10 +10,10 @@
     }
   
   	state = {
-        name = revotc_scene_selector_show
+        name = votc_scene_selector_show
         trigger_on_create = yes
     	on_start = ""
-    	on_finish = "[GetVariableSystem.Toggle('revotc_scene_selector_opened')]"
+    	on_finish = "[GetVariableSystem.Toggle('votc_scene_selector_opened')]"
   	}
 	
 	expand = {}

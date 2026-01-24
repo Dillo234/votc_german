@@ -387,26 +387,26 @@ mcc_event_v2.1002 = {
 	}
 	
 	widget = {
-        gui = "revotc_scene_selector_widget"
+        gui = "votc_scene_selector_widget"
         container = "custom_widgets_container"
     }
 
 	option ={
-		name = revotc_talk_change_scene_selection
+		name = votc_talk_change_scene_selection
 		trigger_event = mcc_event_v2.1002
 	}
 	option ={
 		trigger = {
 			has_global_variable = talk_scene
 		}
-		name = revotc_talk_alone
+		name = votc_talk_alone
 		trigger_event = mcc_event_v2.9000
 	}
 	option ={
 		trigger = {
 			has_global_variable = talk_scene
 		}
-		name = revotc_talk_together
+		name = votc_talk_together
 		trigger_event = mcc_event_v2.9001
 	}
 	
@@ -428,13 +428,6 @@ mcc_event_v2.7001 = {
 			gui = "event_window_widget_talk_clear"
 			container = "custom_widgets_container"
 	    }
-
-		immediate = {
-			debug_log_scopes = yes
-			root = {
-			log_backgrounds = yes
-			}
-		}
 
 }
 

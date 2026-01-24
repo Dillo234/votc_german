@@ -1,5 +1,5 @@
 window = {
-	name = "revotc_letter"
+	name = "votc_letter"
 	layer = middle
 	size = { 675 830 }
 	position = { 450 200 }
@@ -28,7 +28,7 @@ window = {
 		on_start = "[PdxGuiWidget.AccessChild('letter_paper').TriggerAnimation('hide')]"
 		on_start = "[PdxGuiWidget.AccessChild('letter_content').TriggerAnimation('hide')]"
 		on_start = "[PdxGuiWidget.AccessChild('letter_edges').TriggerAnimation('hide')]"
-		on_finish = "[ExecuteConsoleCommand('GUI.ClearWidgets revotc_letter')]"
+		on_finish = "[ExecuteConsoleCommand('GUI.ClearWidgets votc_letter')]"
 	}
 
 	state = {

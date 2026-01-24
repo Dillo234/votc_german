@@ -39,7 +39,7 @@ votc_letter_full:0 "Letter thread full (9/9)"
 event_window_widget_message_write_prompt:0 "Enter letter content"
 
 letter_greet:0 "Hi, "
-letter_message:0 "If you see this, then app couldn't find path to mod and rewrite this localization string with response of LLM. Check your character artifacts, there should be letter with proper content. If there's no letter, report to Discord."
+letter_message:0 "My Lord Caliph,\n\nI have received your letter and am relieved to hear of your continued strength and the prosperity of Dar al-Islam. The news from the western front is most welcome; the victory over the Crusaders will surely strengthen our faith and secure our borders.\n\nI must inform you that the situation in Persia remains... delicate. My authority is challenged not only by external threats but also by the ambitions of those within my own court. The memory of my brother's death and the recent loss of Aghlab weigh heavily upon me, as they do upon you. I have taken measures to fortify our defenses and have begun to strengthen the loyalty of our commanders, as you have always advised.\n\nMy health, as you know, is not what it once was. The old wounds trouble me, and the flagellation provides only temporary relief. Yet I remain steadfast in my duty to Allah and to you, my father and Caliph.\n\nMay the Almighty grant you victory and long life.\n\nYour humble son and servant,\nAtissi"
 
 talk_scene_alley_night_title:0 "Shadowed Alley"
 talk_scene_alley_day_title:0 "Bright Alley"
@@ -113,11 +113,12 @@ talk_scene_examination_room_title:0 "Examination Room"
 talk_scene_chinese_city_title:0 "Chinese City"
 talk_scene_japanese_city_title:0 "Japanese City"
 
-
+mcc_interaction:0 "Start conversation"
+mcc_interaction.desc:0 "Start a conversation with selected character or travel to their location."
 mcc_event.1002.desc:0 "You have encountered [recipient.GetShortUINamePossessive] at [actor.GetCurrentLocation.GetName]. Now the question is, where should we meet $talk_herhim$, and will we be alone or with other characters (pinned characters in this location)."
-revotc_talk_together:0 "Talk together with pinned characters"
-revotc_talk_alone:0 "Talk alone with [recipient.GetTitledFirstName] one-on-one"
-revotc_talk_change_scene_selection:0 "Change scene selection"
-revotc_scene_selector_title:0 "Select conversation scene"
+votc_talk_together:0 "Talk together with pinned characters"
+votc_talk_alone:0 "Talk alone with [recipient.GetTitledFirstName] one-on-one"
+votc_talk_change_scene_selection:0 "Change scene selection"
+votc_scene_selector_title:0 "Select conversation scene"
 
 mcc_event_v2.7001.desc:0 "VOTC:BACKGROUND/;/[GetGlobalVariable('votc_background_texture').GetFlagName]"

@@ -173,10 +173,10 @@ log_memories = {
 
 log_secrets = {
 	set_global_variable = {
-		name = revotc_mcc_tmp_var
+		name = votc_mcc_tmp_var
 		value = this
 	}
-	save_scope_as = revotc_mcc_tmp_var
+	save_scope_as = votc_mcc_tmp_var
     every_secret = {
 		debug_log = "VOTC:IN/;/secret/;/[PREV.Char.GetID]/;/[THIS.Secret.GetNameNoTooltip]/;/[THIS.Secret.GetDesc]/;/[THIS.Secret.GetCategoryName]/;/[GetSecretType(THIS.Secret)]"
 		
@@ -201,7 +201,7 @@ log_secrets = {
 				exists = secret_target
 			}
 			secret_target = {
-				debug_log = "VOTC:IN/;/secret_target/;/[GetGlobalVariable('revotc_mcc_tmp_var').GetCharacter.GetID]/;/[PREV.Secret.GetNameNoTooltip]/;/[THIS.Char.GetID]/;/[THIS.Char.GetTitledFirstNameNicknamedNoTooltipRegnal]"
+				debug_log = "VOTC:IN/;/secret_target/;/[GetGlobalVariable('votc_mcc_tmp_var').GetCharacter.GetID]/;/[PREV.Secret.GetNameNoTooltip]/;/[THIS.Char.GetID]/;/[THIS.Char.GetTitledFirstNameNicknamedNoTooltipRegnal]"
 			}
 		}
 		
@@ -209,9 +209,9 @@ log_secrets = {
 		every_secret_knower = {
 			save_scope_as = mcc_sec_k
 			limit = {
-				NOT = { this = scope:revotc_mcc_tmp_var }
+				NOT = { this = scope:votc_mcc_tmp_var }
 			}
-			debug_log = "VOTC:IN/;/secret_knower/;/[GetGlobalVariable('revotc_mcc_tmp_var').GetCharacter.GetID]/;/[PREV.Secret.GetNameNoTooltip]/;/[THIS.Char.GetID]/;/[THIS.Char.GetTitledFirstNameNicknamedNoTooltipRegnal]"
+			debug_log = "VOTC:IN/;/secret_knower/;/[GetGlobalVariable('votc_mcc_tmp_var').GetCharacter.GetID]/;/[PREV.Secret.GetNameNoTooltip]/;/[THIS.Char.GetID]/;/[THIS.Char.GetTitledFirstNameNicknamedNoTooltipRegnal]"
 			
 			# Log if knower spent this secret
 			if = {
@@ -220,10 +220,10 @@ log_secrets = {
 						is_spent_by = scope:mcc_sec_k
 					}
 				}
-				debug_log = "VOTC:IN/;/secret_spent/;/[GetGlobalVariable('revotc_mcc_tmp_var').GetCharacter.GetID]/;/yes"
+				debug_log = "VOTC:IN/;/secret_spent/;/[GetGlobalVariable('votc_mcc_tmp_var').GetCharacter.GetID]/;/yes"
 			}
 			else = {
-				debug_log = "VOTC:IN/;/secret_spent/;/[GetGlobalVariable('revotc_mcc_tmp_var').GetCharacter.GetID]/;/no"
+				debug_log = "VOTC:IN/;/secret_spent/;/[GetGlobalVariable('votc_mcc_tmp_var').GetCharacter.GetID]/;/no"
 			}
 
 			# Log if knower can expose this secret
@@ -233,29 +233,29 @@ log_secrets = {
 						can_be_exposed_by = scope:mcc_sec_k
 					}
 				}
-				debug_log = "VOTC:IN/;/secret_can_be_exposed/;/[GetGlobalVariable('revotc_mcc_tmp_var').GetCharacter.GetID]/;/yes"
+				debug_log = "VOTC:IN/;/secret_can_be_exposed/;/[GetGlobalVariable('votc_mcc_tmp_var').GetCharacter.GetID]/;/yes"
 			}
 			else = {
-				debug_log = "VOTC:IN/;/secret_can_be_exposed/;/[GetGlobalVariable('revotc_mcc_tmp_var').GetCharacter.GetID]/;/no"
+				debug_log = "VOTC:IN/;/secret_can_be_exposed/;/[GetGlobalVariable('votc_mcc_tmp_var').GetCharacter.GetID]/;/no"
 			}
 		}
 
 
-		debug_log = "VOTC:IN/;/secret_eob/;/[GetGlobalVariable('revotc_mcc_tmp_var').GetCharacter.GetID]/;/"
+		debug_log = "VOTC:IN/;/secret_eob/;/[GetGlobalVariable('votc_mcc_tmp_var').GetCharacter.GetID]/;/"
     }
 }
 
 log_ksecrets = {
 		set_global_variable = {
-			name = revotc_mcc_tmp_var
+			name = votc_mcc_tmp_var
 			value = this
 		}
-		save_scope_as = revotc_mcc_tmp_var
+		save_scope_as = votc_mcc_tmp_var
 
     every_known_secret = {
 		debug_log = "VOTC:IN/;/k_secret/;/[PREV.Char.GetID]/;/[THIS.Secret.GetNameNoTooltip]/;/[THIS.Secret.GetDesc]/;/[THIS.Secret.GetCategoryName]/;/[GetSecretType(THIS.Secret)]"
 		secret_owner = {
-			debug_log = "VOTC:IN/;/k_secret_owner/;/[GetGlobalVariable('revotc_mcc_tmp_var').GetCharacter.GetID]/;/[THIS.Char.GetID]/;/[THIS.Char.GetTitledFirstNameNicknamedNoTooltipRegnal]"
+			debug_log = "VOTC:IN/;/k_secret_owner/;/[GetGlobalVariable('votc_mcc_tmp_var').GetCharacter.GetID]/;/[THIS.Char.GetID]/;/[THIS.Char.GetTitledFirstNameNicknamedNoTooltipRegnal]"
 		}
 		# Log this secret is is_shunned_for or is_criminal_for 
 		if = {
@@ -263,13 +263,13 @@ log_ksecrets = {
 				is_criminal_for = secret_owner
 			}
 
-			debug_log = "VOTC:IN/;/k_secret_is_criminal/;/[GetGlobalVariable('revotc_mcc_tmp_var').GetCharacter.GetID]/;/"
+			debug_log = "VOTC:IN/;/k_secret_is_criminal/;/[GetGlobalVariable('votc_mcc_tmp_var').GetCharacter.GetID]/;/"
 		}
 		else_if = {
 			limit = {
 				is_shunned_for = secret_owner
 			}
-			debug_log = "VOTC:IN/;/k_secret_is_shunned/;/[GetGlobalVariable('revotc_mcc_tmp_var').GetCharacter.GetID]/;/"
+			debug_log = "VOTC:IN/;/k_secret_is_shunned/;/[GetGlobalVariable('votc_mcc_tmp_var').GetCharacter.GetID]/;/"
 		}
 
 		# Log secret target if exists (personal secrets don't have targets)
@@ -278,7 +278,7 @@ log_ksecrets = {
 				exists = secret_target
 			}
 			secret_target = {
-				debug_log = "VOTC:IN/;/k_secret_target/;/[GetGlobalVariable('revotc_mcc_tmp_var').GetCharacter.GetID]/;/[THIS.Char.GetID]/;/[THIS.Char.GetTitledFirstNameNicknamedNoTooltipRegnal]"
+				debug_log = "VOTC:IN/;/k_secret_target/;/[GetGlobalVariable('votc_mcc_tmp_var').GetCharacter.GetID]/;/[THIS.Char.GetID]/;/[THIS.Char.GetTitledFirstNameNicknamedNoTooltipRegnal]"
 			}
 		}
 		
@@ -287,10 +287,10 @@ log_ksecrets = {
 			limit = {
 					is_spent_by = prev
 			}
-			debug_log = "VOTC:IN/;/k_secret_spent/;/[GetGlobalVariable('revotc_mcc_tmp_var').GetCharacter.GetID]/;/yes"
+			debug_log = "VOTC:IN/;/k_secret_spent/;/[GetGlobalVariable('votc_mcc_tmp_var').GetCharacter.GetID]/;/yes"
 		}
 		else = {
-			debug_log = "VOTC:IN/;/k_secret_spent/;/[GetGlobalVariable('revotc_mcc_tmp_var').GetCharacter.GetID]/;/no"
+			debug_log = "VOTC:IN/;/k_secret_spent/;/[GetGlobalVariable('votc_mcc_tmp_var').GetCharacter.GetID]/;/no"
 		}
 
 		# Log if knower can expose this secret
@@ -298,22 +298,22 @@ log_ksecrets = {
 			limit = {
 					can_be_exposed_by = prev
 			}
-			debug_log = "VOTC:IN/;/k_secret_can_be_exposed/;/[GetGlobalVariable('revotc_mcc_tmp_var').GetCharacter.GetID]/;/yes"
+			debug_log = "VOTC:IN/;/k_secret_can_be_exposed/;/[GetGlobalVariable('votc_mcc_tmp_var').GetCharacter.GetID]/;/yes"
 		}
 		else = {
-			debug_log = "VOTC:IN/;/k_secret_can_be_exposed/;/[GetGlobalVariable('revotc_mcc_tmp_var').GetCharacter.GetID]/;/no"
+			debug_log = "VOTC:IN/;/k_secret_can_be_exposed/;/[GetGlobalVariable('votc_mcc_tmp_var').GetCharacter.GetID]/;/no"
 		}
 		
 		# Log all knowers of this secret (for rp might be useful, so character could tell, who told this secret)
 		every_secret_knower = {
 			limit = {
-				NOT = { this = scope:revotc_mcc_tmp_var }
+				NOT = { this = scope:votc_mcc_tmp_var }
 			}
-			debug_log = "VOTC:IN/;/k_secret_knower/;/[GetGlobalVariable('revotc_mcc_tmp_var').GetCharacter.GetID]/;/[PREV.Secret.GetNameNoTooltip]/;/[THIS.Char.GetID]/;/[THIS.Char.GetTitledFirstNameNicknamedNoTooltipRegnal]"
+			debug_log = "VOTC:IN/;/k_secret_knower/;/[GetGlobalVariable('votc_mcc_tmp_var').GetCharacter.GetID]/;/[PREV.Secret.GetNameNoTooltip]/;/[THIS.Char.GetID]/;/[THIS.Char.GetTitledFirstNameNicknamedNoTooltipRegnal]"
 		}
 
 
-		debug_log = "VOTC:IN/;/k_secret_eob/;/[GetGlobalVariable('revotc_mcc_tmp_var').GetCharacter.GetID]/;/"
+		debug_log = "VOTC:IN/;/k_secret_eob/;/[GetGlobalVariable('votc_mcc_tmp_var').GetCharacter.GetID]/;/"
     }
 }
 
@@ -408,10 +408,10 @@ log_title_laws = {
 
 log_relatives = {
 	set_global_variable = {
-		name = revotc_mcc_tmp_var
+		name = votc_mcc_tmp_var
 		value = this
 	}
-	save_scope_as = revotc_mcc_tmp_var
+	save_scope_as = votc_mcc_tmp_var
 	every_parent = {
 		even_if_dead = yes
 		debug_log = "VOTC:IN/;/parents/;/[PREV.Char.GetID]/;/[THIS.Char.GetID]/;/[THIS.Char.GetTitledFirstNameNicknamedNoTooltipRegnal]/;/[THIS.Char.GetBirthDate.GetDateAsTotalDays]/;/[THIS.Char.GetBirthDate.GetString]/;/"
@@ -434,9 +434,9 @@ log_relatives = {
 			every_parent = {
 				even_if_dead = yes
 				limit = {
-					NOT = { this = scope:revotc_mcc_tmp_var }
+					NOT = { this = scope:votc_mcc_tmp_var }
 				}
-				debug_log = "VOTC:IN/;/kid_other_parent/;/[GetGlobalVariable('revotc_mcc_tmp_var').GetCharacter.GetID]/;/[PREV.Char.GetID]/;/[THIS.Char.GetID]/;/[THIS.Char.GetTitledFirstNameNicknamedNoTooltipRegnal]"
+				debug_log = "VOTC:IN/;/kid_other_parent/;/[GetGlobalVariable('votc_mcc_tmp_var').GetCharacter.GetID]/;/[PREV.Char.GetID]/;/[THIS.Char.GetID]/;/[THIS.Char.GetTitledFirstNameNicknamedNoTooltipRegnal]"
 			}
 		}
 
@@ -446,7 +446,7 @@ log_relatives = {
 			debug_log = "VOTC:IN/;/kid_death/;/[PREV.Char.GetID]/;/[THIS.Char.GetID]/;/[THIS.Char.GetDeathDate.GetDateAsTotalDays]/;/[THIS.Char.GetDeathDate.GetStringShort]/;/[THIS.Char.GetDeathReason]/;/"
 		}
 		every_character_trait = {
-			debug_log = "VOTC:IN/;/kid_trait/;/[GetGlobalVariable('revotc_mcc_tmp_var').GetCharacter.GetID]/;/[PREV.Char.GetID]/;/[THIS.Trait.GetTraitCategoryLabel]/;/[THIS.Trait.GetNameNoTooltip(PREV.Char)]/;/[THIS.Trait.GetDescription(PREV.Char)]"
+			debug_log = "VOTC:IN/;/kid_trait/;/[GetGlobalVariable('votc_mcc_tmp_var').GetCharacter.GetID]/;/[PREV.Char.GetID]/;/[THIS.Trait.GetTraitCategoryLabel]/;/[THIS.Trait.GetNameNoTooltip(PREV.Char)]/;/[THIS.Trait.GetDescription(PREV.Char)]"
 		}
 
 		# kid marital status
@@ -465,17 +465,17 @@ log_relatives = {
 					limit = { 
 						is_concubine = yes
 					}
-					debug_log = "VOTC:IN/;/kid_concubine/;/[GetGlobalVariable('revotc_mcc_tmp_var').GetCharacter.GetID]/;/[PREV.Char.GetID]/;/[THIS.Char.GetID]/;/[THIS.Char.GetFullNameNicknamedNoTooltip]"
+					debug_log = "VOTC:IN/;/kid_concubine/;/[GetGlobalVariable('votc_mcc_tmp_var').GetCharacter.GetID]/;/[PREV.Char.GetID]/;/[THIS.Char.GetID]/;/[THIS.Char.GetFullNameNicknamedNoTooltip]"
 				}
 				else = {
-					debug_log = "VOTC:IN/;/kid_spouse/;/[GetGlobalVariable('revotc_mcc_tmp_var').GetCharacter.GetID]/;/[PREV.Char.GetID]/;/[THIS.Char.GetID]/;/[THIS.Char.GetFullNameNicknamedNoTooltip]"
+					debug_log = "VOTC:IN/;/kid_spouse/;/[GetGlobalVariable('votc_mcc_tmp_var').GetCharacter.GetID]/;/[PREV.Char.GetID]/;/[THIS.Char.GetID]/;/[THIS.Char.GetFullNameNicknamedNoTooltip]"
 				}
 			}
 		}
 		else_if = {
 			limit = { is_betrothed = yes }
 			betrothed = {
-				debug_log = "VOTC:IN/;/kid_betrothed/;/[GetGlobalVariable('revotc_mcc_tmp_var').GetCharacter.GetID]/;/[PREV.Char.GetID]/;/[THIS.Char.GetID]/;/[THIS.Char.GetFullNameNicknamedNoTooltip]"
+				debug_log = "VOTC:IN/;/kid_betrothed/;/[GetGlobalVariable('votc_mcc_tmp_var').GetCharacter.GetID]/;/[PREV.Char.GetID]/;/[THIS.Char.GetID]/;/[THIS.Char.GetFullNameNicknamedNoTooltip]"
 			}
 		}
 		else = { 
