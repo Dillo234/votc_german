@@ -415,6 +415,29 @@ mcc_event_v2.1002 = {
 	}
 }
 
+#log_backgrounds
+mcc_event_v2.7001 = {
+	type = character_event
+		title = "aha"
+		window = fullscreen_event
+		theme = clipboard_transfer_event_theme
+		desc = mcc_event_v2.7001.desc
+		
+
+		widget = {
+			gui = "event_window_widget_talk_clear"
+			container = "custom_widgets_container"
+	    }
+
+		immediate = {
+			debug_log_scopes = yes
+			root = {
+			log_backgrounds = yes
+			}
+		}
+
+}
+
 #hidden Event fired when initating conversation with someone. 
 #The only reason this exist is to open the 'event_window_widget_talk' gui event widget, so we can copy the data to the clipboard using the EventWindowData.CopyToClipboard guifunction.
 mcc_event_v2.9000 = {
@@ -426,8 +449,7 @@ mcc_event_v2.9000 = {
 	immediate = {
 		scope:recipient = {
 			log_gamedata_v3l = yes
-		}
-		
+		}		
 	}
 	
 	#this widget is what calls the EventWindowData.CopyToClipboard guifunction, 
@@ -513,3 +535,4 @@ mcc_event_v2.9003 = {
 	
 
 }
+

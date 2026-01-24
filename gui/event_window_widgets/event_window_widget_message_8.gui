@@ -9,7 +9,8 @@ hbox = {
         name = widget_show
         trigger_on_create = yes
 
-		on_start = "[ExecuteConsoleCommand('run letter8.txt')]"
+		on_start = "[ExecuteConsoleCommand('gui.createwidget gui/custom_gui/revotc_letter.gui revotc_letter')]"
+		on_start = "[ExecuteConsoleCommand('run letter_8.txt')]"
 
 
 	}

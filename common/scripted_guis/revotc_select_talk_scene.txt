@@ -4,5 +4,6 @@ revotc_select_talk_scene = {
             name = talk_scene
             value = scope:selected_scene
         }
+        root = {trigger_event = mcc_event_v2.7001}
     }
 }

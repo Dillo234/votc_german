@@ -6,9 +6,6 @@ log_gamedata_v3 = {
 
 	debug_log = log_character_header
 	
-	scope:actor = {
-		log_background = yes
-	}
 	add_to_global_variable_list = {
 		name = mcc_characters_list_v2
 		target = scope:recipient

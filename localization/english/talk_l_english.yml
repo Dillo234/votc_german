@@ -20,7 +20,7 @@ message_interaction:0 "Write Letter"
 votc_message_title:0 "Write to [recipient.GetShortUINamePossessive]"
 votc_message_desc:0 " "
 votc_message_tooltip:0 "If the message is incomplete, check the corresponding letter artifact."
-message_text:0 "VOTC:LETTER/;/English/;/[GetPlayer.GetLocalizedText( 'votc_message_text' )]/;/[GetGlobalVariable('votc_letter_num').GetFlagName]/"
+message_text:0 "VOTC:LETTER/;/[GetPlayer.GetLocalizedText( 'votc_message_text' )]/;/[GetGlobalVariable('votc_letter_num').GetFlagName]/;/"
 send_message:0 "Send"
 
 # Titles for each letter thread
@@ -39,7 +39,7 @@ votc_letter_full:0 "Letter thread full (9/9)"
 event_window_widget_message_write_prompt:0 "Enter letter content"
 
 letter_greet:0 "Hi, "
-letter_message:0 "If you see this, then app couldn't find path to mod and rewrite these localization strings with response of LLM. Check your character artifacts, there should be letter with proper content."
+letter_message:0 "If you see this, then app couldn't find path to mod and rewrite this localization string with response of LLM. Check your character artifacts, there should be letter with proper content. If there's no letter, report to Discord."
 
 talk_scene_alley_night_title:0 "Shadowed Alley"
 talk_scene_alley_day_title:0 "Bright Alley"
@@ -119,3 +119,5 @@ revotc_talk_together:0 "Talk together with pinned characters"
 revotc_talk_alone:0 "Talk alone with [recipient.GetTitledFirstName] one-on-one"
 revotc_talk_change_scene_selection:0 "Change scene selection"
 revotc_scene_selector_title:0 "Select conversation scene"
+
+mcc_event_v2.7001.desc:0 "VOTC:BACKGROUND/;/[GetGlobalVariable('votc_background_texture').GetFlagName]"

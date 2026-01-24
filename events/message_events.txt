@@ -56,7 +56,7 @@ message_event.360 = {
 			name = votc_letter_distance
 			value = votc_letter_delay
 		}
-		debug_log = "VOTC:LETTER delay [GetGlobalVariable('votc_letter_distance').GetValue] days"
+		#debug_log = "VOTC:LETTER delay [GetGlobalVariable('votc_letter_distance').GetValue] days"
 
 		# if/else structure to set delivery thread based on variable availability
 		if = {
@@ -72,7 +72,7 @@ message_event.360 = {
 				name = message_second_scope_letter_1
 				value = scope:recipient
 			}
-			debug_log = "VOTC:LETTER set to thread votc_letter_1"
+			#debug_log = "VOTC:LETTER set to thread votc_letter_1"
 			scope:actor = {
 				trigger_event = {
 					id = message_event.3621
@@ -95,7 +95,7 @@ message_event.360 = {
 				name = message_second_scope_letter_2
 				value = scope:recipient
 			}
-			debug_log = "VOTC:LETTER set to thread votc_letter_2"
+			#debug_log = "VOTC:LETTER set to thread votc_letter_2"
 			scope:actor = {
 				trigger_event = {
 					id = message_event.3622
@@ -117,7 +117,7 @@ message_event.360 = {
 				name = message_second_scope_letter_3
 				value = scope:recipient
 			}
-			debug_log = "VOTC:LETTER set to thread votc_letter_3"	
+			#debug_log = "VOTC:LETTER set to thread votc_letter_3"	
 			scope:actor = {
 				trigger_event = {
 					id = message_event.3623
@@ -139,7 +139,7 @@ message_event.360 = {
 				name = message_second_scope_letter_4
 				value = scope:recipient
 			}
-			debug_log = "VOTC:LETTER set to thread votc_letter_4"
+			#debug_log = "VOTC:LETTER set to thread votc_letter_4"
 			scope:actor = {
 				trigger_event = {
 					id = message_event.3624
@@ -161,7 +161,7 @@ message_event.360 = {
 				name = message_second_scope_letter_5
 				value = scope:recipient
 			}
-			debug_log = "VOTC:LETTER set to thread votc_letter_5"
+			#debug_log = "VOTC:LETTER set to thread votc_letter_5"
 			scope:actor = {
 				trigger_event = {
 					id = message_event.3625
@@ -183,7 +183,7 @@ message_event.360 = {
 				name = message_second_scope_letter_6
 				value = scope:recipient
 			}
-			debug_log = "VOTC:LETTER set to thread votc_letter_6"
+			#debug_log = "VOTC:LETTER set to thread votc_letter_6"
 			scope:actor = {
 				trigger_event = {
 					id = message_event.3626
@@ -205,7 +205,7 @@ message_event.360 = {
 				name = message_second_scope_letter_7
 				value = scope:recipient
 			}
-			debug_log = "VOTC:LETTER set to thread votc_letter_7"
+			#debug_log = "VOTC:LETTER set to thread votc_letter_7"
 			scope:actor = {
 				trigger_event = {
 					id = message_event.3627
@@ -227,7 +227,7 @@ message_event.360 = {
 				name = message_second_scope_letter_8
 				value = scope:recipient
 			}
-			debug_log = "VOTC:LETTER set to thread votc_letter_8"
+			#debug_log = "VOTC:LETTER set to thread votc_letter_8"
 			scope:actor = {
 				trigger_event = {
 					id = message_event.3628
@@ -249,7 +249,7 @@ message_event.360 = {
 				name = message_second_scope_letter_9
 				value = scope:recipient
 			}
-			debug_log = "VOTC:LETTER set to thread votc_letter_9"
+			#debug_log = "VOTC:LETTER set to thread votc_letter_9"
 			scope:actor = {
 				trigger_event = {
 					id = message_event.3629
@@ -257,7 +257,7 @@ message_event.360 = {
 				}
 			}	
 		}
-
+		
 		scope:recipient = {
 			log_gamedata_v3l = yes
 		}
@@ -276,7 +276,7 @@ message_event.360 = {
 	}
 }
 
-# Clipboard event, used to notify backend program to begin processing letter messages
+# Clipboard event, used to notify backend program to begin processing letter messages with VOTC:LETTER signature
 message_event.361 = {
 	type = character_event
 	title = "aha"

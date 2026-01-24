@@ -15,6 +15,7 @@ hbox = {
 
 
 		on_start = "[ExecuteConsoleCommand('gui.createwidget gui/custom_gui/revotc_letter.gui revotc_letter')]"
+		on_start = "[ExecuteConsoleCommand('run letter_1.txt')]"
 	}
 
 

@@ -3,5 +3,5 @@ tags={
 	"Gameplay"
 }
 name="reVOTC"
-supported_version="1.18.1"
+supported_version="1.18.*"
 remote_file_id="3346777360"
