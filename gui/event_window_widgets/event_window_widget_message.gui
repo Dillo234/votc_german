@@ -13,8 +13,10 @@ hbox = {
         name = widget_show
         trigger_on_create = yes
 
-
-		on_finish = "[ExecuteConsoleCommand('gui.createwidget gui/custom_gui/letters_runner.gui letters_runner')]"	}
+		on_start = "[ExecuteConsoleCommand('GUI.ClearWidgets letters_runner letters_runner')]"
+		on_finish = "[ExecuteConsoleCommand('gui.createwidget gui/custom_gui/letters_runner.gui letters_runner')]"	
+	
+	}
 
 
 	expand = {}

@@ -34,6 +34,13 @@
 	on_send = {
 		scope:actor = {
 			trigger_event = message_event.360
+			if = {
+				limit = {
+					NOT = { has_character_flag = votc_started_pooling}
+				}
+				add_character_flag = votc_started_pooling
+				trigger_event = mcc_event_v2.9998
+			}
 		}
 		debug_log = "Message sent"
 	}
