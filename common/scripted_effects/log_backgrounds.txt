@@ -1,8 +1,8 @@
-log_backgrounds = {
+﻿log_backgrounds = {
 
 	if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_alley_night scope:selected_scene = flag:talk_scene_alley_night  }
+			global_var:talk_scene = flag:talk_scene_alley_night 
 			location = {
 				province_owner = {
 					OR = {
@@ -22,7 +22,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_alley_night scope:selected_scene = flag:talk_scene_alley_night  }
+			global_var:talk_scene = flag:talk_scene_alley_night 
 			location = {
 				province_owner = {
 					root.location ?= {
@@ -39,14 +39,14 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_alley_night scope:selected_scene = flag:talk_scene_alley_night  }
+			global_var:talk_scene = flag:talk_scene_alley_night 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_alley }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_alley_day scope:selected_scene = flag:talk_scene_alley_day  }
+			global_var:talk_scene = flag:talk_scene_alley_day 
 			location = {
 				province_owner = {
 					OR = {
@@ -66,7 +66,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_alley_day scope:selected_scene = flag:talk_scene_alley_day  }
+			global_var:talk_scene = flag:talk_scene_alley_day 
 			location = {
 				province_owner = {
 					root.location ?= {
@@ -93,7 +93,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_alley_day scope:selected_scene = flag:talk_scene_alley_day  }
+			global_var:talk_scene = flag:talk_scene_alley_day 
 			location = {
 				province_owner = {
 					root.location ?= {
@@ -110,14 +110,14 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_alley_day scope:selected_scene = flag:talk_scene_alley_day  }
+			global_var:talk_scene = flag:talk_scene_alley_day 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_alley_day }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_armory scope:selected_scene = flag:talk_scene_armory  }
+			global_var:talk_scene = flag:talk_scene_armory 
 			location = {
 				province_owner = {
 					OR = {
@@ -135,7 +135,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_armory scope:selected_scene = flag:talk_scene_armory  }
+			global_var:talk_scene = flag:talk_scene_armory 
 			location = {
 				province_owner = {
 					has_government = landless_adventurer_government
@@ -147,21 +147,21 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_armory scope:selected_scene = flag:talk_scene_armory  }
+			global_var:talk_scene = flag:talk_scene_armory 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_armory }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_battlefield scope:selected_scene = flag:talk_scene_battlefield  }
+			global_var:talk_scene = flag:talk_scene_battlefield 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_battlefield }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_temple scope:selected_scene = flag:talk_scene_temple  }
+			global_var:talk_scene = flag:talk_scene_temple 
 			location = {
 				province_owner = {
 					is_landless_adventurer = yes
@@ -179,7 +179,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_temple scope:selected_scene = flag:talk_scene_temple  }
+			global_var:talk_scene = flag:talk_scene_temple 
 			location = {
 				province_owner = {
 					OR = {
@@ -221,7 +221,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_temple scope:selected_scene = flag:talk_scene_temple  }
+			global_var:talk_scene = flag:talk_scene_temple 
 			location = {
 				province_owner = {
 					primary_title = title:e_byzantium
@@ -234,7 +234,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_temple scope:selected_scene = flag:talk_scene_temple  }
+			global_var:talk_scene = flag:talk_scene_temple 
 			location = {
 				province_owner = {
 					religion = religion:zoroastrianism_religion
@@ -246,7 +246,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_temple scope:selected_scene = flag:talk_scene_temple  }
+			global_var:talk_scene = flag:talk_scene_temple 
 			location = {
 				province_owner = {
 					OR = {
@@ -263,7 +263,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_temple scope:selected_scene = flag:talk_scene_temple  }
+			global_var:talk_scene = flag:talk_scene_temple 
 			location = {
 				province_owner = {
 					faith = { religion = religion:christianity_religion }
@@ -275,7 +275,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_temple scope:selected_scene = flag:talk_scene_temple  }
+			global_var:talk_scene = flag:talk_scene_temple 
 			location = {
 				province_owner = {
 					faith = { religion = religion:islam_religion }
@@ -287,7 +287,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_temple scope:selected_scene = flag:talk_scene_temple  }
+			global_var:talk_scene = flag:talk_scene_temple 
 			location = {
 				province_owner = {
 					religion = religion:germanic_religion
@@ -299,7 +299,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_temple scope:selected_scene = flag:talk_scene_temple  }
+			global_var:talk_scene = flag:talk_scene_temple 
 			location = {
 				province_owner = {
 					root.location = {
@@ -327,7 +327,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_temple scope:selected_scene = flag:talk_scene_temple  }
+			global_var:talk_scene = flag:talk_scene_temple 
 			location = {
 				province_owner = {
 					root.location = {
@@ -355,7 +355,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_temple scope:selected_scene = flag:talk_scene_temple  }
+			global_var:talk_scene = flag:talk_scene_temple 
 			location = {
 				province_owner = {
 					religion = { is_in_family = rf_pagan }
@@ -371,14 +371,14 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_temple scope:selected_scene = flag:talk_scene_temple  }
+			global_var:talk_scene = flag:talk_scene_temple 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_temple }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_corridor_night scope:selected_scene = flag:talk_scene_corridor_night  }
+			global_var:talk_scene = flag:talk_scene_corridor_night 
 			location = {
 				province_owner = {
 					OR = {
@@ -396,7 +396,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_corridor_night scope:selected_scene = flag:talk_scene_corridor_night  }
+			global_var:talk_scene = flag:talk_scene_corridor_night 
 			location = {
 				province_owner = {
 					has_government = landless_adventurer_government
@@ -408,7 +408,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_corridor_night scope:selected_scene = flag:talk_scene_corridor_night  }
+			global_var:talk_scene = flag:talk_scene_corridor_night 
 			location = {
 				province_owner = {
 					root.location ?= {
@@ -428,7 +428,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_corridor_night scope:selected_scene = flag:talk_scene_corridor_night  }
+			global_var:talk_scene = flag:talk_scene_corridor_night 
 			location = {
 				province_owner = {
 					OR = {
@@ -454,7 +454,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_corridor_night scope:selected_scene = flag:talk_scene_corridor_night  }
+			global_var:talk_scene = flag:talk_scene_corridor_night 
 			location = {
 				province_owner = {
 					OR = {
@@ -474,7 +474,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_corridor_night scope:selected_scene = flag:talk_scene_corridor_night  }
+			global_var:talk_scene = flag:talk_scene_corridor_night 
 			location = {
 				province_owner = {
 					OR = {
@@ -497,7 +497,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_corridor_night scope:selected_scene = flag:talk_scene_corridor_night  }
+			global_var:talk_scene = flag:talk_scene_corridor_night 
 			location = {
 				province_owner = {
 					OR = {
@@ -516,14 +516,14 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_corridor_night scope:selected_scene = flag:talk_scene_corridor_night  }
+			global_var:talk_scene = flag:talk_scene_corridor_night 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_corridor }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_corridor_day scope:selected_scene = flag:talk_scene_corridor_day  }
+			global_var:talk_scene = flag:talk_scene_corridor_day 
 			location = {
 				province_owner = {
 					OR = {
@@ -541,7 +541,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_corridor_day scope:selected_scene = flag:talk_scene_corridor_day  }
+			global_var:talk_scene = flag:talk_scene_corridor_day 
 			location = {
 				province_owner = {
 					has_government = landless_adventurer_government
@@ -553,7 +553,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_corridor_day scope:selected_scene = flag:talk_scene_corridor_day  }
+			global_var:talk_scene = flag:talk_scene_corridor_day 
 			location = {
 				province_owner = {
 					OR = {
@@ -582,7 +582,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_corridor_day scope:selected_scene = flag:talk_scene_corridor_day  }
+			global_var:talk_scene = flag:talk_scene_corridor_day 
 			location = {
 				province_owner = {
 					OR = {
@@ -602,7 +602,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_corridor_day scope:selected_scene = flag:talk_scene_corridor_day  }
+			global_var:talk_scene = flag:talk_scene_corridor_day 
 			location = {
 				province_owner = {
 					OR = {
@@ -625,7 +625,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_corridor_day scope:selected_scene = flag:talk_scene_corridor_day  }
+			global_var:talk_scene = flag:talk_scene_corridor_day 
 			location = {
 				province_owner = {
 					root.location ?= {
@@ -642,14 +642,14 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_corridor_day scope:selected_scene = flag:talk_scene_corridor_day  }
+			global_var:talk_scene = flag:talk_scene_corridor_day 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_corridor_day }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_council_chamber scope:selected_scene = flag:talk_scene_council_chamber  }
+			global_var:talk_scene = flag:talk_scene_council_chamber 
 			location = {
 				province_owner = {
 					OR = {
@@ -673,7 +673,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_council_chamber scope:selected_scene = flag:talk_scene_council_chamber  }
+			global_var:talk_scene = flag:talk_scene_council_chamber 
 			location = {
 				province_owner = {
 					has_government = landless_adventurer_government
@@ -685,7 +685,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_council_chamber scope:selected_scene = flag:talk_scene_council_chamber  }
+			global_var:talk_scene = flag:talk_scene_council_chamber 
 			location = {
 				province_owner = {
 					root.location = {
@@ -700,7 +700,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_council_chamber scope:selected_scene = flag:talk_scene_council_chamber  }
+			global_var:talk_scene = flag:talk_scene_council_chamber 
 			location = {
 				province_owner = {
 					government_has_flag = government_is_tribal
@@ -712,7 +712,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_council_chamber scope:selected_scene = flag:talk_scene_council_chamber  }
+			global_var:talk_scene = flag:talk_scene_council_chamber 
 			location = {
 				province_owner = {
 					OR = {
@@ -736,7 +736,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_council_chamber scope:selected_scene = flag:talk_scene_council_chamber  }
+			global_var:talk_scene = flag:talk_scene_council_chamber 
 			location = {
 				province_owner = {
 					OR = {
@@ -767,7 +767,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_council_chamber scope:selected_scene = flag:talk_scene_council_chamber  }
+			global_var:talk_scene = flag:talk_scene_council_chamber 
 			location = {
 				province_owner = {
 					OR = {
@@ -784,7 +784,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_council_chamber scope:selected_scene = flag:talk_scene_council_chamber  }
+			global_var:talk_scene = flag:talk_scene_council_chamber 
 			location = {
 				province_owner = {
 					OR = {
@@ -801,7 +801,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_council_chamber scope:selected_scene = flag:talk_scene_council_chamber  }
+			global_var:talk_scene = flag:talk_scene_council_chamber 
 			location = {
 				province_owner = {
 					root.location ?= {
@@ -818,7 +818,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_council_chamber scope:selected_scene = flag:talk_scene_council_chamber  }
+			global_var:talk_scene = flag:talk_scene_council_chamber 
 			location = {
 				province_owner = {
 					culture ?= { has_graphical_east_asia_culture_group_trigger = yes }
@@ -830,14 +830,14 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_council_chamber scope:selected_scene = flag:talk_scene_council_chamber  }
+			global_var:talk_scene = flag:talk_scene_council_chamber 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_councilchamber }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_courtyard scope:selected_scene = flag:talk_scene_courtyard  }
+			global_var:talk_scene = flag:talk_scene_courtyard 
 			location = {
 				province_owner = {
 					OR = {
@@ -876,7 +876,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_courtyard scope:selected_scene = flag:talk_scene_courtyard  }
+			global_var:talk_scene = flag:talk_scene_courtyard 
 			location = {
 				province_owner = {
 					OR = {
@@ -900,7 +900,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_courtyard scope:selected_scene = flag:talk_scene_courtyard  }
+			global_var:talk_scene = flag:talk_scene_courtyard 
 			location = {
 				province_owner = {
 					government_has_flag = government_is_tribal
@@ -929,7 +929,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_courtyard scope:selected_scene = flag:talk_scene_courtyard  }
+			global_var:talk_scene = flag:talk_scene_courtyard 
 			location = {
 				province_owner = {
 					government_has_flag = government_is_tribal
@@ -950,7 +950,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_courtyard scope:selected_scene = flag:talk_scene_courtyard  }
+			global_var:talk_scene = flag:talk_scene_courtyard 
 			location = {
 				province_owner = {
 					government_has_flag = government_is_tribal
@@ -972,7 +972,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_courtyard scope:selected_scene = flag:talk_scene_courtyard  }
+			global_var:talk_scene = flag:talk_scene_courtyard 
 			location = {
 				province_owner = {
 					government_has_flag = government_is_tribal
@@ -984,7 +984,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_courtyard scope:selected_scene = flag:talk_scene_courtyard  }
+			global_var:talk_scene = flag:talk_scene_courtyard 
 			location = {
 				province_owner = {
 					has_government = landless_adventurer_government
@@ -996,7 +996,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_courtyard scope:selected_scene = flag:talk_scene_courtyard  }
+			global_var:talk_scene = flag:talk_scene_courtyard 
 			location = {
 				province_owner = {
 					root.location = {
@@ -1010,7 +1010,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_courtyard scope:selected_scene = flag:talk_scene_courtyard  }
+			global_var:talk_scene = flag:talk_scene_courtyard 
 			location = {
 				province_owner = {
 					OR = {
@@ -1027,7 +1027,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_courtyard scope:selected_scene = flag:talk_scene_courtyard  }
+			global_var:talk_scene = flag:talk_scene_courtyard 
 			location = {
 				province_owner = {
 					OR = {
@@ -1046,7 +1046,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_courtyard scope:selected_scene = flag:talk_scene_courtyard  }
+			global_var:talk_scene = flag:talk_scene_courtyard 
 			location = {
 				province_owner = {
 					OR = {
@@ -1063,7 +1063,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_courtyard scope:selected_scene = flag:talk_scene_courtyard  }
+			global_var:talk_scene = flag:talk_scene_courtyard 
 			location = {
 				province_owner = {
 					OR = {
@@ -1083,7 +1083,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_courtyard scope:selected_scene = flag:talk_scene_courtyard  }
+			global_var:talk_scene = flag:talk_scene_courtyard 
 			location = {
 				province_owner = {
 					root.location ?= {
@@ -1100,14 +1100,14 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_courtyard scope:selected_scene = flag:talk_scene_courtyard  }
+			global_var:talk_scene = flag:talk_scene_courtyard 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_courtyard }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_dungeon scope:selected_scene = flag:talk_scene_dungeon  }
+			global_var:talk_scene = flag:talk_scene_dungeon 
 			location = {
 				province_owner = {
 					government_has_flag = government_is_nomadic
@@ -1119,7 +1119,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_dungeon scope:selected_scene = flag:talk_scene_dungeon  }
+			global_var:talk_scene = flag:talk_scene_dungeon 
 			location = {
 				province_owner = {
 					has_government = landless_adventurer_government
@@ -1131,7 +1131,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_dungeon scope:selected_scene = flag:talk_scene_dungeon  }
+			global_var:talk_scene = flag:talk_scene_dungeon 
 			location = {
 				province_owner = {
 					OR = {
@@ -1148,7 +1148,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_dungeon scope:selected_scene = flag:talk_scene_dungeon  }
+			global_var:talk_scene = flag:talk_scene_dungeon 
 			location = {
 				province_owner = {
 					OR = {
@@ -1169,21 +1169,21 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_dungeon scope:selected_scene = flag:talk_scene_dungeon  }
+			global_var:talk_scene = flag:talk_scene_dungeon 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_dungeon }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_ocean scope:selected_scene = flag:talk_scene_ocean  }
+			global_var:talk_scene = flag:talk_scene_ocean 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_fp1_ocean }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_travel scope:selected_scene = flag:talk_scene_terrain_travel  }
+			global_var:talk_scene = flag:talk_scene_terrain_travel 
 			location = {
 				is_riverside_province = yes
 				geographical_region = world_europe
@@ -1201,7 +1201,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_travel scope:selected_scene = flag:talk_scene_terrain_travel  }
+			global_var:talk_scene = flag:talk_scene_terrain_travel 
 			location = {
 				has_winter_trigger = no
 				is_riverside_province = yes
@@ -1219,7 +1219,7 @@ log_backgrounds = {
 	# This goes before other terrain since it can override in many different terrains if built
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_travel scope:selected_scene = flag:talk_scene_terrain_travel  }
+			global_var:talk_scene = flag:talk_scene_terrain_travel 
 			location = {
 				OR = {
 					terrain = terraced_hills
@@ -1232,7 +1232,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_travel scope:selected_scene = flag:talk_scene_terrain_travel  }
+			global_var:talk_scene = flag:talk_scene_terrain_travel 
 			location = {
 				OR = {
 					terrain = farmlands
@@ -1246,7 +1246,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_travel scope:selected_scene = flag:talk_scene_terrain_travel  }
+			global_var:talk_scene = flag:talk_scene_terrain_travel 
 			location = {
 				terrain = farmlands
 				exists = province_owner
@@ -1258,7 +1258,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_travel scope:selected_scene = flag:talk_scene_terrain_travel  }
+			global_var:talk_scene = flag:talk_scene_terrain_travel 
 			location = {
 				terrain = farmlands
 				exists = province_owner
@@ -1269,7 +1269,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_travel scope:selected_scene = flag:talk_scene_terrain_travel  }
+			global_var:talk_scene = flag:talk_scene_terrain_travel 
 			location = {
 				terrain = farmlands
 				NOT = { exists = province_owner }
@@ -1280,7 +1280,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_travel scope:selected_scene = flag:talk_scene_terrain_travel  }
+			global_var:talk_scene = flag:talk_scene_terrain_travel 
 			location = {
 				graphical_plains_trigger = yes
 				exists = province_owner
@@ -1291,7 +1291,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_travel scope:selected_scene = flag:talk_scene_terrain_travel  }
+			global_var:talk_scene = flag:talk_scene_terrain_travel 
 			location = {
 				graphical_plains_trigger = yes
 				NOT = { exists = province_owner }
@@ -1302,7 +1302,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_travel scope:selected_scene = flag:talk_scene_terrain_travel  }
+			global_var:talk_scene = flag:talk_scene_terrain_travel 
 			location = {
 				graphical_wilderness_desert_trigger = yes
 				province_owner ?= { government_has_flag = government_is_tribal }
@@ -1313,7 +1313,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_travel scope:selected_scene = flag:talk_scene_terrain_travel  }
+			global_var:talk_scene = flag:talk_scene_terrain_travel 
 			location = {
 				graphical_wilderness_desert_trigger = yes
 				exists = province_owner
@@ -1325,7 +1325,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_travel scope:selected_scene = flag:talk_scene_terrain_travel  }
+			global_var:talk_scene = flag:talk_scene_terrain_travel 
 			location = {
 				terrain = oasis
 				NOT = { exists = province_owner }
@@ -1336,7 +1336,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_travel scope:selected_scene = flag:talk_scene_terrain_travel  }
+			global_var:talk_scene = flag:talk_scene_terrain_travel 
 			location = {
 				graphical_wilderness_desert_trigger = yes
 				NOT = { exists = province_owner }
@@ -1347,7 +1347,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_travel scope:selected_scene = flag:talk_scene_terrain_travel  }
+			global_var:talk_scene = flag:talk_scene_terrain_travel 
 			location = {
 				root.location ?= { hunt_snowy_forest_trigger = yes }
 			}
@@ -1357,7 +1357,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_travel scope:selected_scene = flag:talk_scene_terrain_travel  }
+			global_var:talk_scene = flag:talk_scene_terrain_travel 
 			location = {
 				graphical_wilderness_forest_pine_trigger = yes
 			}
@@ -1367,7 +1367,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_travel scope:selected_scene = flag:talk_scene_terrain_travel  }
+			global_var:talk_scene = flag:talk_scene_terrain_travel 
 			location = {
 				graphical_wilderness_forest_trigger = yes
 			}
@@ -1377,7 +1377,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_travel scope:selected_scene = flag:talk_scene_terrain_travel  }
+			global_var:talk_scene = flag:talk_scene_terrain_travel 
 			location = {
 				graphical_wilderness_mountains_trigger = yes
 				has_winter_trigger = yes
@@ -1388,7 +1388,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_travel scope:selected_scene = flag:talk_scene_terrain_travel  }
+			global_var:talk_scene = flag:talk_scene_terrain_travel 
 			location = {
 				graphical_wilderness_mountains_trigger = yes
 				exists = province_owner
@@ -1399,7 +1399,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_travel scope:selected_scene = flag:talk_scene_terrain_travel  }
+			global_var:talk_scene = flag:talk_scene_terrain_travel 
 			location = {
 				graphical_wilderness_mountains_trigger = yes
 				NOT = { exists = province_owner }
@@ -1410,7 +1410,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_travel scope:selected_scene = flag:talk_scene_terrain_travel  }
+			global_var:talk_scene = flag:talk_scene_terrain_travel 
 			location = {
 				graphical_wilderness_steppe_trigger = yes
 				has_winter_trigger = yes
@@ -1421,7 +1421,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_travel scope:selected_scene = flag:talk_scene_terrain_travel  }
+			global_var:talk_scene = flag:talk_scene_terrain_travel 
 			location = {
 				graphical_wilderness_steppe_trigger = yes
 				exists = province_owner
@@ -1432,7 +1432,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_travel scope:selected_scene = flag:talk_scene_terrain_travel  }
+			global_var:talk_scene = flag:talk_scene_terrain_travel 
 			location = {
 				graphical_wilderness_steppe_trigger = yes
 				NOT = { exists = province_owner }
@@ -1443,7 +1443,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_travel scope:selected_scene = flag:talk_scene_terrain_travel  }
+			global_var:talk_scene = flag:talk_scene_terrain_travel 
 			location = {
 				graphical_drylands_trigger = yes
 			}
@@ -1453,7 +1453,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_travel scope:selected_scene = flag:talk_scene_terrain_travel  }
+			global_var:talk_scene = flag:talk_scene_terrain_travel 
 			location = {
 				graphical_wilderness_wetlands_trigger = yes
 				has_winter_trigger = yes
@@ -1464,7 +1464,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_travel scope:selected_scene = flag:talk_scene_terrain_travel  }
+			global_var:talk_scene = flag:talk_scene_terrain_travel 
 			location = {
 				graphical_wilderness_wetlands_trigger = yes
 			}
@@ -1474,7 +1474,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_travel scope:selected_scene = flag:talk_scene_terrain_travel  }
+			global_var:talk_scene = flag:talk_scene_terrain_travel 
 			location = {
 				graphical_wilderness_jungle_trigger = yes
 			}
@@ -1484,7 +1484,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_travel scope:selected_scene = flag:talk_scene_terrain_travel  }
+			global_var:talk_scene = flag:talk_scene_terrain_travel 
 			location = {
 				graphical_hills_trigger = yes
 				has_winter_trigger = yes
@@ -1495,7 +1495,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_travel scope:selected_scene = flag:talk_scene_terrain_travel  }
+			global_var:talk_scene = flag:talk_scene_terrain_travel 
 			location = {
 				graphical_hills_trigger = yes
 				exists = province_owner
@@ -1506,7 +1506,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_travel scope:selected_scene = flag:talk_scene_terrain_travel  }
+			global_var:talk_scene = flag:talk_scene_terrain_travel 
 			location = {
 				graphical_hills_trigger = yes
 				NOT = { exists = province_owner }
@@ -1517,7 +1517,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_travel scope:selected_scene = flag:talk_scene_terrain_travel  }
+			global_var:talk_scene = flag:talk_scene_terrain_travel 
 			location = {
 				is_sea_province = yes
 			}
@@ -1527,14 +1527,14 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_travel scope:selected_scene = flag:talk_scene_terrain_travel  }
+			global_var:talk_scene = flag:talk_scene_terrain_travel 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_forest }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_docks scope:selected_scene = flag:talk_scene_docks  }
+			global_var:talk_scene = flag:talk_scene_docks 
 			root.location = {
 			is_coastal = yes
 			OR = {
@@ -1550,7 +1550,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_docks scope:selected_scene = flag:talk_scene_docks  }
+			global_var:talk_scene = flag:talk_scene_docks 
 			location = {
 				province_owner = {
 					OR = {
@@ -1582,7 +1582,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_docks scope:selected_scene = flag:talk_scene_docks  }
+			global_var:talk_scene = flag:talk_scene_docks 
 			location = {
 				province_owner = {
 					OR = {
@@ -1598,7 +1598,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_docks scope:selected_scene = flag:talk_scene_docks  }
+			global_var:talk_scene = flag:talk_scene_docks 
 			root.location ?= {
 			OR = {
 			culture ?= { has_graphical_east_asia_culture_group_trigger = yes }
@@ -1611,7 +1611,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_docks scope:selected_scene = flag:talk_scene_docks  }
+			global_var:talk_scene = flag:talk_scene_docks 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_docks }
 	}
@@ -1619,7 +1619,7 @@ log_backgrounds = {
 	# First we check for Rice
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_farmland scope:selected_scene = flag:talk_scene_farmland  }
+			global_var:talk_scene = flag:talk_scene_farmland 
 			root.location ?= {
 			OR = {
 			terrain = terraced_hills
@@ -1632,7 +1632,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_farmland scope:selected_scene = flag:talk_scene_farmland  }
+			global_var:talk_scene = flag:talk_scene_farmland 
 			root.location ?= {
 			OR = {
 			geographical_region = world_india
@@ -1650,14 +1650,14 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_farmland scope:selected_scene = flag:talk_scene_farmland  }
+			global_var:talk_scene = flag:talk_scene_farmland 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_farms }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_feast scope:selected_scene = flag:talk_scene_feast  }
+			global_var:talk_scene = flag:talk_scene_feast 
 			location = {
 				province_owner = {
 					OR = {
@@ -1681,7 +1681,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_feast scope:selected_scene = flag:talk_scene_feast  }
+			global_var:talk_scene = flag:talk_scene_feast 
 			location = {
 				province_owner = {
 					has_government = landless_adventurer_government
@@ -1693,7 +1693,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_feast scope:selected_scene = flag:talk_scene_feast  }
+			global_var:talk_scene = flag:talk_scene_feast 
 			trigger_if = {
 			limit = {
 			NOT = { exists = scope:activity }
@@ -1704,7 +1704,7 @@ log_backgrounds = {
 			}
 			trigger_else = {
 			scope:activity = {
-			activity_root.location = {
+			activity_location = {
 			culture ?= { has_building_gfx = byzantine_building_gfx }
 			}
 			}
@@ -1715,10 +1715,10 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_feast scope:selected_scene = flag:talk_scene_feast  }
+			global_var:talk_scene = flag:talk_scene_feast 
 			OR = {
 			scope:activity = {
-			activity_root.location = {
+			activity_location = {
 			culture ?= { has_building_gfx = norse_building_gfx }
 			}
 			}
@@ -1730,7 +1730,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_feast scope:selected_scene = flag:talk_scene_feast  }
+			global_var:talk_scene = flag:talk_scene_feast 
 			trigger_if = {
 			limit = {
 			NOT = { exists = scope:activity }
@@ -1745,12 +1745,12 @@ log_backgrounds = {
 			trigger_else = {
 			OR = {
 			scope:activity = {
-			activity_root.location = {
+			activity_location = {
 			culture ?= { has_graphical_india_culture_group_trigger = yes }
 			}
 			}
 			scope:activity = {
-			activity_root.location ?= { steppe_building_gfx_use_indian_trigger = yes }
+			activity_location ?= { steppe_building_gfx_use_indian_trigger = yes }
 			}
 			}
 			}
@@ -1760,7 +1760,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_feast scope:selected_scene = flag:talk_scene_feast  }
+			global_var:talk_scene = flag:talk_scene_feast 
 			trigger_if = {
 			limit = {
 			NOT = { exists = scope:activity }
@@ -1771,7 +1771,7 @@ log_backgrounds = {
 			}
 			trigger_else = {
 			scope:activity = {
-			activity_root.location = {
+			activity_location = {
 			culture ?= { has_building_gfx = african_building_gfx }
 			}
 			}
@@ -1782,7 +1782,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_feast scope:selected_scene = flag:talk_scene_feast  }
+			global_var:talk_scene = flag:talk_scene_feast 
 			trigger_if = {
 			limit = {
 			NOT = { exists = scope:activity }
@@ -1805,7 +1805,7 @@ log_backgrounds = {
 			trigger_else = {
 			OR = {
 			scope:activity = {
-			activity_root.location = {
+			activity_location = {
 			culture ?= {
 			OR = {
 			has_graphical_mena_culture_group_trigger = yes
@@ -1816,7 +1816,7 @@ log_backgrounds = {
 			}
 			}
 			scope:activity = {
-			activity_root.location ?= {
+			activity_location ?= {
 			steppe_building_gfx_use_mena_trigger = yes
 			}
 			}
@@ -1828,7 +1828,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_feast scope:selected_scene = flag:talk_scene_feast  }
+			global_var:talk_scene = flag:talk_scene_feast 
 			trigger_if = {
 			limit = {
 			NOT = { exists = scope:activity }
@@ -1844,7 +1844,7 @@ log_backgrounds = {
 			}
 			trigger_else = {
 			scope:activity = {
-			activity_root.location ?= {
+			activity_location ?= {
 			OR = {
 			culture ?= {
 			has_graphical_east_asia_culture_group_trigger = yes
@@ -1860,14 +1860,14 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_feast scope:selected_scene = flag:talk_scene_feast  }
+			global_var:talk_scene = flag:talk_scene_feast 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_feast }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_gallows scope:selected_scene = flag:talk_scene_gallows  }
+			global_var:talk_scene = flag:talk_scene_gallows 
 			location = {
 				province_owner = {
 					OR = {
@@ -1887,14 +1887,14 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_gallows scope:selected_scene = flag:talk_scene_gallows  }
+			global_var:talk_scene = flag:talk_scene_gallows 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_gallows }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_garden scope:selected_scene = flag:talk_scene_garden  }
+			global_var:talk_scene = flag:talk_scene_garden 
 			location = {
 				province_owner = {
 					OR = {
@@ -1918,7 +1918,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_garden scope:selected_scene = flag:talk_scene_garden  }
+			global_var:talk_scene = flag:talk_scene_garden 
 			location = {
 				province_owner = {
 					has_government = landless_adventurer_government
@@ -1930,7 +1930,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_garden scope:selected_scene = flag:talk_scene_garden  }
+			global_var:talk_scene = flag:talk_scene_garden 
 			root.location = {
 			culture ?= { has_building_gfx = norse_building_gfx }
 			}
@@ -1940,7 +1940,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_garden scope:selected_scene = flag:talk_scene_garden  }
+			global_var:talk_scene = flag:talk_scene_garden 
 			location = {
 				province_owner = {
 					government_has_flag = government_is_tribal
@@ -1961,7 +1961,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_garden scope:selected_scene = flag:talk_scene_garden  }
+			global_var:talk_scene = flag:talk_scene_garden 
 			location = {
 				province_owner = {
 					government_has_flag = government_is_tribal
@@ -1986,7 +1986,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_garden scope:selected_scene = flag:talk_scene_garden  }
+			global_var:talk_scene = flag:talk_scene_garden 
 			location = {
 				province_owner = {
 					government_has_flag = government_is_tribal
@@ -2011,7 +2011,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_garden scope:selected_scene = flag:talk_scene_garden  }
+			global_var:talk_scene = flag:talk_scene_garden 
 			location = {
 				province_owner = {
 					government_has_flag = government_is_tribal
@@ -2026,7 +2026,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_garden scope:selected_scene = flag:talk_scene_garden  }
+			global_var:talk_scene = flag:talk_scene_garden 
 			location = {
 				province_owner = {
 					government_has_flag = government_is_tribal
@@ -2045,7 +2045,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_garden scope:selected_scene = flag:talk_scene_garden  }
+			global_var:talk_scene = flag:talk_scene_garden 
 			location = {
 				province_owner = {
 					OR = {
@@ -2062,7 +2062,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_garden scope:selected_scene = flag:talk_scene_garden  }
+			global_var:talk_scene = flag:talk_scene_garden 
 			location = {
 				province_owner = {
 					OR = {
@@ -2087,7 +2087,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_garden scope:selected_scene = flag:talk_scene_garden  }
+			global_var:talk_scene = flag:talk_scene_garden 
 			location = {
 				province_owner = {
 					root.location ?= {
@@ -2104,14 +2104,14 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_garden scope:selected_scene = flag:talk_scene_garden  }
+			global_var:talk_scene = flag:talk_scene_garden 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_garden }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_market scope:selected_scene = flag:talk_scene_market  }
+			global_var:talk_scene = flag:talk_scene_market 
 			location = {
 				province_owner = {
 					root.location = {
@@ -2132,7 +2132,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_market scope:selected_scene = flag:talk_scene_market  }
+			global_var:talk_scene = flag:talk_scene_market 
 			location = {
 				province_owner = {
 					OR = {
@@ -2156,7 +2156,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_market scope:selected_scene = flag:talk_scene_market  }
+			global_var:talk_scene = flag:talk_scene_market 
 			location = {
 				province_owner = {
 					root.location ?= {
@@ -2193,7 +2193,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_market scope:selected_scene = flag:talk_scene_market  }
+			global_var:talk_scene = flag:talk_scene_market 
 			location = {
 				province_owner = {
 					root.location ?= {
@@ -2227,7 +2227,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_market scope:selected_scene = flag:talk_scene_market  }
+			global_var:talk_scene = flag:talk_scene_market 
 			location = {
 				province_owner = {
 					root.location ?= {
@@ -2250,7 +2250,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_market scope:selected_scene = flag:talk_scene_market  }
+			global_var:talk_scene = flag:talk_scene_market 
 			location = {
 				province_owner = {
 					root.location ?= {
@@ -2269,7 +2269,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_market scope:selected_scene = flag:talk_scene_market  }
+			global_var:talk_scene = flag:talk_scene_market 
 			location = {
 				province_owner = {
 					root.location ?= {
@@ -2300,7 +2300,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_market scope:selected_scene = flag:talk_scene_market  }
+			global_var:talk_scene = flag:talk_scene_market 
 			location = {
 				province_owner = {
 					root.location ?= {
@@ -2324,14 +2324,14 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_market scope:selected_scene = flag:talk_scene_market  }
+			global_var:talk_scene = flag:talk_scene_market 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_market_west }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_village scope:selected_scene = flag:talk_scene_village  }
+			global_var:talk_scene = flag:talk_scene_village 
 			root.location = {
 			county = {
 			holder ?= {
@@ -2348,7 +2348,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_village scope:selected_scene = flag:talk_scene_village  }
+			global_var:talk_scene = flag:talk_scene_village 
 			root.location = {
 			is_coastal = yes
 			OR = {
@@ -2364,7 +2364,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_village scope:selected_scene = flag:talk_scene_village  }
+			global_var:talk_scene = flag:talk_scene_village 
 			location = {
 				province_owner = {
 					government_has_flag = government_is_tribal
@@ -2389,7 +2389,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_village scope:selected_scene = flag:talk_scene_village  }
+			global_var:talk_scene = flag:talk_scene_village 
 			root.location = {
 			OR = {
 			culture ?= { has_graphical_east_asia_culture_group_trigger = yes }
@@ -2410,7 +2410,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_village scope:selected_scene = flag:talk_scene_village  }
+			global_var:talk_scene = flag:talk_scene_village 
 			root.location ?= {
 			OR = {
 			geographical_region = graphical_mena
@@ -2434,7 +2434,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_village scope:selected_scene = flag:talk_scene_village  }
+			global_var:talk_scene = flag:talk_scene_village 
 			root.location ?= {
 			county = {
 			holder ?= {
@@ -2449,7 +2449,7 @@ log_backgrounds = {
 	# Uses Market
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_village scope:selected_scene = flag:talk_scene_village  }
+			global_var:talk_scene = flag:talk_scene_village 
 			root.location ?= {
 			OR = {
 			geographical_region = mediteranean_coast
@@ -2464,14 +2464,14 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_village scope:selected_scene = flag:talk_scene_village  }
+			global_var:talk_scene = flag:talk_scene_village 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_market_west }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_burning_building scope:selected_scene = flag:talk_scene_burning_building  }
+			global_var:talk_scene = flag:talk_scene_burning_building 
 			location = {
 				province_owner = {
 					root.location ?= {
@@ -2492,7 +2492,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_burning_building scope:selected_scene = flag:talk_scene_burning_building  }
+			global_var:talk_scene = flag:talk_scene_burning_building 
 			location = {
 				province_owner = {
 					root.location = {
@@ -2506,14 +2506,14 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_burning_building scope:selected_scene = flag:talk_scene_burning_building  }
+			global_var:talk_scene = flag:talk_scene_burning_building 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_raid_burning }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_sitting_room scope:selected_scene = flag:talk_scene_sitting_room  }
+			global_var:talk_scene = flag:talk_scene_sitting_room 
 			location = {
 				province_owner = {
 					OR = {
@@ -2537,7 +2537,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_sitting_room scope:selected_scene = flag:talk_scene_sitting_room  }
+			global_var:talk_scene = flag:talk_scene_sitting_room 
 			location = {
 				province_owner = {
 					has_government = landless_adventurer_government
@@ -2549,7 +2549,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_sitting_room scope:selected_scene = flag:talk_scene_sitting_room  }
+			global_var:talk_scene = flag:talk_scene_sitting_room 
 			location = {
 				province_owner = {
 					highest_held_title_tier >= tier_kingdom
@@ -2571,7 +2571,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_sitting_room scope:selected_scene = flag:talk_scene_sitting_room  }
+			global_var:talk_scene = flag:talk_scene_sitting_room 
 			location = {
 				province_owner = {
 					OR = {
@@ -2597,7 +2597,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_sitting_room scope:selected_scene = flag:talk_scene_sitting_room  }
+			global_var:talk_scene = flag:talk_scene_sitting_room 
 			location = {
 				province_owner = {
 					OR = {
@@ -2625,7 +2625,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_sitting_room scope:selected_scene = flag:talk_scene_sitting_room  }
+			global_var:talk_scene = flag:talk_scene_sitting_room 
 			location = {
 				province_owner = {
 					OR = {
@@ -2642,7 +2642,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_sitting_room scope:selected_scene = flag:talk_scene_sitting_room  }
+			global_var:talk_scene = flag:talk_scene_sitting_room 
 			location = {
 				province_owner = {
 					OR = {
@@ -2661,7 +2661,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_sitting_room scope:selected_scene = flag:talk_scene_sitting_room  }
+			global_var:talk_scene = flag:talk_scene_sitting_room 
 			location = {
 				province_owner = {
 					OR = {
@@ -2680,7 +2680,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_sitting_room scope:selected_scene = flag:talk_scene_sitting_room  }
+			global_var:talk_scene = flag:talk_scene_sitting_room 
 			location = {
 				province_owner = {
 					OR = {
@@ -2703,14 +2703,14 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_sitting_room scope:selected_scene = flag:talk_scene_sitting_room  }
+			global_var:talk_scene = flag:talk_scene_sitting_room 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_sittingroom }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_bedchamber scope:selected_scene = flag:talk_scene_bedchamber  }
+			global_var:talk_scene = flag:talk_scene_bedchamber 
 			location = {
 				province_owner = {
 					OR = {
@@ -2734,7 +2734,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_bedchamber scope:selected_scene = flag:talk_scene_bedchamber  }
+			global_var:talk_scene = flag:talk_scene_bedchamber 
 			location = {
 				province_owner = {
 					has_government = landless_adventurer_government
@@ -2746,7 +2746,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_bedchamber scope:selected_scene = flag:talk_scene_bedchamber  }
+			global_var:talk_scene = flag:talk_scene_bedchamber 
 			location = {
 				province_owner = {
 					OR = {
@@ -2775,7 +2775,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_bedchamber scope:selected_scene = flag:talk_scene_bedchamber  }
+			global_var:talk_scene = flag:talk_scene_bedchamber 
 			location = {
 				province_owner = {
 					OR = {
@@ -2792,7 +2792,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_bedchamber scope:selected_scene = flag:talk_scene_bedchamber  }
+			global_var:talk_scene = flag:talk_scene_bedchamber 
 			location = {
 				province_owner = {
 					root.location ?= {
@@ -2811,7 +2811,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_bedchamber scope:selected_scene = flag:talk_scene_bedchamber  }
+			global_var:talk_scene = flag:talk_scene_bedchamber 
 			location = {
 				province_owner = {
 					OR = {
@@ -2834,14 +2834,14 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_bedchamber scope:selected_scene = flag:talk_scene_bedchamber  }
+			global_var:talk_scene = flag:talk_scene_bedchamber 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_bedchamber }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_study scope:selected_scene = flag:talk_scene_study  }
+			global_var:talk_scene = flag:talk_scene_study 
 			location = {
 				province_owner = {
 					OR = {
@@ -2865,7 +2865,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_study scope:selected_scene = flag:talk_scene_study  }
+			global_var:talk_scene = flag:talk_scene_study 
 			location = {
 				province_owner = {
 					has_government = landless_adventurer_government
@@ -2877,7 +2877,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_study scope:selected_scene = flag:talk_scene_study  }
+			global_var:talk_scene = flag:talk_scene_study 
 			location = {
 				province_owner = {
 					OR = {
@@ -2900,7 +2900,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_study scope:selected_scene = flag:talk_scene_study  }
+			global_var:talk_scene = flag:talk_scene_study 
 			location = {
 				province_owner = {
 					root.location = {
@@ -2921,7 +2921,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_study scope:selected_scene = flag:talk_scene_study  }
+			global_var:talk_scene = flag:talk_scene_study 
 			location = {
 				province_owner = {
 					OR = {
@@ -2947,7 +2947,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_study scope:selected_scene = flag:talk_scene_study  }
+			global_var:talk_scene = flag:talk_scene_study 
 			location = {
 				province_owner = {
 					OR = {
@@ -2964,7 +2964,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_study scope:selected_scene = flag:talk_scene_study  }
+			global_var:talk_scene = flag:talk_scene_study 
 			location = {
 				province_owner = {
 					OR = {
@@ -2981,7 +2981,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_study scope:selected_scene = flag:talk_scene_study  }
+			global_var:talk_scene = flag:talk_scene_study 
 			location = {
 				province_owner = {
 					root.location ?= {
@@ -2998,14 +2998,14 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_study scope:selected_scene = flag:talk_scene_study  }
+			global_var:talk_scene = flag:talk_scene_study 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_study }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_relaxing_room scope:selected_scene = flag:talk_scene_relaxing_room  }
+			global_var:talk_scene = flag:talk_scene_relaxing_room 
 			location = {
 				province_owner = {
 					OR = {
@@ -3029,7 +3029,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_relaxing_room scope:selected_scene = flag:talk_scene_relaxing_room  }
+			global_var:talk_scene = flag:talk_scene_relaxing_room 
 			location = {
 				province_owner = {
 					has_government = landless_adventurer_government
@@ -3041,7 +3041,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_relaxing_room scope:selected_scene = flag:talk_scene_relaxing_room  }
+			global_var:talk_scene = flag:talk_scene_relaxing_room 
 			location = {
 				province_owner = {
 					highest_held_title_tier >= tier_kingdom
@@ -3066,7 +3066,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_relaxing_room scope:selected_scene = flag:talk_scene_relaxing_room  }
+			global_var:talk_scene = flag:talk_scene_relaxing_room 
 			location = {
 				province_owner = {
 					OR = {
@@ -3090,7 +3090,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_relaxing_room scope:selected_scene = flag:talk_scene_relaxing_room  }
+			global_var:talk_scene = flag:talk_scene_relaxing_room 
 			location = {
 				province_owner = {
 					OR = {
@@ -3107,7 +3107,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_relaxing_room scope:selected_scene = flag:talk_scene_relaxing_room  }
+			global_var:talk_scene = flag:talk_scene_relaxing_room 
 			location = {
 				province_owner = {
 					OR = {
@@ -3134,7 +3134,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_relaxing_room scope:selected_scene = flag:talk_scene_relaxing_room  }
+			global_var:talk_scene = flag:talk_scene_relaxing_room 
 			location = {
 				province_owner = {
 					root.location ?= {
@@ -3151,7 +3151,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_relaxing_room scope:selected_scene = flag:talk_scene_relaxing_room  }
+			global_var:talk_scene = flag:talk_scene_relaxing_room 
 			location = {
 				province_owner = {
 					OR = {
@@ -3174,14 +3174,14 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_relaxing_room scope:selected_scene = flag:talk_scene_relaxing_room  }
+			global_var:talk_scene = flag:talk_scene_relaxing_room 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_bp1_relaxing_room_western }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_physicians_study scope:selected_scene = flag:talk_scene_physicians_study  }
+			global_var:talk_scene = flag:talk_scene_physicians_study 
 			location = {
 				province_owner = {
 					OR = {
@@ -3199,7 +3199,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_physicians_study scope:selected_scene = flag:talk_scene_physicians_study  }
+			global_var:talk_scene = flag:talk_scene_physicians_study 
 			location = {
 				province_owner = {
 					has_government = landless_adventurer_government
@@ -3211,7 +3211,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_physicians_study scope:selected_scene = flag:talk_scene_physicians_study  }
+			global_var:talk_scene = flag:talk_scene_physicians_study 
 			location = {
 				province_owner = {
 					OR = {
@@ -3234,7 +3234,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_physicians_study scope:selected_scene = flag:talk_scene_physicians_study  }
+			global_var:talk_scene = flag:talk_scene_physicians_study 
 			location = {
 				province_owner = {
 					OR = {
@@ -3251,7 +3251,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_physicians_study scope:selected_scene = flag:talk_scene_physicians_study  }
+			global_var:talk_scene = flag:talk_scene_physicians_study 
 			location = {
 				province_owner = {
 					OR = {
@@ -3268,7 +3268,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_physicians_study scope:selected_scene = flag:talk_scene_physicians_study  }
+			global_var:talk_scene = flag:talk_scene_physicians_study 
 			location = {
 				province_owner = {
 					OR = {
@@ -3288,14 +3288,14 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_physicians_study scope:selected_scene = flag:talk_scene_physicians_study  }
+			global_var:talk_scene = flag:talk_scene_physicians_study 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_study_physician }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_tavern scope:selected_scene = flag:talk_scene_tavern  }
+			global_var:talk_scene = flag:talk_scene_tavern 
 			location = {
 				province_owner = {
 					root.location = {
@@ -3321,7 +3321,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_tavern scope:selected_scene = flag:talk_scene_tavern  }
+			global_var:talk_scene = flag:talk_scene_tavern 
 			location = {
 				province_owner = {
 					OR = {
@@ -3338,7 +3338,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_tavern scope:selected_scene = flag:talk_scene_tavern  }
+			global_var:talk_scene = flag:talk_scene_tavern 
 			location = {
 				province_owner = {
 					OR = {
@@ -3361,7 +3361,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_tavern scope:selected_scene = flag:talk_scene_tavern  }
+			global_var:talk_scene = flag:talk_scene_tavern 
 			location = {
 				province_owner = {
 					root.location ?= {
@@ -3380,14 +3380,14 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_tavern scope:selected_scene = flag:talk_scene_tavern  }
+			global_var:talk_scene = flag:talk_scene_tavern 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_tavern }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_throne_room scope:selected_scene = flag:talk_scene_throne_room  }
+			global_var:talk_scene = flag:talk_scene_throne_room 
 			location = {
 				province_owner = {
 					tgp_has_ceremonial_liege_title_trigger = no
@@ -3400,7 +3400,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_throne_room scope:selected_scene = flag:talk_scene_throne_room  }
+			global_var:talk_scene = flag:talk_scene_throne_room 
 			location = {
 				province_owner = {
 					is_governor_or_admin_count = no
@@ -3421,7 +3421,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_throne_room scope:selected_scene = flag:talk_scene_throne_room  }
+			global_var:talk_scene = flag:talk_scene_throne_room 
 			location = {
 				province_owner = {
 					government_has_flag = government_is_nomadic
@@ -3439,7 +3439,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_throne_room scope:selected_scene = flag:talk_scene_throne_room  }
+			global_var:talk_scene = flag:talk_scene_throne_room 
 			location = {
 				province_owner = {
 					OR = {
@@ -3464,7 +3464,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_throne_room scope:selected_scene = flag:talk_scene_throne_room  }
+			global_var:talk_scene = flag:talk_scene_throne_room 
 			location = {
 				province_owner = {
 					has_government = landless_adventurer_government
@@ -3476,7 +3476,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_throne_room scope:selected_scene = flag:talk_scene_throne_room  }
+			global_var:talk_scene = flag:talk_scene_throne_room 
 			location = {
 				province_owner = {
 					root.location = {
@@ -3491,7 +3491,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_throne_room scope:selected_scene = flag:talk_scene_throne_room  }
+			global_var:talk_scene = flag:talk_scene_throne_room 
 			location = {
 				province_owner = {
 					root.location = {
@@ -3506,7 +3506,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_throne_room scope:selected_scene = flag:talk_scene_throne_room  }
+			global_var:talk_scene = flag:talk_scene_throne_room 
 			location = {
 				province_owner = {
 					government_has_flag = government_is_tribal
@@ -3518,7 +3518,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_throne_room scope:selected_scene = flag:talk_scene_throne_room  }
+			global_var:talk_scene = flag:talk_scene_throne_room 
 			location = {
 				province_owner = {
 					OR = {
@@ -3538,7 +3538,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_throne_room scope:selected_scene = flag:talk_scene_throne_room  }
+			global_var:talk_scene = flag:talk_scene_throne_room 
 			location = {
 				province_owner = {
 					is_governor_or_admin_count = yes
@@ -3556,7 +3556,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_throne_room scope:selected_scene = flag:talk_scene_throne_room  }
+			global_var:talk_scene = flag:talk_scene_throne_room 
 			location = {
 				province_owner = {
 					OR = {
@@ -3574,7 +3574,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_throne_room scope:selected_scene = flag:talk_scene_throne_room  }
+			global_var:talk_scene = flag:talk_scene_throne_room 
 			location = {
 				province_owner = {
 					OR = {
@@ -3591,7 +3591,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_throne_room scope:selected_scene = flag:talk_scene_throne_room  }
+			global_var:talk_scene = flag:talk_scene_throne_room 
 			location = {
 				province_owner = {
 					root.location = {
@@ -3606,7 +3606,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_throne_room scope:selected_scene = flag:talk_scene_throne_room  }
+			global_var:talk_scene = flag:talk_scene_throne_room 
 			location = {
 				province_owner = {
 					OR = {
@@ -3623,7 +3623,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_throne_room scope:selected_scene = flag:talk_scene_throne_room  }
+			global_var:talk_scene = flag:talk_scene_throne_room 
 			location = {
 				province_owner = {
 					OR = {
@@ -3640,7 +3640,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_throne_room scope:selected_scene = flag:talk_scene_throne_room  }
+			global_var:talk_scene = flag:talk_scene_throne_room 
 			location = {
 				province_owner = {
 					OR = {
@@ -3657,7 +3657,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_throne_room scope:selected_scene = flag:talk_scene_throne_room  }
+			global_var:talk_scene = flag:talk_scene_throne_room 
 			location = {
 				province_owner = {
 					root.location ?= {
@@ -3674,7 +3674,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_throne_room scope:selected_scene = flag:talk_scene_throne_room  }
+			global_var:talk_scene = flag:talk_scene_throne_room 
 			location = {
 				province_owner = {
 					root.location ?= {
@@ -3691,7 +3691,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_throne_room scope:selected_scene = flag:talk_scene_throne_room  }
+			global_var:talk_scene = flag:talk_scene_throne_room 
 			location = {
 				province_owner = {
 					is_governor_or_admin_count = no
@@ -3709,14 +3709,14 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_throne_room scope:selected_scene = flag:talk_scene_throne_room  }
+			global_var:talk_scene = flag:talk_scene_throne_room 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_throneroom_west }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_estate scope:selected_scene = flag:talk_scene_estate  }
+			global_var:talk_scene = flag:talk_scene_estate 
 			location = {
 				province_owner = {
 					domicile ?= { is_domicile_type = japanese_manor }
@@ -3728,7 +3728,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_estate scope:selected_scene = flag:talk_scene_estate  }
+			global_var:talk_scene = flag:talk_scene_estate 
 			location = {
 				province_owner = {
 					domicile ?= { is_domicile_type = east_asian_estate }
@@ -3741,7 +3741,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_estate scope:selected_scene = flag:talk_scene_estate  }
+			global_var:talk_scene = flag:talk_scene_estate 
 			location = {
 				province_owner = {
 					domicile ?= { is_domicile_type = east_asian_estate }
@@ -3753,7 +3753,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_estate scope:selected_scene = flag:talk_scene_estate  }
+			global_var:talk_scene = flag:talk_scene_estate 
 			location = {
 				province_owner = {
 					root.location ?= {
@@ -3770,7 +3770,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_estate scope:selected_scene = flag:talk_scene_estate  }
+			global_var:talk_scene = flag:talk_scene_estate 
 			location = {
 				province_owner = {
 					root.location ?= {
@@ -3787,7 +3787,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_estate scope:selected_scene = flag:talk_scene_estate  }
+			global_var:talk_scene = flag:talk_scene_estate 
 			location = {
 				province_owner = {
 					root.location ?= {
@@ -3809,14 +3809,14 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_estate scope:selected_scene = flag:talk_scene_estate  }
+			global_var:talk_scene = flag:talk_scene_estate 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_ep3_medi_estate }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_army_camp scope:selected_scene = flag:talk_scene_army_camp  }
+			global_var:talk_scene = flag:talk_scene_army_camp 
 			location = {
 				province_owner = {
 					OR = {
@@ -3835,7 +3835,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_army_camp scope:selected_scene = flag:talk_scene_army_camp  }
+			global_var:talk_scene = flag:talk_scene_army_camp 
 			location = {
 				province_owner = {
 					OR = {
@@ -3852,42 +3852,42 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_army_camp scope:selected_scene = flag:talk_scene_army_camp  }
+			global_var:talk_scene = flag:talk_scene_army_camp 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_genericcamp }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_bath_house scope:selected_scene = flag:talk_scene_bath_house  }
+			global_var:talk_scene = flag:talk_scene_bath_house 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_fp3_bathhouse }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_runestone scope:selected_scene = flag:talk_scene_runestone  }
+			global_var:talk_scene = flag:talk_scene_runestone 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_fp1_runestone }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_runestone_circle scope:selected_scene = flag:talk_scene_runestone_circle  }
+			global_var:talk_scene = flag:talk_scene_runestone_circle 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_fp1_runestone_circle }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_beached_longships scope:selected_scene = flag:talk_scene_beached_longships  }
+			global_var:talk_scene = flag:talk_scene_beached_longships 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_fp1_beached_longship }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_kitchen scope:selected_scene = flag:talk_scene_kitchen  }
+			global_var:talk_scene = flag:talk_scene_kitchen 
 			location = {
 				province_owner = {
 					OR = {
@@ -3911,7 +3911,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_kitchen scope:selected_scene = flag:talk_scene_kitchen  }
+			global_var:talk_scene = flag:talk_scene_kitchen 
 			location = {
 				province_owner = {
 					has_government = landless_adventurer_government
@@ -3929,7 +3929,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_kitchen scope:selected_scene = flag:talk_scene_kitchen  }
+			global_var:talk_scene = flag:talk_scene_kitchen 
 			location = {
 				province_owner = {
 					has_government = landless_adventurer_government
@@ -3941,7 +3941,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_kitchen scope:selected_scene = flag:talk_scene_kitchen  }
+			global_var:talk_scene = flag:talk_scene_kitchen 
 			location = {
 				province_owner = {
 					root.location ?= {
@@ -3960,7 +3960,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_kitchen scope:selected_scene = flag:talk_scene_kitchen  }
+			global_var:talk_scene = flag:talk_scene_kitchen 
 			location = {
 				province_owner = {
 					OR = {
@@ -3977,14 +3977,14 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_kitchen scope:selected_scene = flag:talk_scene_kitchen  }
+			global_var:talk_scene = flag:talk_scene_kitchen 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_bp1_kitchen_western }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_bonfire scope:selected_scene = flag:talk_scene_bonfire  }
+			global_var:talk_scene = flag:talk_scene_bonfire 
 			location = {
 				province_owner = {
 					government_has_flag = government_is_nomadic
@@ -3996,14 +3996,14 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_bonfire scope:selected_scene = flag:talk_scene_bonfire  }
+			global_var:talk_scene = flag:talk_scene_bonfire 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_bp1_bonfire }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_wine_cellar scope:selected_scene = flag:talk_scene_wine_cellar  }
+			global_var:talk_scene = flag:talk_scene_wine_cellar 
 			location = {
 				province_owner = {
 					government_has_flag = government_is_nomadic
@@ -4015,7 +4015,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_wine_cellar scope:selected_scene = flag:talk_scene_wine_cellar  }
+			global_var:talk_scene = flag:talk_scene_wine_cellar 
 			location = {
 				province_owner = {
 					root.location ?= {
@@ -4032,7 +4032,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_wine_cellar scope:selected_scene = flag:talk_scene_wine_cellar  }
+			global_var:talk_scene = flag:talk_scene_wine_cellar 
 			location = {
 				province_owner = {
 					OR = {
@@ -4049,14 +4049,14 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_wine_cellar scope:selected_scene = flag:talk_scene_wine_cellar  }
+			global_var:talk_scene = flag:talk_scene_wine_cellar 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_bp1_wine_cellar }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_crossroads_inn scope:selected_scene = flag:talk_scene_crossroads_inn  }
+			global_var:talk_scene = flag:talk_scene_crossroads_inn 
 			location = {
 				province_owner = {
 					root.location ?= {
@@ -4083,7 +4083,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_crossroads_inn scope:selected_scene = flag:talk_scene_crossroads_inn  }
+			global_var:talk_scene = flag:talk_scene_crossroads_inn 
 			root.location = {
 			county = {
 			holder ?= {
@@ -4104,7 +4104,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_crossroads_inn scope:selected_scene = flag:talk_scene_crossroads_inn  }
+			global_var:talk_scene = flag:talk_scene_crossroads_inn 
 			location = {
 				province_owner = {
 					root.location ?= {
@@ -4124,7 +4124,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_crossroads_inn scope:selected_scene = flag:talk_scene_crossroads_inn  }
+			global_var:talk_scene = flag:talk_scene_crossroads_inn 
 			root.location = {
 			is_coastal = yes
 			OR = {
@@ -4140,7 +4140,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_crossroads_inn scope:selected_scene = flag:talk_scene_crossroads_inn  }
+			global_var:talk_scene = flag:talk_scene_crossroads_inn 
 			location = {
 				province_owner = {
 					government_has_flag = government_is_tribal
@@ -4169,7 +4169,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_crossroads_inn scope:selected_scene = flag:talk_scene_crossroads_inn  }
+			global_var:talk_scene = flag:talk_scene_crossroads_inn 
 			location = {
 				province_owner = {
 					root.location ?= {
@@ -4198,7 +4198,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_crossroads_inn scope:selected_scene = flag:talk_scene_crossroads_inn  }
+			global_var:talk_scene = flag:talk_scene_crossroads_inn 
 			location = {
 				province_owner = {
 					OR = {
@@ -4218,21 +4218,21 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_crossroads_inn scope:selected_scene = flag:talk_scene_crossroads_inn  }
+			global_var:talk_scene = flag:talk_scene_crossroads_inn 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_bp1_crossroads_inn }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_cave scope:selected_scene = flag:talk_scene_cave  }
+			global_var:talk_scene = flag:talk_scene_cave 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_fp3_cave }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_tournament scope:selected_scene = flag:talk_scene_tournament  }
+			global_var:talk_scene = flag:talk_scene_tournament 
 			root.location ?= {
 			county = {
 			title_province ?= {
@@ -4250,7 +4250,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_tournament scope:selected_scene = flag:talk_scene_tournament  }
+			global_var:talk_scene = flag:talk_scene_tournament 
 			root.location ?= {
 			OR = {
 			culture ?= { has_graphical_india_culture_group_trigger = yes }
@@ -4264,7 +4264,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_tournament scope:selected_scene = flag:talk_scene_tournament  }
+			global_var:talk_scene = flag:talk_scene_tournament 
 			root.location ?= {
 			OR = {
 			culture ?= { has_graphical_east_asia_culture_group_trigger = yes }
@@ -4277,7 +4277,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_tournament scope:selected_scene = flag:talk_scene_tournament  }
+			global_var:talk_scene = flag:talk_scene_tournament 
 			root.location ?= {
 			OR = {
 			geographical_region = graphical_mena
@@ -4296,14 +4296,14 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_tournament scope:selected_scene = flag:talk_scene_tournament  }
+			global_var:talk_scene = flag:talk_scene_tournament 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_ep2_tournament_western }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_holy_site scope:selected_scene = flag:talk_scene_holy_site  }
+			global_var:talk_scene = flag:talk_scene_holy_site 
 			root.location = {
 			county = title:c_jerusalem
 			}
@@ -4313,7 +4313,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_holy_site scope:selected_scene = flag:talk_scene_holy_site  }
+			global_var:talk_scene = flag:talk_scene_holy_site 
 			root.location = {
 			county = title:c_mecca
 			}
@@ -4323,7 +4323,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_holy_site scope:selected_scene = flag:talk_scene_holy_site  }
+			global_var:talk_scene = flag:talk_scene_holy_site 
 			root.location = {
 			county = title:c_byzantion
 			}
@@ -4333,7 +4333,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_holy_site scope:selected_scene = flag:talk_scene_holy_site  }
+			global_var:talk_scene = flag:talk_scene_holy_site 
 			root.location = {
 			religion ?= religion:zoroastrianism_religion
 			}
@@ -4343,7 +4343,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_holy_site scope:selected_scene = flag:talk_scene_holy_site  }
+			global_var:talk_scene = flag:talk_scene_holy_site 
 			root.location = {
 			OR = {
 			religion = {
@@ -4386,7 +4386,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_holy_site scope:selected_scene = flag:talk_scene_holy_site  }
+			global_var:talk_scene = flag:talk_scene_holy_site 
 			root.location ?= {
 			religion = religion:christianity_religion
 			OR = {
@@ -4406,7 +4406,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_holy_site scope:selected_scene = flag:talk_scene_holy_site  }
+			global_var:talk_scene = flag:talk_scene_holy_site 
 			root.location ?= {
 			OR = {
 			culture ?= { has_graphical_east_asia_culture_group_trigger = yes }
@@ -4419,7 +4419,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_holy_site scope:selected_scene = flag:talk_scene_holy_site  }
+			global_var:talk_scene = flag:talk_scene_holy_site 
 			root.location ?= {
 			OR = {
 			culture ?= { has_graphical_india_culture_group_trigger = yes }
@@ -4432,7 +4432,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_holy_site scope:selected_scene = flag:talk_scene_holy_site  }
+			global_var:talk_scene = flag:talk_scene_holy_site 
 			root.location ?= {
 			OR = {
 			culture ?= { has_graphical_western_culture_group_trigger = yes }
@@ -4448,7 +4448,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_holy_site scope:selected_scene = flag:talk_scene_holy_site  }
+			global_var:talk_scene = flag:talk_scene_holy_site 
 			root.location = {
 			culture = { has_graphical_norse_culture_group_trigger = yes }
 			}
@@ -4458,7 +4458,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_holy_site scope:selected_scene = flag:talk_scene_holy_site  }
+			global_var:talk_scene = flag:talk_scene_holy_site 
 			root.location = {
 			religion = { is_in_family = rf_pagan }
 			}
@@ -4468,7 +4468,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_holy_site scope:selected_scene = flag:talk_scene_holy_site  }
+			global_var:talk_scene = flag:talk_scene_holy_site 
 			OR = {
 			root.location ?= {
 			OR = {
@@ -4486,7 +4486,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_holy_site scope:selected_scene = flag:talk_scene_holy_site  }
+			global_var:talk_scene = flag:talk_scene_holy_site 
 			root.location = {
 			culture ?= { has_graphical_iberian_culture_group_trigger = yes }
 			}
@@ -4496,58 +4496,58 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_holy_site scope:selected_scene = flag:talk_scene_holy_site  }
+			global_var:talk_scene = flag:talk_scene_holy_site 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_ep2_holysite_western }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_travel_bridge scope:selected_scene = flag:talk_scene_travel_bridge  }
+			global_var:talk_scene = flag:talk_scene_travel_bridge 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_ep2_travel_bridge }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_hunt_forest_hut scope:selected_scene = flag:talk_scene_hunt_forest_hut  }
+			global_var:talk_scene = flag:talk_scene_hunt_forest_hut 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_ep2_hunt_generic }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_hunt_forest_cave scope:selected_scene = flag:talk_scene_hunt_forest_cave  }
+			global_var:talk_scene = flag:talk_scene_hunt_forest_cave 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_ep2_hunt_cave_entrance }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_hunt_foggy_forest scope:selected_scene = flag:talk_scene_hunt_foggy_forest  }
+			global_var:talk_scene = flag:talk_scene_hunt_foggy_forest 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_ep2_hunt_foggy_forest }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_dog_kennels scope:selected_scene = flag:talk_scene_dog_kennels  }
+			global_var:talk_scene = flag:talk_scene_dog_kennels 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_ep2_dog_kennels }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_hunt_poachers_camp scope:selected_scene = flag:talk_scene_hunt_poachers_camp  }
+			global_var:talk_scene = flag:talk_scene_hunt_poachers_camp 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_ep2_hunt_poachers_camp }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_hunt_activity_camp scope:selected_scene = flag:talk_scene_hunt_activity_camp  }
+			global_var:talk_scene = flag:talk_scene_hunt_activity_camp 
 			scope:activity = {
-			activity_root.location ?= { hunt_snowy_forest_trigger = yes }
+			activity_location ?= { hunt_snowy_forest_trigger = yes }
 			}
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_ep2_hunt_snowy_forest }
@@ -4555,9 +4555,9 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_hunt_activity_camp scope:selected_scene = flag:talk_scene_hunt_activity_camp  }
+			global_var:talk_scene = flag:talk_scene_hunt_activity_camp 
 			scope:activity = {
-			activity_root.location ?= { graphical_wilderness_mountains_trigger = yes }
+			activity_location ?= { graphical_wilderness_mountains_trigger = yes }
 			}
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_mountains }
@@ -4565,9 +4565,9 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_hunt_activity_camp scope:selected_scene = flag:talk_scene_hunt_activity_camp  }
+			global_var:talk_scene = flag:talk_scene_hunt_activity_camp 
 			scope:activity = {
-			activity_root.location ?= { graphical_wilderness_jungle_trigger = yes }
+			activity_location ?= { graphical_wilderness_jungle_trigger = yes }
 			}
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_bp1_jungle }
@@ -4575,7 +4575,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_hunt_activity_camp scope:selected_scene = flag:talk_scene_hunt_activity_camp  }
+			global_var:talk_scene = flag:talk_scene_hunt_activity_camp 
 			scope:activity = {
 			activity_host = { government_has_flag = government_is_nomadic }
 			}
@@ -4585,9 +4585,9 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_hunt_activity_camp scope:selected_scene = flag:talk_scene_hunt_activity_camp  }
+			global_var:talk_scene = flag:talk_scene_hunt_activity_camp 
 			scope:activity = {
-			activity_root.location ?= { graphical_wilderness_steppe_trigger = yes }
+			activity_location ?= { graphical_wilderness_steppe_trigger = yes }
 			}
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_steppe }
@@ -4595,9 +4595,9 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_hunt_activity_camp scope:selected_scene = flag:talk_scene_hunt_activity_camp  }
+			global_var:talk_scene = flag:talk_scene_hunt_activity_camp 
 			scope:activity = {
-			activity_root.location ?= { graphical_wilderness_desert_trigger = yes }
+			activity_location ?= { graphical_wilderness_desert_trigger = yes }
 			}
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_desert }
@@ -4605,9 +4605,9 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_hunt_activity_camp scope:selected_scene = flag:talk_scene_hunt_activity_camp  }
+			global_var:talk_scene = flag:talk_scene_hunt_activity_camp 
 			scope:activity = {
-			activity_root.location ?= { graphical_drylands_trigger = yes }
+			activity_location ?= { graphical_drylands_trigger = yes }
 			}
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_drylands }
@@ -4615,14 +4615,14 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_hunt_activity_camp scope:selected_scene = flag:talk_scene_hunt_activity_camp  }
+			global_var:talk_scene = flag:talk_scene_hunt_activity_camp 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_ep2_hunt_poachers_camp }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_wedding_ceremony scope:selected_scene = flag:talk_scene_wedding_ceremony  }
+			global_var:talk_scene = flag:talk_scene_wedding_ceremony 
 			trigger_if = {
 			limit = { exists = scope:activity }
 			scope:activity ?= { has_activity_type = activity_wedding }
@@ -4639,7 +4639,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_wedding_ceremony scope:selected_scene = flag:talk_scene_wedding_ceremony  }
+			global_var:talk_scene = flag:talk_scene_wedding_ceremony 
 			trigger_if = {
 			limit = { exists = scope:activity }
 			scope:activity ?= { has_activity_type = activity_wedding }
@@ -4656,7 +4656,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_wedding_ceremony scope:selected_scene = flag:talk_scene_wedding_ceremony  }
+			global_var:talk_scene = flag:talk_scene_wedding_ceremony 
 			trigger_if = {
 			limit = { exists = scope:activity }
 			scope:activity ?= { has_activity_type = activity_wedding }
@@ -4682,14 +4682,14 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_wedding_ceremony scope:selected_scene = flag:talk_scene_wedding_ceremony  }
+			global_var:talk_scene = flag:talk_scene_wedding_ceremony 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_ep2_wedding_ceremony_western }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_involved_activity scope:selected_scene = flag:talk_scene_involved_activity  }
+			global_var:talk_scene = flag:talk_scene_involved_activity 
 			location = {
 				province_owner = {
 					involved_activity ?= { has_activity_type = activity_tournament }
@@ -4701,7 +4701,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_involved_activity scope:selected_scene = flag:talk_scene_involved_activity  }
+			global_var:talk_scene = flag:talk_scene_involved_activity 
 			location = {
 				province_owner = {
 					involved_activity ?= { has_activity_type = activity_tour }
@@ -4719,7 +4719,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_involved_activity scope:selected_scene = flag:talk_scene_involved_activity  }
+			global_var:talk_scene = flag:talk_scene_involved_activity 
 			location = {
 				province_owner = {
 					involved_activity ?= { has_activity_type = activity_tour }
@@ -4737,12 +4737,12 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_involved_activity scope:selected_scene = flag:talk_scene_involved_activity  }
+			global_var:talk_scene = flag:talk_scene_involved_activity 
 			location = {
 				province_owner = {
 					involved_activity ?= { has_activity_type = activity_tour }
 					involved_activity = {
-						activity_root.location = {
+						activity_location = {
 							culture = { has_building_gfx = steppe_building_gfx }
 						}
 					}
@@ -4754,7 +4754,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_involved_activity scope:selected_scene = flag:talk_scene_involved_activity  }
+			global_var:talk_scene = flag:talk_scene_involved_activity 
 			location = {
 				province_owner = {
 					involved_activity ?= { has_activity_type = activity_tour }
@@ -4778,7 +4778,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_involved_activity scope:selected_scene = flag:talk_scene_involved_activity  }
+			global_var:talk_scene = flag:talk_scene_involved_activity 
 			location = {
 				province_owner = {
 					involved_activity ?= { has_activity_type = activity_tour }
@@ -4796,7 +4796,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_involved_activity scope:selected_scene = flag:talk_scene_involved_activity  }
+			global_var:talk_scene = flag:talk_scene_involved_activity 
 			location = {
 				province_owner = {
 					involved_activity ?= { has_activity_type = activity_tour }
@@ -4808,7 +4808,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_involved_activity scope:selected_scene = flag:talk_scene_involved_activity  }
+			global_var:talk_scene = flag:talk_scene_involved_activity 
 			location = {
 				province_owner = {
 					involved_activity ?= { has_activity_type = activity_wedding }
@@ -4823,7 +4823,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_involved_activity scope:selected_scene = flag:talk_scene_involved_activity  }
+			global_var:talk_scene = flag:talk_scene_involved_activity 
 			location = {
 				province_owner = {
 					involved_activity ?= { has_activity_type = activity_wedding }
@@ -4838,7 +4838,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_involved_activity scope:selected_scene = flag:talk_scene_involved_activity  }
+			global_var:talk_scene = flag:talk_scene_involved_activity 
 			location = {
 				province_owner = {
 					involved_activity ?= { has_activity_type = activity_wedding }
@@ -4865,7 +4865,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_involved_activity scope:selected_scene = flag:talk_scene_involved_activity  }
+			global_var:talk_scene = flag:talk_scene_involved_activity 
 			location = {
 				province_owner = {
 					involved_activity ?= { has_activity_type = activity_wedding }
@@ -4883,7 +4883,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_involved_activity scope:selected_scene = flag:talk_scene_involved_activity  }
+			global_var:talk_scene = flag:talk_scene_involved_activity 
 			location = {
 				province_owner = {
 					involved_activity ?= { has_activity_type = activity_wedding }
@@ -4901,7 +4901,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_involved_activity scope:selected_scene = flag:talk_scene_involved_activity  }
+			global_var:talk_scene = flag:talk_scene_involved_activity 
 			location = {
 				province_owner = {
 					involved_activity ?= { has_activity_type = activity_wedding }
@@ -4913,12 +4913,12 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_involved_activity scope:selected_scene = flag:talk_scene_involved_activity  }
+			global_var:talk_scene = flag:talk_scene_involved_activity 
 			location = {
 				province_owner = {
 					involved_activity = {
 						has_activity_type = activity_hunt
-						activity_root.location ?= {
+						activity_location ?= {
 							OR = {
 								has_province_modifier = winter_normal_modifier
 								has_province_modifier = winter_harsh_modifier
@@ -4937,12 +4937,12 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_involved_activity scope:selected_scene = flag:talk_scene_involved_activity  }
+			global_var:talk_scene = flag:talk_scene_involved_activity 
 			location = {
 				province_owner = {
 					involved_activity = {
 						has_activity_type = activity_hunt
-						activity_root.location ?= {
+						activity_location ?= {
 							OR = {
 								has_building_or_higher = royal_forest_01
 								has_building_or_higher = hunting_grounds_01
@@ -4957,12 +4957,12 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_involved_activity scope:selected_scene = flag:talk_scene_involved_activity  }
+			global_var:talk_scene = flag:talk_scene_involved_activity 
 			location = {
 				province_owner = {
 					involved_activity = {
 						has_activity_type = activity_hunt
-						activity_root.location ?= { graphical_wilderness_forest_pine_trigger = yes }
+						activity_location ?= { graphical_wilderness_forest_pine_trigger = yes }
 					}
 				}
 			}
@@ -4972,12 +4972,12 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_involved_activity scope:selected_scene = flag:talk_scene_involved_activity  }
+			global_var:talk_scene = flag:talk_scene_involved_activity 
 			location = {
 				province_owner = {
 					involved_activity = {
 						has_activity_type = activity_hunt
-						activity_root.location ?= { graphical_wilderness_forest_trigger = yes }
+						activity_location ?= { graphical_wilderness_forest_trigger = yes }
 					}
 				}
 			}
@@ -4987,12 +4987,12 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_involved_activity scope:selected_scene = flag:talk_scene_involved_activity  }
+			global_var:talk_scene = flag:talk_scene_involved_activity 
 			location = {
 				province_owner = {
 					involved_activity ?= {
 						has_activity_type = activity_hunt
-						activity_root.location = {
+						activity_location = {
 							culture = { has_graphical_east_asia_culture_group_trigger = yes }
 						}
 					}
@@ -5004,7 +5004,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_involved_activity scope:selected_scene = flag:talk_scene_involved_activity  }
+			global_var:talk_scene = flag:talk_scene_involved_activity 
 			location = {
 				province_owner = {
 					involved_activity ?= { has_activity_type = activity_hunt }
@@ -5016,12 +5016,12 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_involved_activity scope:selected_scene = flag:talk_scene_involved_activity  }
+			global_var:talk_scene = flag:talk_scene_involved_activity 
 			location = {
 				province_owner = {
 					involved_activity ?= { has_activity_type = activity_pilgrimage }
 					involved_activity = {
-						activity_root.location ?= { has_building_or_higher = hagia_sophia_01 }
+						activity_location ?= { has_building_or_higher = hagia_sophia_01 }
 					}
 				}
 			}
@@ -5031,7 +5031,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_involved_activity scope:selected_scene = flag:talk_scene_involved_activity  }
+			global_var:talk_scene = flag:talk_scene_involved_activity 
 			location = {
 				province_owner = {
 					involved_activity ?= { has_activity_type = activity_pilgrimage }
@@ -5044,7 +5044,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_involved_activity scope:selected_scene = flag:talk_scene_involved_activity  }
+			global_var:talk_scene = flag:talk_scene_involved_activity 
 			location = {
 				province_owner = {
 					involved_activity ?= { has_activity_type = activity_pilgrimage }
@@ -5059,7 +5059,7 @@ log_backgrounds = {
 					AND = {
 						religion = religion:buddhism_religion
 						involved_activity = {
-							activity_root.location = {
+							activity_location = {
 								OR = {
 									geographical_region = world_steppe_east
 									geographical_region = world_steppe_central
@@ -5072,7 +5072,7 @@ log_backgrounds = {
 					AND = {
 						religion = religion:buddhism_religion
 						involved_activity = {
-							activity_root.location = {
+							activity_location = {
 								OR = {
 									geographical_region = world_tibet
 									geographical_region = world_steppe_tarim
@@ -5080,7 +5080,7 @@ log_backgrounds = {
 						}
 					}
 					involved_activity = {
-						activity_root.location = {
+						activity_location = {
 							county = {
 								title_province ?= {
 									OR = {
@@ -5103,13 +5103,13 @@ log_backgrounds = {
 	# Orthodox and Oriental Christians
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_involved_activity scope:selected_scene = flag:talk_scene_involved_activity  }
+			global_var:talk_scene = flag:talk_scene_involved_activity 
 			location = {
 				province_owner = {
 					involved_activity ?= { has_activity_type = activity_pilgrimage }
 					religion = religion:christianity_religion
 					involved_activity = {
-						activity_root.location ?= {
+						activity_location ?= {
 							OR = {
 								faith = faith:orthodox
 								geographical_region = graphical_mena
@@ -5127,12 +5127,12 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_involved_activity scope:selected_scene = flag:talk_scene_involved_activity  }
+			global_var:talk_scene = flag:talk_scene_involved_activity 
 			location = {
 				province_owner = {
 					involved_activity ?= { has_activity_type = activity_pilgrimage }
 					involved_activity = {
-						activity_root.location = {
+						activity_location = {
 							OR = {
 								steppe_building_gfx_use_east_asian_trigger = yes
 								culture = { has_graphical_east_asia_culture_group_trigger = yes }
@@ -5147,12 +5147,12 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_involved_activity scope:selected_scene = flag:talk_scene_involved_activity  }
+			global_var:talk_scene = flag:talk_scene_involved_activity 
 			location = {
 				province_owner = {
 					involved_activity ?= { has_activity_type = activity_pilgrimage }
 					involved_activity = {
-						activity_root.location = {
+						activity_location = {
 							OR = {
 								steppe_building_gfx_use_mena_trigger = yes
 								culture = { has_graphical_mena_culture_group_trigger = yes }
@@ -5167,12 +5167,12 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_involved_activity scope:selected_scene = flag:talk_scene_involved_activity  }
+			global_var:talk_scene = flag:talk_scene_involved_activity 
 			location = {
 				province_owner = {
 					involved_activity ?= { has_activity_type = activity_pilgrimage }
 					involved_activity = {
-						activity_root.location = {
+						activity_location = {
 							OR = {
 								steppe_building_gfx_use_indian_trigger = yes
 								culture = { has_graphical_india_culture_group_trigger = yes }
@@ -5187,12 +5187,12 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_involved_activity scope:selected_scene = flag:talk_scene_involved_activity  }
+			global_var:talk_scene = flag:talk_scene_involved_activity 
 			location = {
 				province_owner = {
 					involved_activity ?= { has_activity_type = activity_pilgrimage }
 					involved_activity = {
-						activity_root.location = {
+						activity_location = {
 							culture = { has_graphical_iberian_culture_group_trigger = yes }
 						}
 					}
@@ -5204,12 +5204,12 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_involved_activity scope:selected_scene = flag:talk_scene_involved_activity  }
+			global_var:talk_scene = flag:talk_scene_involved_activity 
 			location = {
 				province_owner = {
 					involved_activity ?= { has_activity_type = activity_pilgrimage }
 					involved_activity = {
-						activity_root.location = {
+						activity_location = {
 							OR = {
 								steppe_building_gfx_use_western_trigger = yes
 								culture = { has_graphical_western_culture_group_trigger = yes }
@@ -5227,13 +5227,13 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_involved_activity scope:selected_scene = flag:talk_scene_involved_activity  }
+			global_var:talk_scene = flag:talk_scene_involved_activity 
 			location = {
 				province_owner = {
 					involved_activity ?= { has_activity_type = activity_pilgrimage }
 					OR = {
 						involved_activity = {
-							activity_root.location = {
+							activity_location = {
 								county = {
 									holder ?= {
 										OR = {
@@ -5246,7 +5246,7 @@ log_backgrounds = {
 					}
 					}
 					involved_activity = {
-						activity_root.location = {
+						activity_location = {
 							culture = { has_graphical_steppe_culture_group_trigger = yes }
 						}
 					}
@@ -5259,12 +5259,12 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_involved_activity scope:selected_scene = flag:talk_scene_involved_activity  }
+			global_var:talk_scene = flag:talk_scene_involved_activity 
 			location = {
 				province_owner = {
 					involved_activity ?= { has_activity_type = activity_pilgrimage }
 					involved_activity = {
-						activity_root.location = {
+						activity_location = {
 							culture = { has_graphical_norse_culture_group_trigger = yes }
 						}
 					}
@@ -5276,12 +5276,12 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_involved_activity scope:selected_scene = flag:talk_scene_involved_activity  }
+			global_var:talk_scene = flag:talk_scene_involved_activity 
 			location = {
 				province_owner = {
 					involved_activity ?= { has_activity_type = activity_pilgrimage }
 					involved_activity = {
-						activity_root.location = {
+						activity_location = {
 							county = {
 								holder ?= {
 									OR = {
@@ -5301,7 +5301,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_involved_activity scope:selected_scene = flag:talk_scene_involved_activity  }
+			global_var:talk_scene = flag:talk_scene_involved_activity 
 			location = {
 				province_owner = {
 					involved_activity ?= { has_activity_type = activity_pilgrimage }
@@ -5313,12 +5313,12 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_involved_activity scope:selected_scene = flag:talk_scene_involved_activity  }
+			global_var:talk_scene = flag:talk_scene_involved_activity 
 			location = {
 				province_owner = {
 					involved_activity ?= { has_activity_type = activity_feast }
 					involved_activity = {
-						activity_root.location = {
+						activity_location = {
 							culture ?= { has_graphical_mediterranean_culture_group_trigger = yes }
 						}
 					}
@@ -5330,12 +5330,12 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_involved_activity scope:selected_scene = flag:talk_scene_involved_activity  }
+			global_var:talk_scene = flag:talk_scene_involved_activity 
 			location = {
 				province_owner = {
 					involved_activity ?= { has_activity_type = activity_feast }
 					involved_activity = {
-						activity_root.location = {
+						activity_location = {
 							culture = { has_building_gfx = norse_building_gfx }
 						}
 					}
@@ -5347,12 +5347,12 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_involved_activity scope:selected_scene = flag:talk_scene_involved_activity  }
+			global_var:talk_scene = flag:talk_scene_involved_activity 
 			location = {
 				province_owner = {
 					involved_activity ?= { has_activity_type = activity_feast }
 					involved_activity = {
-						activity_root.location = {
+						activity_location = {
 							culture = { has_building_gfx = indian_building_gfx }
 						}
 					}
@@ -5364,28 +5364,28 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_involved_activity scope:selected_scene = flag:talk_scene_involved_activity  }
+			global_var:talk_scene = flag:talk_scene_involved_activity 
 			location = {
 				province_owner = {
 					involved_activity ?= { has_activity_type = activity_feast }
 					OR = {
 						involved_activity = {
-							activity_root.location = {
+							activity_location = {
 								culture = { has_building_gfx = arabic_group_building_gfx }
 							}
 					}
 					involved_activity = {
-						activity_root.location = {
+						activity_location = {
 							culture = { has_building_gfx = berber_group_building_gfx }
 						}
 					}
 					involved_activity = {
-						activity_root.location = {
+						activity_location = {
 							culture = { has_building_gfx = iberian_building_gfx }
 						}
 					}
 					involved_activity = {
-						activity_root.location = {
+						activity_location = {
 							culture ?= { has_building_gfx = iranian_building_gfx }
 						}
 					}
@@ -5398,12 +5398,12 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_involved_activity scope:selected_scene = flag:talk_scene_involved_activity  }
+			global_var:talk_scene = flag:talk_scene_involved_activity 
 			location = {
 				province_owner = {
 					involved_activity ?= { has_activity_type = activity_feast }
 					involved_activity = {
-						activity_root.location = {
+						activity_location = {
 							culture = { has_building_gfx = steppe_building_gfx }
 						}
 					}
@@ -5415,7 +5415,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_involved_activity scope:selected_scene = flag:talk_scene_involved_activity  }
+			global_var:talk_scene = flag:talk_scene_involved_activity 
 			location = {
 				province_owner = {
 					involved_activity ?= { has_activity_type = activity_feast }
@@ -5428,12 +5428,12 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_involved_activity scope:selected_scene = flag:talk_scene_involved_activity  }
+			global_var:talk_scene = flag:talk_scene_involved_activity 
 			location = {
 				province_owner = {
 					involved_activity ?= { has_activity_type = activity_feast }
 					involved_activity = {
-						activity_root.location = {
+						activity_location = {
 							OR = {
 								steppe_building_gfx_use_east_asian_trigger = yes
 								culture = { has_graphical_east_asia_culture_group_trigger = yes }
@@ -5448,14 +5448,14 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_involved_activity scope:selected_scene = flag:talk_scene_involved_activity  }
+			global_var:talk_scene = flag:talk_scene_involved_activity 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_feast }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_nursery scope:selected_scene = flag:talk_scene_nursery  }
+			global_var:talk_scene = flag:talk_scene_nursery 
 			location = {
 				province_owner = {
 					government_has_flag = government_is_nomadic
@@ -5467,14 +5467,14 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_nursery scope:selected_scene = flag:talk_scene_nursery  }
+			global_var:talk_scene = flag:talk_scene_nursery 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_bp2_nursery }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_courtyard scope:selected_scene = flag:talk_scene_courtyard  }
+			global_var:talk_scene = flag:talk_scene_courtyard 
 			location = {
 				province_owner = {
 					government_has_flag = government_is_nomadic
@@ -5486,14 +5486,14 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_courtyard scope:selected_scene = flag:talk_scene_courtyard  }
+			global_var:talk_scene = flag:talk_scene_courtyard 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_bp2_courtyard }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_university scope:selected_scene = flag:talk_scene_university  }
+			global_var:talk_scene = flag:talk_scene_university 
 			location = {
 				province_owner = {
 					root.location = {
@@ -5512,7 +5512,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_university scope:selected_scene = flag:talk_scene_university  }
+			global_var:talk_scene = flag:talk_scene_university 
 			root.location ?= {
 			OR = {
 			culture = { has_graphical_east_asia_or_southeast_asia_group_trigger = yes }
@@ -5525,7 +5525,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_university scope:selected_scene = flag:talk_scene_university  }
+			global_var:talk_scene = flag:talk_scene_university 
 			location = {
 				province_owner = {
 					OR = {
@@ -5553,7 +5553,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_university scope:selected_scene = flag:talk_scene_university  }
+			global_var:talk_scene = flag:talk_scene_university 
 			location = {
 				province_owner = {
 					OR = {
@@ -5570,21 +5570,21 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_university scope:selected_scene = flag:talk_scene_university  }
+			global_var:talk_scene = flag:talk_scene_university 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_bp2_university_mena }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_catacombs scope:selected_scene = flag:talk_scene_catacombs  }
+			global_var:talk_scene = flag:talk_scene_catacombs 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_fp4_catacombs }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_condemned_village scope:selected_scene = flag:talk_scene_condemned_village  }
+			global_var:talk_scene = flag:talk_scene_condemned_village 
 			culture_has_asian_heritage_pillar_trigger = yes
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_tgp_alley_night_asia }
@@ -5592,14 +5592,14 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_condemned_village scope:selected_scene = flag:talk_scene_condemned_village  }
+			global_var:talk_scene = flag:talk_scene_condemned_village 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_fp4_condemned_village }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_funeral_pyre scope:selected_scene = flag:talk_scene_funeral_pyre  }
+			global_var:talk_scene = flag:talk_scene_funeral_pyre 
 			culture_has_asian_heritage_pillar_trigger = yes
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_mpo_raid_burning_asian }
@@ -5607,35 +5607,35 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_funeral_pyre scope:selected_scene = flag:talk_scene_funeral_pyre  }
+			global_var:talk_scene = flag:talk_scene_funeral_pyre 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_fp4_funeral_pyre }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_legendary_battlefield scope:selected_scene = flag:talk_scene_legendary_battlefield  }
+			global_var:talk_scene = flag:talk_scene_legendary_battlefield 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_fp4_legendary_battlefield }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_constantinople scope:selected_scene = flag:talk_scene_constantinople  }
+			global_var:talk_scene = flag:talk_scene_constantinople 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_ep3_constantinople }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_city_gate scope:selected_scene = flag:talk_scene_city_gate  }
+			global_var:talk_scene = flag:talk_scene_city_gate 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_ep3_city_gate }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_relaxing_tent scope:selected_scene = flag:talk_scene_relaxing_tent  }
+			global_var:talk_scene = flag:talk_scene_relaxing_tent 
 			location = {
 				province_owner = {
 					culture ?= { has_graphical_steppe_culture_group_trigger = yes }
@@ -5647,14 +5647,14 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_relaxing_tent scope:selected_scene = flag:talk_scene_relaxing_tent  }
+			global_var:talk_scene = flag:talk_scene_relaxing_tent 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_ep3_relaxing_tent }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_survey scope:selected_scene = flag:talk_scene_survey  }
+			global_var:talk_scene = flag:talk_scene_survey 
 			root.location = {
 			county = title:c_byzantion
 			}
@@ -5664,7 +5664,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_survey scope:selected_scene = flag:talk_scene_survey  }
+			global_var:talk_scene = flag:talk_scene_survey 
 			OR = {
 			root.location = {
 			culture ?= { has_building_gfx = iberian_building_gfx }
@@ -5677,7 +5677,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_survey scope:selected_scene = flag:talk_scene_survey  }
+			global_var:talk_scene = flag:talk_scene_survey 
 			root.location = {
 			culture ?= { has_graphical_india_culture_group_trigger = yes }
 			}
@@ -5687,7 +5687,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_survey scope:selected_scene = flag:talk_scene_survey  }
+			global_var:talk_scene = flag:talk_scene_survey 
 			OR = {
 			root.location = {
 			culture ?= { has_graphical_mena_culture_group_trigger = yes }
@@ -5705,7 +5705,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_survey scope:selected_scene = flag:talk_scene_survey  }
+			global_var:talk_scene = flag:talk_scene_survey 
 			root.location ?= {
 			OR = {
 			culture ?= { has_graphical_east_asia_culture_group_trigger = yes }
@@ -5718,14 +5718,14 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_survey scope:selected_scene = flag:talk_scene_survey  }
+			global_var:talk_scene = flag:talk_scene_survey 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_bp2_courtyard }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_settlement scope:selected_scene = flag:talk_scene_terrain_settlement  }
+			global_var:talk_scene = flag:talk_scene_terrain_settlement 
 			location = {
 				province_owner = {
 					root.location ?= {
@@ -5739,7 +5739,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_settlement scope:selected_scene = flag:talk_scene_terrain_settlement  }
+			global_var:talk_scene = flag:talk_scene_terrain_settlement 
 			location = {
 				province_owner = {
 					root.location ?= {
@@ -5754,7 +5754,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_settlement scope:selected_scene = flag:talk_scene_terrain_settlement  }
+			global_var:talk_scene = flag:talk_scene_terrain_settlement 
 			location = {
 				province_owner = {
 					root.location ?= {
@@ -5769,7 +5769,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_settlement scope:selected_scene = flag:talk_scene_terrain_settlement  }
+			global_var:talk_scene = flag:talk_scene_terrain_settlement 
 			location = {
 				province_owner = {
 					root.location ?= {
@@ -5785,7 +5785,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_settlement scope:selected_scene = flag:talk_scene_terrain_settlement  }
+			global_var:talk_scene = flag:talk_scene_terrain_settlement 
 			location = {
 				province_owner = {
 					root.location ?= {
@@ -5799,7 +5799,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_settlement scope:selected_scene = flag:talk_scene_terrain_settlement  }
+			global_var:talk_scene = flag:talk_scene_terrain_settlement 
 			location = {
 				province_owner = {
 					root.location ?= {
@@ -5813,7 +5813,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_settlement scope:selected_scene = flag:talk_scene_terrain_settlement  }
+			global_var:talk_scene = flag:talk_scene_terrain_settlement 
 			location = {
 				province_owner = {
 					root.location ?= {
@@ -5827,7 +5827,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_settlement scope:selected_scene = flag:talk_scene_terrain_settlement  }
+			global_var:talk_scene = flag:talk_scene_terrain_settlement 
 			location = {
 				province_owner = {
 					root.location ?= {
@@ -5841,7 +5841,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_settlement scope:selected_scene = flag:talk_scene_terrain_settlement  }
+			global_var:talk_scene = flag:talk_scene_terrain_settlement 
 			location = {
 				province_owner = {
 					root.location ?= {
@@ -5861,7 +5861,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_settlement scope:selected_scene = flag:talk_scene_terrain_settlement  }
+			global_var:talk_scene = flag:talk_scene_terrain_settlement 
 			location = {
 				province_owner = {
 					root.location ?= {
@@ -5878,14 +5878,14 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_settlement scope:selected_scene = flag:talk_scene_terrain_settlement  }
+			global_var:talk_scene = flag:talk_scene_terrain_settlement 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_ep2_travel_hills }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_settlement_no_owner scope:selected_scene = flag:talk_scene_terrain_settlement_no_owner  }
+			global_var:talk_scene = flag:talk_scene_terrain_settlement_no_owner 
 			location = {
 				province_owner = {
 					root.location ?= { terrain = farmlands }
@@ -5897,7 +5897,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_settlement_no_owner scope:selected_scene = flag:talk_scene_terrain_settlement_no_owner  }
+			global_var:talk_scene = flag:talk_scene_terrain_settlement_no_owner 
 			location = {
 				province_owner = {
 					root.location ?= {
@@ -5914,7 +5914,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_settlement_no_owner scope:selected_scene = flag:talk_scene_terrain_settlement_no_owner  }
+			global_var:talk_scene = flag:talk_scene_terrain_settlement_no_owner 
 			location = {
 				province_owner = {
 					root.location ?= { graphical_wilderness_mountains_trigger = yes }
@@ -5926,7 +5926,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_settlement_no_owner scope:selected_scene = flag:talk_scene_terrain_settlement_no_owner  }
+			global_var:talk_scene = flag:talk_scene_terrain_settlement_no_owner 
 			location = {
 				province_owner = {
 					root.location ?= { graphical_wilderness_steppe_trigger = yes }
@@ -5938,7 +5938,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_settlement_no_owner scope:selected_scene = flag:talk_scene_terrain_settlement_no_owner  }
+			global_var:talk_scene = flag:talk_scene_terrain_settlement_no_owner 
 			location = {
 				province_owner = {
 					root.location ?= { graphical_plains_trigger = yes }
@@ -5950,7 +5950,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_settlement_no_owner scope:selected_scene = flag:talk_scene_terrain_settlement_no_owner  }
+			global_var:talk_scene = flag:talk_scene_terrain_settlement_no_owner 
 			location = {
 				province_owner = {
 					root.location ?= { graphical_hills_trigger = yes }
@@ -5962,7 +5962,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_settlement_no_owner scope:selected_scene = flag:talk_scene_terrain_settlement_no_owner  }
+			global_var:talk_scene = flag:talk_scene_terrain_settlement_no_owner 
 			location = {
 				province_owner = {
 					root.location ?= {
@@ -5980,7 +5980,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_settlement_no_owner scope:selected_scene = flag:talk_scene_terrain_settlement_no_owner  }
+			global_var:talk_scene = flag:talk_scene_terrain_settlement_no_owner 
 			location = {
 				province_owner = {
 					root.location ?= {
@@ -5997,14 +5997,14 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_terrain_settlement_no_owner scope:selected_scene = flag:talk_scene_terrain_settlement_no_owner  }
+			global_var:talk_scene = flag:talk_scene_terrain_settlement_no_owner 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_ep2_travel_hills }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_campfire scope:selected_scene = flag:talk_scene_campfire  }
+			global_var:talk_scene = flag:talk_scene_campfire 
 			location = {
 				province_owner = {
 					culture = { has_graphical_steppe_culture_group_trigger = yes }
@@ -6016,14 +6016,14 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_campfire scope:selected_scene = flag:talk_scene_campfire  }
+			global_var:talk_scene = flag:talk_scene_campfire 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_ep3_campfire }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_camp scope:selected_scene = flag:talk_scene_camp  }
+			global_var:talk_scene = flag:talk_scene_camp 
 			location = {
 				province_owner = {
 					culture ?= { has_graphical_steppe_culture_group_trigger = yes }
@@ -6035,14 +6035,14 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_camp scope:selected_scene = flag:talk_scene_camp  }
+			global_var:talk_scene = flag:talk_scene_camp 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_ep3_camp_arid_terrain }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_camp_night scope:selected_scene = flag:talk_scene_camp_night  }
+			global_var:talk_scene = flag:talk_scene_camp_night 
 			location = {
 				province_owner = {
 					culture ?= { has_graphical_steppe_culture_group_trigger = yes }
@@ -6054,14 +6054,14 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_camp_night scope:selected_scene = flag:talk_scene_camp_night  }
+			global_var:talk_scene = flag:talk_scene_camp_night 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_ep3_adventurer_background }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_military_tent scope:selected_scene = flag:talk_scene_military_tent  }
+			global_var:talk_scene = flag:talk_scene_military_tent 
 			location = {
 				province_owner = {
 					culture ?= { has_graphical_steppe_culture_group_trigger = yes }
@@ -6073,14 +6073,14 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_military_tent scope:selected_scene = flag:talk_scene_military_tent  }
+			global_var:talk_scene = flag:talk_scene_military_tent 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_ep3_military_tent }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_village_festival scope:selected_scene = flag:talk_scene_village_festival  }
+			global_var:talk_scene = flag:talk_scene_village_festival 
 			root.location = {
 			culture ?= { has_building_gfx = steppe_building_gfx }
 			}
@@ -6101,7 +6101,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_village_festival scope:selected_scene = flag:talk_scene_village_festival  }
+			global_var:talk_scene = flag:talk_scene_village_festival 
 			root.location = {
 			culture ?= { has_building_gfx = byzantine_building_gfx }
 			}
@@ -6111,7 +6111,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_village_festival scope:selected_scene = flag:talk_scene_village_festival  }
+			global_var:talk_scene = flag:talk_scene_village_festival 
 			root.location ?= {
 			OR = {
 			culture ?= {
@@ -6126,7 +6126,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_village_festival scope:selected_scene = flag:talk_scene_village_festival  }
+			global_var:talk_scene = flag:talk_scene_village_festival 
 			root.location ?= {
 			OR = {
 			culture ?= {
@@ -6141,7 +6141,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_village_festival scope:selected_scene = flag:talk_scene_village_festival  }
+			global_var:talk_scene = flag:talk_scene_village_festival 
 			root.location = {
 			culture ?= { has_building_gfx = african_building_gfx }
 			}
@@ -6151,7 +6151,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_village_festival scope:selected_scene = flag:talk_scene_village_festival  }
+			global_var:talk_scene = flag:talk_scene_village_festival 
 			root.location ?= {
 			OR = {
 			steppe_building_gfx_use_mena_trigger = yes
@@ -6166,7 +6166,7 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_village_festival scope:selected_scene = flag:talk_scene_village_festival  }
+			global_var:talk_scene = flag:talk_scene_village_festival 
 			OR = {
 			root.location = {
 			culture ?= { has_building_gfx = norse_building_gfx }
@@ -6179,42 +6179,42 @@ log_backgrounds = {
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_village_festival scope:selected_scene = flag:talk_scene_village_festival  }
+			global_var:talk_scene = flag:talk_scene_village_festival 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_ep2_village_festival_western }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_coast scope:selected_scene = flag:talk_scene_coast  }
+			global_var:talk_scene = flag:talk_scene_coast 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_bp3_coast }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_city_steppe scope:selected_scene = flag:talk_scene_city_steppe  }
+			global_var:talk_scene = flag:talk_scene_city_steppe 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_mpo_city_steppe }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_examination_room scope:selected_scene = flag:talk_scene_examination_room  }
+			global_var:talk_scene = flag:talk_scene_examination_room 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_tgp_examination_room }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_chinese_city scope:selected_scene = flag:talk_scene_chinese_city  }
+			global_var:talk_scene = flag:talk_scene_chinese_city 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_tgp_chinese_city }
 	}
 
 	else_if = {
 		limit = {
-			OR = { global_var:talk_scene = flag:talk_scene_japanese_city scope:selected_scene = flag:talk_scene_japanese_city  }
+			global_var:talk_scene = flag:talk_scene_japanese_city 
 		}
 		set_global_variable = { name = votc_background_texture value = flag:texture_tgp_japanese_city }
 	}

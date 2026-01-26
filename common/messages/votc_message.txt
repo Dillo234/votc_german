@@ -1,4 +1,4 @@
-# Used to receive votc reply message popups
+﻿# Used to receive votc reply message popups
 votc_message_feed = {
 	display = feed
 	title = event_message_title

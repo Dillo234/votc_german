@@ -1,4 +1,4 @@
-talk_scene_alley_night = {
+﻿talk_scene_alley_night = {
 	texture = {
 		reference = "event_scenes/mpo_campfire_steppe.dds"
 		trigger = {
@@ -1607,7 +1607,7 @@ talk_scene_feast = {
 			}
 			trigger_else = {
 				scope:activity = {
-					activity_root.location = {
+					activity_location = {
 						culture ?= { has_building_gfx = byzantine_building_gfx }
 					}
 				}
@@ -1620,7 +1620,7 @@ talk_scene_feast = {
 		trigger = {
 			OR = {
 				scope:activity = {
-					activity_root.location = {
+					activity_location = {
 						culture ?= { has_building_gfx = norse_building_gfx }
 					}
 				}
@@ -1646,12 +1646,12 @@ talk_scene_feast = {
 			trigger_else = {
 				OR = {
 					scope:activity = {
-						activity_root.location = {
+						activity_location = {
 							culture ?= { has_graphical_india_culture_group_trigger = yes }
 						}
 					}
 					scope:activity = {
-						activity_root.location ?= { steppe_building_gfx_use_indian_trigger = yes }
+						activity_location ?= { steppe_building_gfx_use_indian_trigger = yes }
 					}
 				}	
 			}
@@ -1671,7 +1671,7 @@ talk_scene_feast = {
 			}
 			trigger_else = {
 				scope:activity = {
-					activity_root.location = {
+					activity_location = {
 						culture ?= { has_building_gfx = african_building_gfx }
 					}
 				}
@@ -1704,7 +1704,7 @@ talk_scene_feast = {
 			trigger_else = {
 				OR = {
 					scope:activity = {
-						activity_root.location = {
+						activity_location = {
 							culture ?= {
 								OR = {
 								has_graphical_mena_culture_group_trigger = yes
@@ -1715,7 +1715,7 @@ talk_scene_feast = {
 						}
 					}
 					scope:activity = {
-						activity_root.location ?= {
+						activity_location ?= {
 							steppe_building_gfx_use_mena_trigger = yes
 							}
 					}
@@ -1742,7 +1742,7 @@ talk_scene_feast = {
 			}
 			trigger_else = {
 				scope:activity = {
-					activity_root.location ?= {
+					activity_location ?= {
 						OR = {
 						culture ?= {
 						has_graphical_east_asia_culture_group_trigger = yes
@@ -4314,7 +4314,7 @@ talk_scene_hunt_activity_camp = {
 		reference = "event_scenes/ep2_hunt_snowy_forest.dds"
 		trigger = {
 			scope:activity = {
-				activity_root.location ?= { hunt_snowy_forest_trigger = yes }
+				activity_location ?= { hunt_snowy_forest_trigger = yes }
 			}
 		}
 	}
@@ -4323,7 +4323,7 @@ talk_scene_hunt_activity_camp = {
 		reference = "event_scenes/mountains.dds"
 		trigger = {
 			scope:activity = {
-				activity_root.location ?= { graphical_wilderness_mountains_trigger = yes }
+				activity_location ?= { graphical_wilderness_mountains_trigger = yes }
 			}
 		}
 	}
@@ -4332,7 +4332,7 @@ talk_scene_hunt_activity_camp = {
 		reference = "event_scenes/bp1_jungle.dds"
 		trigger = {
 			scope:activity = {
-				activity_root.location ?= { graphical_wilderness_jungle_trigger = yes }
+				activity_location ?= { graphical_wilderness_jungle_trigger = yes }
 			}
 		}
 	}
@@ -4350,7 +4350,7 @@ talk_scene_hunt_activity_camp = {
 		reference = "event_scenes/steppe.dds"
 		trigger = {
 			scope:activity = {
-				activity_root.location ?= { graphical_wilderness_steppe_trigger = yes }
+				activity_location ?= { graphical_wilderness_steppe_trigger = yes }
 			}
 		}
 	}
@@ -4359,7 +4359,7 @@ talk_scene_hunt_activity_camp = {
 		reference = "event_scenes/desert.dds"
 		trigger = {
 			scope:activity = {
-				activity_root.location ?= { graphical_wilderness_desert_trigger = yes }
+				activity_location ?= { graphical_wilderness_desert_trigger = yes }
 			}
 		}
 	}
@@ -4368,7 +4368,7 @@ talk_scene_hunt_activity_camp = {
 		reference = "event_scenes/drylands.dds"
 		trigger = {
 			scope:activity = {
-				activity_root.location ?= { graphical_drylands_trigger = yes }
+				activity_location ?= { graphical_drylands_trigger = yes }
 			}
 		}
 	}
@@ -4496,7 +4496,7 @@ talk_scene_involved_activity = {
 				province_owner = {
 					involved_activity ?= { has_activity_type = activity_tour }
 					involved_activity = {
-						activity_root.location = {
+						activity_location = {
 							culture = { has_building_gfx = steppe_building_gfx }
 						}
 					}
@@ -4662,7 +4662,7 @@ talk_scene_involved_activity = {
 				province_owner = {
 					involved_activity = {
 						has_activity_type = activity_hunt
-						activity_root.location ?= {
+						activity_location ?= {
 							OR = {
 								has_province_modifier = winter_normal_modifier
 								has_province_modifier = winter_harsh_modifier
@@ -4685,7 +4685,7 @@ talk_scene_involved_activity = {
 				province_owner = {
 					involved_activity = {
 						has_activity_type = activity_hunt
-						activity_root.location ?= {
+						activity_location ?= {
 							OR = {
 								has_building_or_higher = royal_forest_01
 								has_building_or_higher = hunting_grounds_01
@@ -4704,7 +4704,7 @@ talk_scene_involved_activity = {
 				province_owner = {
 					involved_activity = {
 						has_activity_type = activity_hunt
-						activity_root.location ?= { graphical_wilderness_forest_pine_trigger = yes }
+						activity_location ?= { graphical_wilderness_forest_pine_trigger = yes }
 					}
 				}
 			}
@@ -4718,7 +4718,7 @@ talk_scene_involved_activity = {
 				province_owner = {
 					involved_activity = {
 						has_activity_type = activity_hunt
-						activity_root.location ?= { graphical_wilderness_forest_trigger = yes }
+						activity_location ?= { graphical_wilderness_forest_trigger = yes }
 					}
 				}
 			}
@@ -4732,7 +4732,7 @@ talk_scene_involved_activity = {
 				province_owner = {
 					involved_activity ?= {
 						has_activity_type = activity_hunt
-						activity_root.location = {
+						activity_location = {
 							culture = { has_graphical_east_asia_culture_group_trigger = yes }
 						}
 					}
@@ -4759,7 +4759,7 @@ talk_scene_involved_activity = {
 				province_owner = {
 					involved_activity ?= { has_activity_type = activity_pilgrimage }
 					involved_activity = {
-						activity_root.location ?= { has_building_or_higher = hagia_sophia_01 }
+						activity_location ?= { has_building_or_higher = hagia_sophia_01 }
 					}
 				}
 			}
@@ -4795,7 +4795,7 @@ talk_scene_involved_activity = {
 					AND = {
 						religion = religion:buddhism_religion
 						involved_activity = {
-							activity_root.location = {
+							activity_location = {
 								OR = {
 									geographical_region = world_steppe_east
 									geographical_region = world_steppe_central
@@ -4808,7 +4808,7 @@ talk_scene_involved_activity = {
 					AND = {
 						religion = religion:buddhism_religion
 						involved_activity = {
-							activity_root.location = {
+							activity_location = {
 								OR = {
 									geographical_region = world_tibet
 									geographical_region = world_steppe_tarim
@@ -4816,7 +4816,7 @@ talk_scene_involved_activity = {
 						}
 					}
 					involved_activity = {
-						activity_root.location = {
+						activity_location = {
 							county = {
 								title_province ?= {
 									OR = {
@@ -4844,7 +4844,7 @@ talk_scene_involved_activity = {
 					involved_activity ?= { has_activity_type = activity_pilgrimage }
 					religion = religion:christianity_religion
 					involved_activity = {
-						activity_root.location ?= {
+						activity_location ?= {
 							OR = {
 								faith = faith:orthodox
 								geographical_region = graphical_mena
@@ -4866,7 +4866,7 @@ talk_scene_involved_activity = {
 				province_owner = {
 					involved_activity ?= { has_activity_type = activity_pilgrimage }
 					involved_activity = {
-						activity_root.location = {
+						activity_location = {
 							OR = {
 								steppe_building_gfx_use_east_asian_trigger = yes
 								culture = { has_graphical_east_asia_culture_group_trigger = yes }
@@ -4885,7 +4885,7 @@ talk_scene_involved_activity = {
 				province_owner = {
 					involved_activity ?= { has_activity_type = activity_pilgrimage }
 					involved_activity = {
-						activity_root.location = {
+						activity_location = {
 							OR = {
 								steppe_building_gfx_use_mena_trigger = yes
 								culture = { has_graphical_mena_culture_group_trigger = yes }
@@ -4904,7 +4904,7 @@ talk_scene_involved_activity = {
 				province_owner = {
 					involved_activity ?= { has_activity_type = activity_pilgrimage }
 					involved_activity = {
-						activity_root.location = {
+						activity_location = {
 							OR = {
 								steppe_building_gfx_use_indian_trigger = yes
 								culture = { has_graphical_india_culture_group_trigger = yes }
@@ -4923,7 +4923,7 @@ talk_scene_involved_activity = {
 				province_owner = {
 					involved_activity ?= { has_activity_type = activity_pilgrimage }
 					involved_activity = {
-						activity_root.location = {
+						activity_location = {
 							culture = { has_graphical_iberian_culture_group_trigger = yes }
 						}
 					}
@@ -4939,7 +4939,7 @@ talk_scene_involved_activity = {
 				province_owner = {
 					involved_activity ?= { has_activity_type = activity_pilgrimage }
 					involved_activity = {
-						activity_root.location = {
+						activity_location = {
 							OR = {
 								steppe_building_gfx_use_western_trigger = yes
 								culture = { has_graphical_western_culture_group_trigger = yes }
@@ -4962,7 +4962,7 @@ talk_scene_involved_activity = {
 					involved_activity ?= { has_activity_type = activity_pilgrimage }
 					OR = {
 						involved_activity = {
-							activity_root.location = {
+							activity_location = {
 								county = {
 									holder ?= {
 										OR = {
@@ -4975,7 +4975,7 @@ talk_scene_involved_activity = {
 					}
 					}
 					involved_activity = {
-						activity_root.location = {
+						activity_location = {
 							culture = { has_graphical_steppe_culture_group_trigger = yes }
 						}
 					}
@@ -4992,7 +4992,7 @@ talk_scene_involved_activity = {
 				province_owner = {
 					involved_activity ?= { has_activity_type = activity_pilgrimage }
 					involved_activity = {
-						activity_root.location = {
+						activity_location = {
 							culture = { has_graphical_norse_culture_group_trigger = yes }
 						}
 					}
@@ -5008,7 +5008,7 @@ talk_scene_involved_activity = {
 				province_owner = {
 					involved_activity ?= { has_activity_type = activity_pilgrimage }
 					involved_activity = {
-						activity_root.location = {
+						activity_location = {
 							county = {
 								holder ?= {
 									OR = {
@@ -5043,7 +5043,7 @@ talk_scene_involved_activity = {
 				province_owner = {
 					involved_activity ?= { has_activity_type = activity_feast }
 					involved_activity = {
-						activity_root.location = {
+						activity_location = {
 							culture ?= { has_graphical_mediterranean_culture_group_trigger = yes }
 						}
 					}
@@ -5059,7 +5059,7 @@ talk_scene_involved_activity = {
 				province_owner = {
 					involved_activity ?= { has_activity_type = activity_feast }
 					involved_activity = {
-						activity_root.location = {
+						activity_location = {
 							culture = { has_building_gfx = norse_building_gfx }
 						}
 					}
@@ -5075,7 +5075,7 @@ talk_scene_involved_activity = {
 				province_owner = {
 					involved_activity ?= { has_activity_type = activity_feast }
 					involved_activity = {
-						activity_root.location = {
+						activity_location = {
 							culture = { has_building_gfx = indian_building_gfx }
 						}
 					}
@@ -5092,22 +5092,22 @@ talk_scene_involved_activity = {
 					involved_activity ?= { has_activity_type = activity_feast }
 					OR = {
 						involved_activity = {
-							activity_root.location = {
+							activity_location = {
 								culture = { has_building_gfx = arabic_group_building_gfx }
 							}
 					}
 					involved_activity = {
-						activity_root.location = {
+						activity_location = {
 							culture = { has_building_gfx = berber_group_building_gfx }
 						}
 					}
 					involved_activity = {
-						activity_root.location = {
+						activity_location = {
 							culture = { has_building_gfx = iberian_building_gfx }
 						}
 					}
 					involved_activity = {
-						activity_root.location = {
+						activity_location = {
 							culture ?= { has_building_gfx = iranian_building_gfx }
 						}
 					}
@@ -5124,7 +5124,7 @@ talk_scene_involved_activity = {
 				province_owner = {
 					involved_activity ?= { has_activity_type = activity_feast }
 					involved_activity = {
-						activity_root.location = {
+						activity_location = {
 							culture = { has_building_gfx = steppe_building_gfx }
 						}
 					}
@@ -5152,7 +5152,7 @@ talk_scene_involved_activity = {
 				province_owner = {
 					involved_activity ?= { has_activity_type = activity_feast }
 					involved_activity = {
-						activity_root.location = {
+						activity_location = {
 							OR = {
 								steppe_building_gfx_use_east_asian_trigger = yes
 								culture = { has_graphical_east_asia_culture_group_trigger = yes }
@@ -5184,24 +5184,6 @@ talk_scene_nursery = {
 
 	texture = {
 		reference = "event_scenes/bp2_nursery.dds"
-	}
-
-}
-
-talk_scene_courtyard = {
-	texture = {
-		reference = "event_scenes/mpo_camp_steppe.dds"
-		trigger = {
-			location = {
-				province_owner = {
-					government_has_flag = government_is_nomadic
-				}
-			}
-		}
-	}
-
-	texture = {
-		reference = "event_scenes/bp2_courtyard.dds"
 	}
 
 }

@@ -279,7 +279,7 @@ message_event.360 = {
 # Clipboard event, used to notify backend program to begin processing letter messages with VOTC:LETTER signature
 message_event.361 = {
 	type = character_event
-	title = "aha"
+	title = votc_placeholder
 	window = fullscreen_event
 	theme = clipboard_transfer_event_theme
 	
@@ -294,9 +294,9 @@ message_event.361 = {
 # Used to receive messages from different threads - Run console command run letter1/2/3/4/5/6/7/8/9.txt
 message_event.3621 = {
 	type = character_event
-	title = "aha"
+	title = votc_placeholder
 	theme = realm
-	desc = message_event.362.desc
+	desc = votc_placeholder
 	widget = {
         gui = "event_window_widget_message_1"
         container = "custom_widgets_container"
@@ -306,9 +306,9 @@ message_event.3621 = {
 
 message_event.3622 = {
 	type = character_event
-	title = "aha"
+	title = votc_placeholder
 	theme = realm
-	desc = message_event.362.desc
+	desc = votc_placeholder
 	widget = {
         gui = "event_window_widget_message_2"
         container = "custom_widgets_container"
@@ -318,9 +318,9 @@ message_event.3622 = {
 
 message_event.3623 = {
 	type = character_event
-	title = "aha"
+	title = votc_placeholder
 	theme = realm
-	desc = message_event.362.desc
+	desc = votc_placeholder
 	widget = {
         gui = "event_window_widget_message_3"
         container = "custom_widgets_container"
@@ -330,9 +330,9 @@ message_event.3623 = {
 
 message_event.3624 = {
 	type = character_event
-	title = "aha"
+	title = votc_placeholder
 	theme = realm
-	desc = message_event.362.desc
+	desc = votc_placeholder
 	widget = {
         gui = "event_window_widget_message_4"
         container = "custom_widgets_container"
@@ -342,9 +342,9 @@ message_event.3624 = {
 
 message_event.3625 = {
 	type = character_event
-	title = "aha"
+	title = votc_placeholder
 	theme = realm
-	desc = message_event.362.desc
+	desc = votc_placeholder
 	widget = {
         gui = "event_window_widget_message_5"
         container = "custom_widgets_container"
@@ -354,9 +354,9 @@ message_event.3625 = {
 
 message_event.3626 = {
 	type = character_event
-	title = "aha"
+	title = votc_placeholder
 	theme = realm
-	desc = message_event.362.desc
+	desc = votc_placeholder
 	widget = {
         gui = "event_window_widget_message_6"
         container = "custom_widgets_container"
@@ -366,9 +366,9 @@ message_event.3626 = {
 
 message_event.3627 = {
 	type = character_event
-	title = "aha"
+	title = votc_placeholder
 	theme = realm
-	desc = message_event.362.desc
+	desc = votc_placeholder
 	widget = {
         gui = "event_window_widget_message_7"
         container = "custom_widgets_container"
@@ -378,9 +378,9 @@ message_event.3627 = {
 
 message_event.3628 = {
 	type = character_event
-	title = "aha"
+	title = votc_placeholder
 	theme = realm
-	desc = message_event.362.desc
+	desc = votc_placeholder
 	widget = {
         gui = "event_window_widget_message_8"
         container = "custom_widgets_container"
@@ -390,9 +390,9 @@ message_event.3628 = {
 
 message_event.3629 = {
 	type = character_event
-	title = "aha"
+	title = votc_placeholder
 	theme = realm
-	desc = message_event.362.desc
+	desc = votc_placeholder
 	widget = {
         gui = "event_window_widget_message_9"
         container = "custom_widgets_container"

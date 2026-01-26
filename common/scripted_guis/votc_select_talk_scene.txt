@@ -1,9 +1,8 @@
-votc_select_talk_scene = {
+﻿votc_select_talk_scene = {
     effect = {
         set_global_variable = {
             name = talk_scene
             value = scope:selected_scene
         }
-        root = {trigger_event = mcc_event_v2.7001}
     }
 }

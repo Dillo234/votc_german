@@ -1,4 +1,4 @@
-# Letter delay time, calculated based on distance, in days, rounded to integer
+﻿# Letter delay time, calculated based on distance, in days, rounded to integer
 
 votc_letter_delay = {
 	if = {

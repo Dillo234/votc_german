@@ -1,4 +1,4 @@
-message_interaction = {
+﻿message_interaction = {
 	category = interaction_category_friendly
 	use_diplomatic_range = yes
 	ignores_pending_interaction_block = yes
@@ -6,9 +6,7 @@ message_interaction = {
 	common_interaction = yes
 	desc = message_interaction.desc
 	icon = send_poem_interaction
-    use_diplomatic_range = {
-        always = no
-    }
+	cooldown = {days = 3 }
 	ai_will_do = {
 		base = 0
 	}
@@ -61,8 +59,8 @@ message_interaction = {
 #	
 #
 #	on_send = {
-#		scope:actor = {
-#			trigger_event = message_event.4444
+#		every_player = {
+#		trigger_event = mcc_event_v2.1000
 #		}
 #	}
 #	

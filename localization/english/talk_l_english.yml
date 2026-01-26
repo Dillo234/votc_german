@@ -38,8 +38,8 @@ votc_letter_full:0 "Letter thread full (9/9)"
 
 event_window_widget_message_write_prompt:0 "Enter letter content"
 
-letter_greet:0 "Hi, "
-letter_message:0 "My Lord Caliph,\n\nI have received your letter and am relieved to hear of your continued strength and the prosperity of Dar al-Islam. The news from the western front is most welcome; the victory over the Crusaders will surely strengthen our faith and secure our borders.\n\nI must inform you that the situation in Persia remains... delicate. My authority is challenged not only by external threats but also by the ambitions of those within my own court. The memory of my brother's death and the recent loss of Aghlab weigh heavily upon me, as they do upon you. I have taken measures to fortify our defenses and have begun to strengthen the loyalty of our commanders, as you have always advised.\n\nMy health, as you know, is not what it once was. The old wounds trouble me, and the flagellation provides only temporary relief. Yet I remain steadfast in my duty to Allah and to you, my father and Caliph.\n\nMay the Almighty grant you victory and long life.\n\nYour humble son and servant,\nAtissi"
+letter_greet:0 ""
+letter_message:0 "Duke Fausto,  \n  \nYour honeyed words arrive like a mummer's show—entertaining, yet lacking substance for those who govern. You speak of beauty while your armies still remember the taste of Romagnan blood at Arezzo. My husband the King does not forget such slights, nor do I indulge in distractions when the wounds of war linger.  \n  \nYet your reputation as a strategist holds weight, kinslayer or not. If you seek true alliance over empty flattery, prove it: withdraw your garrisons from the Marche border and send envoys to Ancona under terms we both honor. Let your actions cleanse the stains of your past deeds, for my trust is earned by deeds, not banquet-table poetry.  \n  \nConsider wisely. Romagna may be young, but her physicians know how to heal—and how to bleed a man dry.  \n  \nFroizza of Ramberti  \nQueen Consort & Physician of Romagna"
 
 talk_scene_alley_night_title:0 "Shadowed Alley"
 talk_scene_alley_day_title:0 "Bright Alley"
@@ -122,3 +122,4 @@ votc_talk_change_scene_selection:0 "Change scene selection"
 votc_scene_selector_title:0 "Select conversation scene"
 
 mcc_event_v2.7001.desc:0 "VOTC:BACKGROUND/;/[GetGlobalVariable('votc_background_texture').GetFlagName]"
+votc_placeholder:0 " "
