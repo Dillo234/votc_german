@@ -1,32 +1,23 @@
-﻿#scope:actor = player
-#scope:recipient = character the player wants to talk to
-log_gamedata_v3 = {
+﻿log_gamedata_v3l = {
 	log_backgrounds = yes
-	debug_log = "VOTC:IN/;/init/;/[GetPlayer.GetID]/;/[GetPlayer.GetTitledFirstNameNicknamedNoTooltipRegnal]/;/[recipient.GetID]/;/[recipient.GetTitledFirstNameNicknamedNoTooltipRegnal]/;/[GetCurrentDate.GetStringShort]/;/[GetGlobalVariable('talk_scene').GetFlagName]/;/[recipient.GetCurrentLocation.GetName]/;/[recipient.GetCurrentLocation.GetController.GetFullNameNicknamedNoTooltipRegnal]/;/[GetCurrentDate.GetDateAsTotalDays]/;/[GetGlobalVariable('votc_background_texture').GetFlagName]"
+	debug_log = "VOTC:IN/;/init/;/[GetPlayer.GetID]/;/[GetPlayer.GetTitledFirstNameNicknamedNoTooltipRegnal]/;/[recipient.GetID]/;/[recipient.GetTitledFirstNameNicknamedNoTooltipRegnal]/;/[GetCurrentDate.GetStringShort]/;/[GetGlobalVariable('talk_scene').GetFlagName]/;/[recipient.GetCurrentLocation.GetName]/;/[recipient.GetCurrentLocation.GetController.GetFullNameNicknamedNoTooltipRegnal]/;/[GetCurrentDate.GetDateAsTotalDays]"
 
 	debug_log = log_character_header
 	
-	add_to_global_variable_list = {
-		name = mcc_characters_list_v2
-		target = scope:recipient
+	scope:recipient = {
+		add_to_global_variable_list = {
+			name = mcc_characters_list_v2
+			target = this
+		}
 	}
-	
-	scope:actor = {
-		every_pinned_character = {
-			if = {
-				limit = {
-					is_at_same_location = scope:actor
-					NOT = { this = scope:recipient }
-				}
-				add_to_global_variable_list = {
-					name = mcc_characters_list_v2
-					target = this
-				}
-			}
-		}	
+    scope:actor = {
+		add_to_global_variable_list = {
+			name = mcc_characters_list_v2
+			target = this
+		}
 	}
 
-	every_in_global_list = {
+		every_in_global_list = {
 		variable = mcc_characters_list_v2
 		limit = {
 			NOT = { this = scope:actor }
@@ -135,4 +126,5 @@ log_gamedata_v3 = {
 			}
 		}
 	}
+
 }

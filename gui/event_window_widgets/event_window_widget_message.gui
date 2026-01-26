@@ -1,0 +1,23 @@
+hbox = {
+	name = "event_window_widget_message"
+	layoutpolicy_horizontal = expanding
+	margin = { 10 0 }
+
+	state = {
+        name = pause
+        trigger_when = "[Not(IsGamePaused)]"
+        on_start = "[OnPause]"
+    }
+
+	state = {
+        name = widget_show
+        trigger_on_create = yes
+
+		on_start = "[ExecuteConsoleCommand('GUI.ClearWidgets letters_runner letters_runner')]"
+		on_finish = "[ExecuteConsoleCommand('gui.createwidget gui/custom_gui/letters_runner.gui letters_runner')]"	
+	
+	}
+
+
+	expand = {}
+} 

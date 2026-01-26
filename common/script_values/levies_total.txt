@@ -1,4 +1,4 @@
-levies_total = {
+﻿levies_total = {
 	value = 0
 	every_vassal = {
 		if = {
