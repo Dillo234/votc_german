@@ -1,0 +1,147 @@
+﻿l_russian:
+
+
+talk_interaction:0 "Поговорить"
+talk_interaction.desc:0 "Начать разговор"
+
+
+invite_to_talk_interaction:0 "Пригласить на разговор"
+invite_to_talk_interaction.desc:0 "Пригласить [recipient.GetTitledFirstName] прибыть в ваше местоположение для разговора."
+i_said_we_will_meet:0 "Я сказал, что мы встретимся (чит)"
+
+
+talk_herhim:0 "[recipient.GetHerHim]"
+talk_event.1001.title:0 "Прибытие"
+talk_event.1001.desc:0 "Вы наконец прибыли в [actor.GetCurrentLocation.GetName], чтобы встретиться с [recipient.GetTitledFirstName]. Теперь вопрос в том, где нам встретиться с $talk_herhim$?"
+talk_event.1001.exit:0 "Вообще-то, я не хочу с $talk_herhim$ разговаривать."
+
+
+talk_window_end:0 "Завершить разговор"
+
+
+conversation_opinion:0 "From conversations"
+
+
+not_in_same_province:0 "Мы в одной провинции"
+
+
+
+message_interaction.desc:0 "Написать письмо"
+message_interaction:0 "Написать письмо"
+votc_message_title:0 "Написать [recipient.GetShortUINamePossessive]"
+votc_message_desc:0 " "
+votc_message_tooltip:0 "Если сообщение неполное, проверьте соответствующий артефакт письма."
+message_text:0 "VOTC:LETTER/;/[GetPlayer.GetLocalizedText( 'votc_message_text' )]/;/[GetGlobalVariable('votc_letter_num').GetFlagName]/;/[GetCurrentDate.GetDateAsTotalDays]/;/[GetGlobalVariable('votc_letter_distance').GetValue]/;/"
+send_message:0 "Отправить"
+
+
+# Titles for each letter thread
+votc_huixin_title1:0 "Ответ от [GetGlobalVariable('message_second_scope_letter_1').Char.GetTitledFirstName]"
+votc_huixin_title2:0 "Ответ от [GetGlobalVariable('message_second_scope_letter_2').Char.GetTitledFirstName]"
+votc_huixin_title3:0 "Ответ от [GetGlobalVariable('message_second_scope_letter_3').Char.GetTitledFirstName]"
+votc_huixin_title4:0 "Ответ от [GetGlobalVariable('message_second_scope_letter_4').Char.GetTitledFirstName]"
+votc_huixin_title5:0 "Ответ от [GetGlobalVariable('message_second_scope_letter_5').Char.GetTitledFirstName]"
+votc_huixin_title6:0 "Ответ от [GetGlobalVariable('message_second_scope_letter_6').Char.GetTitledFirstName]"
+votc_huixin_title7:0 "Ответ от [GetGlobalVariable('message_second_scope_letter_7').Char.GetTitledFirstName]"
+votc_huixin_title8:0 "Ответ от [GetGlobalVariable('message_second_scope_letter_8').Char.GetTitledFirstName]"
+votc_huixin_title9:0 "Ответ от [GetGlobalVariable('message_second_scope_letter_9').Char.GetTitledFirstName]"
+
+
+votc_letter_full:0 "Цепочка писем заполнена (9/9), дождитесь ответов"
+
+
+event_window_widget_message_write_prompt:0 "Введите содержание письма"
+
+
+letter_greet:0 ""
+letter_message:0 "[GetGlobalVariable('votc_latest_letter').Artifact.GetDesc]"
+
+
+talk_scene_alley_night_title:0 "Тёмный переулок"
+talk_scene_alley_day_title:0 "Светлый переулок"
+talk_scene_armory_title:0 "Оружейная"
+talk_scene_battlefield_title:0 "Поле боя"
+talk_scene_temple_title:0 "Храм"
+talk_scene_corridor_night_title:0 "Тёмный коридор"
+talk_scene_corridor_day_title:0 "Освещённый коридор"
+talk_scene_council_chamber_title:0 "Палата совета"
+talk_scene_courtyard_title:0 "Внутренний двор"
+talk_scene_dungeon_title:0 "Темница"
+talk_scene_ocean_title:0 "Океан"
+talk_scene_terrain_travel_title:0 "Открытая дорога"
+talk_scene_docks_title:0 "Доки"
+talk_scene_farmland_title:0 "Пахотные земли"
+talk_scene_feast_title:0 "Пиршественный зал"
+talk_scene_gallows_title:0 "Виселица"
+talk_scene_garden_title:0 "Сад"
+talk_scene_market_title:0 "Рыночная площадь"
+talk_scene_village_title:0 "Деревня"
+talk_scene_burning_building_title:0 "Горящее здание"
+talk_scene_sitting_room_title:0 "Гостиная"
+talk_scene_bedchamber_title:0 "Опочивальня"
+talk_scene_study_title:0 "Кабинет"
+talk_scene_relaxing_room_title:0 "Комната отдыха"
+talk_scene_physicians_study_title:0 "Кабинет врача"
+talk_scene_tavern_title:0 "Таверна"
+talk_scene_throne_room_title:0 "Тронный зал"
+talk_scene_estate_title:0 "Поместье"
+talk_scene_army_camp_title:0 "Военный лагерь"
+talk_scene_bath_house_title:0 "Баня"
+talk_scene_runestone_title:0 "Рунный камень"
+talk_scene_runestone_circle_title:0 "Круг рунных камней"
+talk_scene_beached_longships_title:0 "Причаленные ладьи"
+talk_scene_kitchen_title:0 "Кухня"
+talk_scene_bonfire_title:0 "Костёр"
+talk_scene_wine_cellar_title:0 "Винный погреб"
+talk_scene_crossroads_inn_title:0 "Придорожная таверна"
+talk_scene_cave_title:0 "Пещера"
+talk_scene_tournament_title:0 "Турнирная площадка"
+talk_scene_holy_site_title:0 "Святое место"
+talk_scene_travel_bridge_title:0 "Мост"
+talk_scene_hunt_forest_hut_title:0 "Лесная хижина"
+talk_scene_hunt_forest_cave_title:0 "Лесная пещера"
+talk_scene_hunt_foggy_forest_title:0 "Туманный лес"
+talk_scene_dog_kennels_title:0 "Псарня"
+talk_scene_hunt_poachers_camp_title:0 "Лагерь браконьеров"
+talk_scene_hunt_activity_camp_title:0 "Охотничий лагерь"
+talk_scene_wedding_ceremony_title:0 "Свадебная церемония"
+talk_scene_involved_activity_title:0 "Место мероприятия"
+talk_scene_nursery_title:0 "Детская"
+talk_scene_university_title:0 "Университет"
+talk_scene_catacombs_title:0 "Катакомбы"
+talk_scene_condemned_village_title:0 "Проклятая деревня"
+talk_scene_funeral_pyre_title:0 "Погребальный костёр"
+talk_scene_legendary_battlefield_title:0 "Легендарное поле боя"
+talk_scene_constantinople_title:0 "Константинополь"
+talk_scene_city_gate_title:0 "Городские ворота"
+talk_scene_relaxing_tent_title:0 "Шатёр для отдыха"
+talk_scene_survey_title:0 "Точка обзора"
+talk_scene_terrain_settlement_title:0 "Поселение"
+talk_scene_terrain_settlement_no_owner_title:0 "Заброшенное поселение"
+talk_scene_campfire_title:0 "Костёр"
+talk_scene_camp_title:0 "Лагерь"
+talk_scene_camp_night_title:0 "Ночной лагерь"
+talk_scene_military_tent_title:0 "Военный шатёр"
+talk_scene_village_festival_title:0 "Деревенский праздник"
+talk_scene_coast_title:0 "Прибрежная полоса"
+talk_scene_city_steppe_title:0 "Степной город"
+talk_scene_examination_room_title:0 "Экзаменационная комната"
+talk_scene_chinese_city_title:0 "Китайский город"
+talk_scene_japanese_city_title:0 "Японский город"
+
+
+mcc_interaction:0 "Начать разговор"
+mcc_interaction.desc:0 "Начать разговор с выбранным персонажем или отправиться в его местоположение."
+mcc_event.1000.title:0 "Просьба о разговоре"
+mcc_event.1000.desc:0 "Кто-то желает поговорить с вами."
+mcc_event.1002.title:0 "Прибытие"
+mcc_event.1002.exit:0 "Уйти"
+mcc_event.1002.desc:0 "Вы встретили [recipient.GetShortUINamePossessive] в [actor.GetCurrentLocation.GetName]. Теперь вопрос в том, где нам встретиться с $talk_herhim$, и будем ли мы одни или с другими персонажами (закреплёнными персонажами в этом месте)."
+votc_talk_together:0 "Поговорить вместе с закреплёнными персонажами"
+votc_talk_alone:0 "Поговорить наедине с [recipient.GetTitledFirstName]"
+votc_talk_change_scene_selection:0 "Изменить выбор сцены"
+votc_scene_selector_title:0 "Выбрать сцену разговора"
+
+
+mcc_event_v2.7001.desc:0 "VOTC:BACKGROUND/;/[GetGlobalVariable('votc_background_texture').GetFlagName]"
+votc_placeholder:0 " "
