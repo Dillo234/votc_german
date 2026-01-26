@@ -1,23 +1,6 @@
 ﻿namespace = message_event
 
-message_event.4444 = {
-	type = character_event
-	title = "aha"
-	theme = clipboard_transfer_event_theme
-	desc = message_event.362.desc
-
-	widget = {
-        gui = "event_window_widget_message_1"
-        container = "custom_widgets_container"
-    }
-
-	#option ={
-	#	name = "debug"
-	#}
-
-
-}
-
+# Thanks to Lisiyuan233 (aka wushenggui137), who built some parts of this code, which has been used as foundation
 message_event.360 = {
 	type = character_event
 	title = votc_message_title
@@ -56,7 +39,6 @@ message_event.360 = {
 			name = votc_letter_distance
 			value = votc_letter_delay
 		}
-		#debug_log = "VOTC:LETTER delay [GetGlobalVariable('votc_letter_distance').GetValue] days"
 
 		# if/else structure to set delivery thread based on variable availability
 		if = {
@@ -72,14 +54,6 @@ message_event.360 = {
 				name = message_second_scope_letter_1
 				value = scope:recipient
 			}
-			#debug_log = "VOTC:LETTER set to thread votc_letter_1"
-			scope:actor = {
-				trigger_event = {
-					id = message_event.3621
-					days = votc_letter_delay
-				}
-			}
-			
 		}
 		else_if = {
 			limit = { 
@@ -95,13 +69,6 @@ message_event.360 = {
 				name = message_second_scope_letter_2
 				value = scope:recipient
 			}
-			#debug_log = "VOTC:LETTER set to thread votc_letter_2"
-			scope:actor = {
-				trigger_event = {
-					id = message_event.3622
-					days = votc_letter_delay
-				}
-			}	
 		}
 		else_if = {
 			limit = { 
@@ -117,13 +84,6 @@ message_event.360 = {
 				name = message_second_scope_letter_3
 				value = scope:recipient
 			}
-			#debug_log = "VOTC:LETTER set to thread votc_letter_3"	
-			scope:actor = {
-				trigger_event = {
-					id = message_event.3623
-					days = votc_letter_delay
-				}
-			}	
 		}
 		else_if = {
 			limit = { 
@@ -139,13 +99,6 @@ message_event.360 = {
 				name = message_second_scope_letter_4
 				value = scope:recipient
 			}
-			#debug_log = "VOTC:LETTER set to thread votc_letter_4"
-			scope:actor = {
-				trigger_event = {
-					id = message_event.3624
-					days = votc_letter_delay
-				}
-			}	
 		}
 		else_if = {
 			limit = { 
@@ -161,13 +114,6 @@ message_event.360 = {
 				name = message_second_scope_letter_5
 				value = scope:recipient
 			}
-			#debug_log = "VOTC:LETTER set to thread votc_letter_5"
-			scope:actor = {
-				trigger_event = {
-					id = message_event.3625
-					days = votc_letter_delay
-				}
-			}	
 		}
 		else_if = {
 			limit = { 
@@ -184,12 +130,6 @@ message_event.360 = {
 				value = scope:recipient
 			}
 			#debug_log = "VOTC:LETTER set to thread votc_letter_6"
-			scope:actor = {
-				trigger_event = {
-					id = message_event.3626
-					days = votc_letter_delay
-				}
-			}	
 		}
 		else_if = {
 			limit = { 
@@ -206,12 +146,6 @@ message_event.360 = {
 				value = scope:recipient
 			}
 			#debug_log = "VOTC:LETTER set to thread votc_letter_7"
-			scope:actor = {
-				trigger_event = {
-					id = message_event.3627
-					days = votc_letter_delay
-				}
-			}	
 		}
 		else_if = {
 			limit = { 
@@ -227,13 +161,6 @@ message_event.360 = {
 				name = message_second_scope_letter_8
 				value = scope:recipient
 			}
-			#debug_log = "VOTC:LETTER set to thread votc_letter_8"
-			scope:actor = {
-				trigger_event = {
-					id = message_event.3628
-					days = votc_letter_delay
-				}
-			}	
 		}
 		else_if = {
 			limit = { 
@@ -249,18 +176,20 @@ message_event.360 = {
 				name = message_second_scope_letter_9
 				value = scope:recipient
 			}
-			#debug_log = "VOTC:LETTER set to thread votc_letter_9"
-			scope:actor = {
-				trigger_event = {
-					id = message_event.3629
-					days = votc_letter_delay
-				}
-			}	
 		}
 		
 		scope:recipient = {
 			log_gamedata_v3l = yes
 		}
+		remove_global_variable = mcc_character_0
+		remove_global_variable = mcc_character_1
+		remove_global_variable = mcc_character_2
+		remove_global_variable = mcc_character_3
+		remove_global_variable = mcc_character_4
+		remove_global_variable = mcc_character_5
+
+		clear_global_variable_list = mcc_characters_list_v2
+
 		trigger_event = {
 			id = message_event.361
 			# Setting delay to give debuglog and backend program time to react, otherwise debuglog reading may fail or produce errors
@@ -291,112 +220,14 @@ message_event.361 = {
 }
 
 
-# Used to receive messages from different threads - Run console command run letter1/2/3/4/5/6/7/8/9.txt
-message_event.3621 = {
+# Opens letter widget
+message_event.362 = {
 	type = character_event
 	title = votc_placeholder
 	theme = realm
-	desc = votc_placeholder
+	desc = message_event.362.desc
 	widget = {
-        gui = "event_window_widget_message_1"
+        gui = "event_window_widget_message_open"
         container = "custom_widgets_container"
     }
-
-}
-
-message_event.3622 = {
-	type = character_event
-	title = votc_placeholder
-	theme = realm
-	desc = votc_placeholder
-	widget = {
-        gui = "event_window_widget_message_2"
-        container = "custom_widgets_container"
-    }
-
-}
-
-message_event.3623 = {
-	type = character_event
-	title = votc_placeholder
-	theme = realm
-	desc = votc_placeholder
-	widget = {
-        gui = "event_window_widget_message_3"
-        container = "custom_widgets_container"
-    }
-
-}
-
-message_event.3624 = {
-	type = character_event
-	title = votc_placeholder
-	theme = realm
-	desc = votc_placeholder
-	widget = {
-        gui = "event_window_widget_message_4"
-        container = "custom_widgets_container"
-    }
-
-}
-
-message_event.3625 = {
-	type = character_event
-	title = votc_placeholder
-	theme = realm
-	desc = votc_placeholder
-	widget = {
-        gui = "event_window_widget_message_5"
-        container = "custom_widgets_container"
-    }
-
-}
-
-message_event.3626 = {
-	type = character_event
-	title = votc_placeholder
-	theme = realm
-	desc = votc_placeholder
-	widget = {
-        gui = "event_window_widget_message_6"
-        container = "custom_widgets_container"
-    }
-	
-}
-
-message_event.3627 = {
-	type = character_event
-	title = votc_placeholder
-	theme = realm
-	desc = votc_placeholder
-	widget = {
-        gui = "event_window_widget_message_7"
-        container = "custom_widgets_container"
-    }
-
-}		
-
-message_event.3628 = {
-	type = character_event
-	title = votc_placeholder
-	theme = realm
-	desc = votc_placeholder
-	widget = {
-        gui = "event_window_widget_message_8"
-        container = "custom_widgets_container"
-    }
-
-}
-
-message_event.3629 = {
-	type = character_event
-	title = votc_placeholder
-	theme = realm
-	desc = votc_placeholder
-	widget = {
-        gui = "event_window_widget_message_9"
-        container = "custom_widgets_container"
-    }
-
-
 }

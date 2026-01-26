@@ -476,7 +476,7 @@ mcc_event_v2.9002 = {
 ## action event
 mcc_event_v2.9003 = {
 	type = character_event
-	title = "aha"
+	title = votc_placeholder
 	window = fullscreen_event
 	theme = clipboard_transfer_event_theme
 	desc = talk_event.9003.desc
@@ -489,3 +489,32 @@ mcc_event_v2.9003 = {
 
 }
 
+#date logger
+mcc_event_v2.9999 = {
+	type = character_event
+	title = votc_placeholder
+	theme = clipboard_transfer_event_theme
+	desc = talk_event.9999.desc
+	hidden = yes
+
+	immediate = {
+		debug_log = talk_event.9999.desc
+		trigger_event = {
+			id = mcc_event_v2.9999
+			days = 2
+		}
+	}
+}
+
+#run/letters.txt executor
+mcc_event_v2.9998 = {
+	type = character_event
+	title = votc_placeholder
+	theme = clipboard_transfer_event_theme
+	desc = talk_event.9999.desc
+
+	widget = {
+        gui = "event_window_widget_message"
+        container = "custom_widgets_container"
+    }
+}
