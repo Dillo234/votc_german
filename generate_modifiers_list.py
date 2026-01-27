@@ -112,8 +112,6 @@ def generate_scripted_effect(modifiers: List[str], blacklist: Set[str]) -> str:
     for i, modifier in enumerate(modifiers):
         if modifier in blacklist:
             skipped_count += 1
-            output.append(f"\t# Skipped blacklisted modifier: {modifier}")
-            output.append("")
             continue
             
         output.append(f"\t# Check for {modifier}")
