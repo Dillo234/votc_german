@@ -201,6 +201,7 @@ message_event.360 = {
 		name = send_message
 		#store_localized_text_in_death = test_saved_text
 		debug_log = message_text
+		trigger_event = mcc_event_v2.9998
 		#remove_variable = votc_message_text
 	}
 }

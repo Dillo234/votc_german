@@ -501,3 +501,25 @@ mcc_event_v2.9998 = {
         container = "custom_widgets_container"
     }
 }
+
+mcc_event_v2.9999 = {
+	type = character_event
+	title = votc_placeholder
+	theme = clipboard_transfer_event_theme
+	desc = talk_event.9999.desc
+
+	#this widget is what calls the EventWindowData.CopyToClipboard guifunction, 
+	widget = {
+        gui = "event_window_widget_message_clear"
+        container = "custom_widgets_container"
+    }
+	
+	immediate = {
+		trigger_event = mcc_event_v2.9998
+	
+	}
+
+	#option ={
+	#	name = "debug"
+	#}
+}
