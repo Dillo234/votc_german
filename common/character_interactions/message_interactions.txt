@@ -69,27 +69,27 @@
 #	
 #}
 
-start_pooling = {
-	category = interaction_category_friendly
-	use_diplomatic_range = yes
-	ignores_pending_interaction_block = yes
-	interface_priority = 201
-	common_interaction = yes
-	desc = message_interaction.desc
-	icon = send_poem_interaction
-    use_diplomatic_range = {
-        always = no
-    }
-	ai_will_do = {
-		base = 0
-	}
-	
-
-	on_send = {
-		every_player = {
-		trigger_event = mcc_event_v2.9998
-	}}
-	
-	auto_accept = yes
-	
-}
+#start_pooling = {
+#	category = interaction_category_friendly
+#	use_diplomatic_range = yes
+#	ignores_pending_interaction_block = yes
+#	interface_priority = 201
+#	common_interaction = yes
+#	desc = message_interaction.desc
+#	icon = send_poem_interaction
+#    use_diplomatic_range = {
+#        always = no
+#    }
+#	ai_will_do = {
+#		base = 0
+#	}
+#	
+#
+#	on_send = {
+#		every_player = {
+#		trigger_event = mcc_event_v2.9998
+#	}}
+#	
+#	auto_accept = yes
+#	
+#}

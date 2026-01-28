@@ -111,7 +111,6 @@
 		# Struggle agenda
 		modifier = {
 			desc = AI_STRUGGLE_INTENT
-			scope:invite_to_feast = yes
 			scope:recipient = {
 				any_character_struggle = {
 					involvement = involved

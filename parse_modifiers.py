@@ -50,7 +50,7 @@ def load_existing_modifiers(output_path):
 
 def main():
     # Path to the error.log file
-    error_log_path = r"C:\Users\sared\Documents\Paradox Interactive\Crusader Kings III\logs\error.log"
+    error_log_path = r"C:\Users\sared\Documents\Paradox Interactive\Crusader Kings III\error_17lotr.log"
     
     # Parse the log file
     modifiers = parse_error_log(error_log_path)
