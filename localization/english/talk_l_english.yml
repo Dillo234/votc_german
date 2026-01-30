@@ -131,3 +131,6 @@ votc_scene_selector_title:0 "Select conversation scene"
 
 mcc_event_v2.7001.desc:0 "VOTC:BACKGROUND/;/[GetGlobalVariable('votc_background_texture').GetFlagName]"
 votc_placeholder:0 " "
+
+burn_letters_interaction:0 "Burn all letters!"
+burn_letters_interaction.desc:0 "This interaction will destroy all letters you've received from other characters. (VOTC)"

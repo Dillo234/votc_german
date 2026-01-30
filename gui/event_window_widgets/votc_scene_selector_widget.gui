@@ -12,7 +12,7 @@
   	state = {
         name = votc_scene_selector_show
         trigger_on_create = yes
-    	on_start = ""
+    	on_start = "[ExecuteConsoleCommand('log.clearAll')]"
     	on_finish = "[GetVariableSystem.Toggle('votc_scene_selector_opened')]"
   	}
 	

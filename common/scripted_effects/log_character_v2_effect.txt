@@ -31,11 +31,11 @@
 	log_title_laws = yes
 
 	log_relatives = yes
-#	#log_test = yes
+	log_persona_numbers = yes
 }
 
-log_test = {
-	debug_log = income
+log_persona_numbers = {
+	debug_log = "VOTC:IN/;/persona_numbers/;/[THIS.Char.GetID]/;/[THIS.Char.GetAIBoldness]/;/[THIS.Char.GetAICompassion]/;/[THIS.Char.GetAIEnergy]/;/[THIS.Char.GetAIGreed]/;/[THIS.Char.GetAIHonor]/;/[THIS.Char.GetAIRationality]/;/[THIS.Char.GetAISociability]/;/[THIS.Char.GetAIVengefulness]/;/[THIS.Char.GetAIZeal]"
 }
 
 log_relations = {
@@ -483,4 +483,71 @@ log_relatives = {
 		}
 		debug_log = "VOTC:IN/;/kid_eob/;/[PREV.Char.GetID]/;/[THIS.Char.GetID]/;/"
 	}
+
+	every_sibling = {
+		even_if_dead = yes
+		debug_log = "VOTC:IN/;/siblings/;/[PREV.Char.GetID]/;/[THIS.Char.GetID]/;/[THIS.Char.GetTitledFirstNameNicknamedNoTooltipRegnal]/;/[THIS.Char.GetSheHe]/;/[THIS.Char.GetBirthDate.GetDateAsTotalDays]/;/[THIS.Char.GetBirthDate.GetString]/;/"
+		# sibling other parent
+		if = {
+			limit = {
+				any_parent = {
+					even_if_dead = yes
+					count = 2 
+				}
+			}
+			every_parent = {
+				even_if_dead = yes
+				limit = {
+					NOT = { 
+						is_parent_of = scope:votc_mcc_tmp_var 
+					}
+				}
+				debug_log = "VOTC:IN/;/sibling_other_parent/;/[GetGlobalVariable('votc_mcc_tmp_var').GetCharacter.GetID]/;/[PREV.Char.GetID]/;/[THIS.Char.GetID]/;/[THIS.Char.GetTitledFirstNameNicknamedNoTooltipRegnal]"
+			}
+		}
+
+
+		if = {
+			limit = { is_alive = no }
+			debug_log = "VOTC:IN/;/sibling_death/;/[PREV.Char.GetID]/;/[THIS.Char.GetID]/;/[THIS.Char.GetDeathDate.GetDateAsTotalDays]/;/[THIS.Char.GetDeathDate.GetStringShort]/;/[THIS.Char.GetDeathReason]/;/"
+		}
+		every_character_trait = {
+			debug_log = "VOTC:IN/;/sibling_trait/;/[GetGlobalVariable('votc_mcc_tmp_var').GetCharacter.GetID]/;/[PREV.Char.GetID]/;/[THIS.Trait.GetTraitCategoryLabel]/;/[THIS.Trait.GetNameNoTooltip(PREV.Char)]/;/[THIS.Trait.GetDescription(PREV.Char)]"
+		}
+
+		# sibling marital status
+		if = {
+			limit = { 
+				is_concubine = yes
+			}
+			debug_log = "VOTC:IN/;/sibling_is_concubine/;/[PREV.Char.GetID]/;/[THIS.Char.GetID]/;/[THIS.Char.GetConsort.GetID]/;/[THIS.Char.GetConsort.GetFullNameNicknamedNoTooltip]/;/"
+		}
+		else_if = {
+			limit = { 
+				any_consort = { count > 0 }
+			}
+			every_consort = {
+				if = {
+					limit = { 
+						is_concubine = yes
+					}
+					debug_log = "VOTC:IN/;/sibling_concubine/;/[GetGlobalVariable('votc_mcc_tmp_var').GetCharacter.GetID]/;/[PREV.Char.GetID]/;/[THIS.Char.GetID]/;/[THIS.Char.GetFullNameNicknamedNoTooltip]"
+				}
+				else = {
+					debug_log = "VOTC:IN/;/sibling_spouse/;/[GetGlobalVariable('votc_mcc_tmp_var').GetCharacter.GetID]/;/[PREV.Char.GetID]/;/[THIS.Char.GetID]/;/[THIS.Char.GetFullNameNicknamedNoTooltip]"
+				}
+			}
+		}
+		else_if = {
+			limit = { is_betrothed = yes }
+			betrothed = {
+				debug_log = "VOTC:IN/;/sibling_betrothed/;/[GetGlobalVariable('votc_mcc_tmp_var').GetCharacter.GetID]/;/[PREV.Char.GetID]/;/[THIS.Char.GetID]/;/[THIS.Char.GetFullNameNicknamedNoTooltip]"
+			}
+		}
+		else = { 
+			debug_log = "VOTC:IN/;/sibling_unmarried/;/[PREV.Char.GetID]/;/[THIS.Char.GetID]/;/"
+		}
+		debug_log = "VOTC:IN/;/sibling_eob/;/[PREV.Char.GetID]/;/[THIS.Char.GetID]/;/"
+	}
+
 }

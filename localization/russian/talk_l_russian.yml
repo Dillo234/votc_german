@@ -145,3 +145,6 @@ votc_scene_selector_title:0 "Выбрать сцену разговора"
 
 mcc_event_v2.7001.desc:0 "VOTC:BACKGROUND/;/[GetGlobalVariable('votc_background_texture').GetFlagName]"
 votc_placeholder:0 " "
+
+burn_letters_interaction:0 "Сжечь все письма!"
+burn_letters_interaction.desc:0 "Это взаимодействие позволяет вам сжечь все письма, полученные от других персонажей. (VOTC)"
