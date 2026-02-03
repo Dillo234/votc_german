@@ -105,6 +105,7 @@ activity_votc_council_gathering = {
 	province_filter = capital
 	ai_province_filter = capital
 	wait_time_before_start = { months = 3 }
+	max_guest_arrival_delay_time = { months = 9 }
 
 	###################
 	# OPTIONS
@@ -116,85 +117,66 @@ activity_votc_council_gathering = {
 		#########
 		# Amenities
 		#########
-		RICE_east_asian_poetry_gathering_amenities_amount = {
-			RICE_east_asian_poetry_gathering_amenities_amount_small = {			
-				ai_will_do = {
-					value = 10
-				}				
-			}
-			RICE_east_asian_poetry_gathering_amenities_amount_medium = {
-				default = yes
+		votc_council_gathering_amenities_amount = {
+			votc_council_gathering_amenities_amount_small = {			
 				cost = { 
-					gold = {
+					prestige = {
 						add = {
 							value = 0
-							desc = RICE_east_asian_poetry_gathering_amenities_amount
 							add = {
-								value = minor_gold_value
-								desc = RICE_east_asian_poetry_gathering_amenities_amount
+								value = medium_piety_value
 							}
 						}
 					}
-				}			
-				ai_will_do = {
-					value = 15
-					if = {
-						limit = {
-							short_term_gold <= minor_gold_value
+				}
+				on_start = {
+					scope:host = {
+						set_variable = {
+							name = votc_cg_long
+							value = 0
 						}
-						subtract = {
-							value = 15
-						}
-					}
-					if = {
-						limit = {
-							has_trait = zealous
-						}
-						add = 5
-					}
-					if = {
-						limit = {
-							has_trait = diligent
-						}
-						add = 5
 					}
 				}
 			}
-			RICE_east_asian_poetry_gathering_amenities_amount_large = {
+			votc_council_gathering_amenities_amount_medium = {
 				default = yes
 				cost = { 
-					gold = {
+					prestige = {
 						add = {
 							value = 0
-							desc = RICE_east_asian_poetry_gathering_amenities_amount
 							add = {
-								value = medium_gold_value
-								desc = RICE_east_asian_poetry_gathering_amenities_amount
+								value = major_piety_value
 							}
 						}
 					}
-				}			
-				ai_will_do = {
-					value = 10
-					if = {
-						limit = {
-							short_term_gold <= medium_gold_value
-						}
-						subtract = {
-							value = 10
+				}
+				on_start = {
+					scope:host = {
+						set_variable = {
+							name = votc_cg_long
+							value = 1
 						}
 					}
-					if = {
-						limit = {
-							has_trait = zealous
+				}
+			}
+			votc_council_gathering_amenities_amount_large = {
+				default = yes
+				cost = { 
+					prestige = {
+						add = {
+							value = 0
+							add = {
+								value = massive_piety_value
+							}
 						}
-						add = 5
 					}
-					if = {
-						limit = {
-							has_trait = diligent
+				}	
+				on_start = {
+					scope:host = {
+						set_variable = {
+							name = votc_cg_long
+							value = 2
 						}
-						add = 5
 					}
 				}
 			}
@@ -206,10 +188,11 @@ activity_votc_council_gathering = {
 	###################
 
 	phases = {
-		votc_council_gathering_init_phase = {
+		phase_travel = {
 			is_predefined = yes
-			
+			order = 1
 			on_phase_active = {
+				scope:activity = { progress_activity_phase_after = { days = 1 } }
 			}
 
 			on_end = {
@@ -217,16 +200,77 @@ activity_votc_council_gathering = {
 		}
         votc_council_gathering_council_phase = {
 			is_predefined = yes
-			
-			on_phase_active = {
+			order = 2
+			on_enter_phase = {
+				scope:activity = { progress_activity_phase_after = { days = 1 } }
 			}
+			on_phase_active = {
+				if = {
+					limit = {
+						scope:host = { var:votc_cg_long = 2}
+					}
+					if = {
+						limit = { NOT = { this = scope:host } }
+						if = { 
+							limit = { highest_held_title_tier >= tier_duchy } 
+							add_prestige = 250
+						}
+						if = { 
+							limit = { highest_held_title_tier >= tier_kingdom } 
+							add_prestige = 250
+						}
+						add_prestige = 1000
+						dynasty = { add_dynasty_prestige = 400 }
+					}
 
+					scope:activity = { progress_activity_phase_after = { months = 12 } }
+				}
+				if = {
+					limit = {
+						scope:host = { var:votc_cg_long = 1}
+					}
+					if = {
+						limit = { NOT = { this = scope:host } }
+						if = { 
+							limit = { highest_held_title_tier >= tier_kingdom } 
+							add_prestige = 250
+						}
+						if = { 
+							limit = { highest_held_title_tier >= tier_duchy } 
+							add_prestige = 250
+						}
+						add_prestige = 500
+						dynasty = { add_dynasty_prestige = 200 }
+					}
+
+					scope:activity = { progress_activity_phase_after = { months = 6 } }
+				}
+				if = {
+					limit = {
+						scope:host = { var:votc_cg_long = 0}
+					}
+
+					if = {
+						limit = { NOT = { this = scope:host } }
+						if = { 
+							limit = { highest_held_title_tier >= tier_kingdom } 
+							add_prestige = 250
+						}
+						if = { 
+							limit = { highest_held_title_tier >= tier_duchy } 
+							add_prestige = 250
+						}
+						add_prestige = 250
+						dynasty = { add_dynasty_prestige = 100 }
+					}
+
+					scope:activity = { progress_activity_phase_after = { months = 3 } }
+				}
+			}
 			on_end = {
 			}
 		}
 	}
-
-	max_guest_arrival_delay_time = { days = 145 }
 
 	# desc is only shown in debug AI watch window
 	ai_will_do = {
@@ -235,11 +279,7 @@ activity_votc_council_gathering = {
 
 	
 	is_location_valid = {
-		is_capital = yes
 	}
-
-	province_filter = capital
-	ai_province_filter = capital
 
 	max_province_icons = 1
 	
@@ -285,10 +325,10 @@ activity_votc_council_gathering = {
 	guest_invite_rules = {
 		rules = {
 			# Relations.
-			2 = activity_invite_rule_councillors
+			2 = activity_invite_rule_player_heir
 		}
 		defaults = {
-			2 = activity_invite_rule_councillors
+			1 = activity_invite_rule_councillors
 		}
 	}
 
@@ -298,18 +338,19 @@ activity_votc_council_gathering = {
 	}
 
 	host_intents = {
-		intents = { RICE_east_asian_poetry_gathering_socialize_intent  }
-		default = RICE_east_asian_poetry_gathering_socialize_intent
+		intents = { votc_council_intent  }
+		default = votc_council_intent
 	}
 
 	guest_intents = {
-		intents = { RICE_east_asian_poetry_gathering_socialize_intent  }
-		default = RICE_east_asian_poetry_gathering_socialize_intent
+		intents = { votc_council_intent  }
+		default = votc_council_intent
 	}
 
 	guest_join_chance = {
 		base = -10
 		base_activity_modifier = yes
+		activity_votc_cg_longevity_modifier = yes
 
 		# Scripted Modifiers
 		activity_guest_shared_ai_accept_modifier = yes
