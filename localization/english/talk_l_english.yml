@@ -134,3 +134,39 @@ votc_placeholder:0 " "
 
 burn_letters_interaction:0 "Burn all letters!"
 burn_letters_interaction.desc:0 "This interaction will destroy all letters you've received from other characters. (VOTC)"
+
+# Council Gathering Activity
+TRAVEL_NAME_FOR_activity_votc_council_gathering:0 "Council Gathering"
+activity_votc_council_gathering:0 "Council Gathering"
+activity_votc_council_gathering_name:0 "Council Gathering"
+activity_votc_council_gathering_desc:0 "Gather your council to discuss important matters of the realm."
+activity_votc_council_gathering_conclusion_desc:0 "The council gathering has concluded. Important decisions have been made that will shape the future of the realm."
+activity_votc_council_gathering_destination_selection:0 "Select a location for the council gathering."
+activity_votc_council_gathering_guest_desc:0 "You have been invited to a council gathering."
+activity_votc_council_gathering_guest_help_text:0 "Attend the council gathering to provide your counsel on important matters."
+activity_votc_council_gathering_host_desc:0 "Host a council gathering to discuss important matters with your councilors."
+activity_votc_council_gathering_owner:0 "Council Gathering"
+activity_votc_council_gathering_province_desc:0 "A suitable location for a council gathering."
+activity_votc_council_gathering_selection_tooltip:0 "Gather your council to discuss important matters."
+
+# Council Gathering Amenities
+votc_council_gathering_amenities_amount:0 "Duration"
+votc_council_gathering_amenities_amount_small:0 "Small Duration"
+votc_council_gathering_amenities_amount_small_desc:0 "Council gathering will last 3 months."
+votc_council_gathering_amenities_amount_medium:0 "Medium Duration"
+votc_council_gathering_amenities_amount_medium_desc:0 "Council gathering will last 6 months."
+votc_council_gathering_amenities_amount_large:0 "Large Duration"
+votc_council_gathering_amenities_amount_large_desc:0 "Council gathering will last 1 year."
+
+# Council Gathering Phases
+phase_travel:0 "Travel"
+phase_travel_desc:0 "Travel to the council gathering location."
+votc_council_gathering_council_phase:0 "Council Session"
+votc_council_gathering_council_phase_desc:0 "The council is in session, discussing important matters."
+
+VOTC_CG_DUR_DEBUFF:0 "Council Duration"
+VOTC_CG_DUR_DEBUFF_DESC:0 "Modifier from gathering duration."
+
+# Council Gathering Intents
+votc_council_intent:0 "Council Business"
+votc_council_intent_desc:0 "Focus on matters of state and council duties."
