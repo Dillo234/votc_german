@@ -204,6 +204,9 @@ message_event.360 = {
 		trigger_event = mcc_event_v2.9998
 		#remove_variable = votc_message_text
 	}
+	option = {
+		name = mcc_event.1002.exit
+	}
 }
 
 # Clipboard event, used to notify backend program to begin processing letter messages with VOTC:LETTER signature

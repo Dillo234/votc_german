@@ -42,7 +42,6 @@
                     name = "votc_select_start_scene"
                     layoutpolicy_horizontal = expanding
                     layoutpolicy_vertical = expanding
-                    wheelstep = 99999999
                     blockoverride "scrollbox_content"
                     {
 
