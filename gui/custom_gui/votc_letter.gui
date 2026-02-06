@@ -5,7 +5,6 @@ window = {
 	position = { 450 200 }
 	using = Window_Movable
 
-
 	state = {
 		name = _show
 		trigger_on_create = yes
@@ -100,6 +99,35 @@ window = {
 			visible = yes
 			size = { 100% 100% }
 			using = Background_Letter
+			vbox = {
+				layoutpolicy_vertical = expanding
+				hbox = {
+					name = "footer_buttons"
+					margin = { 0 10 }
+					margin_bottom = 34
+					layoutpolicy_horizontal = expanding
+
+					hbox = {
+						margin = { 10 10 }
+						spacing = 60
+						layoutpolicy_horizontal = expanding
+						
+						expand = {}
+
+						### Accept button
+						button_close = {
+							background = Background_Area_Dark
+							size = { 42 42 }
+							
+							visible = yes
+							enabled = yes
+							onclick = "[PdxGuiTriggerAllAnimations('hide_votc_letter')]"
+						}
+
+					}
+				}
+				expand = {}
+			}
 		}
 
 
@@ -219,38 +247,8 @@ window = {
 
 				expand = {}
 			}
-				expand = {}
-
-			### Footer buttons
-			hbox = {
-				name = "footer_buttons"
-				margin = { 10 0 }
-				margin_bottom = 34
-				layoutpolicy_horizontal = expanding
-
-				hbox = {
-					margin = { 0 10 }
-					spacing = 60
-					layoutpolicy_horizontal = expanding
-					
-					expand = {}
-
-					### Accept button
-					button_primary_big = {
-						size = { 250 42 }
-						
-						text = "Accept letter"
-						visible = yes
-						enabled = yes
-						onclick = "[PdxGuiTriggerAllAnimations('hide_votc_letter')]"
-					}
-
-
-					expand = {}
-				}
-
-				expand = {}
-			}
+			
+			expand = {}
 		}
 	}
 
