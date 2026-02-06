@@ -1,5 +1,5 @@
 ﻿hbox = {
-	name = "mcc_select_characters"
+	name = "mcc_select_characters_widget"
 	layoutpolicy_horizontal = expanding
 	margin = { 10 0 }
 	

@@ -171,3 +171,12 @@ VOTC_CG_DUR_DEBUFF_DESC:0 "Modifier from gathering duration."
 # Council Gathering Intents
 votc_council_intent:0 "Council Business"
 votc_council_intent_desc:0 "Focus on matters of state and council duties."
+
+
+votc_mcc_selector_mode1:0 "Pinned characters in this location"
+votc_mcc_selector_mode2:0 "All pinned characters (unlimited)"
+votc_mcc_selector_mode3:0 "All characters in this location"
+mcc_characters_window_title:0 "Select characters for conversation"
+votc_talk_selected:0 "Talk with [recipient.GetTitledFirstName] and selected characters"
+votc_talk_change_mcc_selection:0 "Change selected characters"
+votc_talk_mcc_selector:0 "Select characters to talk along with [recipient.GetTitledFirstName]"

@@ -241,8 +241,291 @@ window = {
                     {
 
                         dynamicgridbox = {
+                            visible = "[GetVariableSystem.HasValue( 'mcc_mode_flag', 'mode1' )]"
                             datamodel = "[GetPlayer.MakeScope.GetList('mcc_characters')]"
-                            datamodel_wrap = 2
+                            datamodel_wrap = 3
+                            flipdirection = yes
+                            setitemsizefromcell = yes
+                            
+                            item = {
+                                container = {
+                                    datacontext = "[Scope.GetCharacter]"
+                                    hbox = {
+                                        spacing = 5
+
+                                        background = {
+                                            using = Background_Area_With_Header
+                                            margin_right = 7
+                                            margin_left = 5
+                                        }
+
+                                        portrait_head = {}
+
+                                        vbox = {
+                                            layoutpolicy_horizontal = expanding
+                                            layoutpolicy_vertical = expanding
+                                            margin_top = 3
+                                            
+                                            hbox = {
+                                                layoutpolicy_horizontal = expanding
+
+                                                text_single = {
+                                                    name = "name"
+                                                    layoutpolicy_horizontal = expanding
+                                                    autoresize = no
+                                                    text = "[Character.GetUINameNoTooltip]"
+                                                    using = Font_Size_Medium
+                                                    align = nobaseline
+                                                    fontsize_min = 14
+                                                    margin_right = 10
+                                                }
+                                                mcc_skills_grid = {}
+                                            }
+
+                                            vbox = {
+                                                layoutpolicy_horizontal = expanding
+                                                margin = { 0 3 }
+                                                margin_bottom = 8
+
+                                                hbox = {
+                                                    layoutpolicy_horizontal = expanding
+                                                    spacing = 3
+
+                                                    warning_icon = {
+                                                        visible = "[And( Character.CourtierWantsToLeaveCourt, Not( Character.IsImprisoned))]"
+                                                        size = { 20 20 }
+                                                        tooltip = "[Character.GetCourtierLeaveDescription]"
+                                                    }
+
+
+                                                    text_single = {
+                                                        name = "relation_to_court_owner"
+                                                        default_format = "#high"
+                                                        align = nobaseline
+                                                        max_width = 300
+                                                        visible = "[Not(Character.IsHostage)]"
+
+                                                        block "description_relation_text" {
+                                                            text = "[Character.GetRelationToString( GetPlayer )]"
+                                                            tooltip = "EXTENDED_RELATIONS_TOOLTIP"
+                                                        }
+
+                                                        background = {
+                                                            visible = "[Character.IsImprisoned]"
+                                                            using = Status_Bad
+                                                            alpha = 0.5
+                                                        }
+                                                    }
+
+                                                    text_single = {
+                                                        name = "relation_to_court_hostage"
+                                                        default_format = "#medium"
+                                                        align = nobaseline
+                                                        visible = "[Character.IsHostage]"
+
+                                                        block "description_relation_text" {
+                                                            text = "[Character.GetRelationToString( GetPlayer )]"
+                                                            tooltip = "EXTENDED_RELATIONS_TOOLTIP"
+                                                        }
+
+                                                        background = {
+                                                            visible = "[Character.IsHostage]"
+                                                            using = Status_Mixed
+                                                            alpha = 0.5
+                                                        }
+                                                    }
+                                                    expand = {}
+
+                                                    text_single = {
+                                                        name = "has_guardian"
+                                                        default_format = "#low"
+                                                        align = nobaseline
+                                                        max_width = 370
+                                                        margin_right = 5
+                                                        visible = "[And( Not(Character.IsAdult), Not(Character.HasGuardian) )]"
+
+                                                        text = "COURT_WINDOW_NO_GUARDIAN"
+                                                        tooltip = "COURT_WINDOW_NO_GUARDIAN_TOOLTIP"
+                                                    }
+                                                }
+                                            }
+
+                                            hbox = {
+                                                layoutpolicy_horizontal = preffered
+                                                spacing = 5
+                                                margin_bottom = 5
+
+                                                block "action_buttons"
+                                                {
+                                                    hbox = {
+                                                        margin = { 0 3 }
+                                                        spacing = 5
+
+                                                        button_round = {
+                                                            button_select_arrow = {
+                                                                parentanchor = center
+                                                                name = "button_mcc_select"
+                                                                size = { 25 25 }
+                                                                onclick = "[GetScriptedGui('mcc_select_char_sgui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('mcc_target', Character.MakeScope).End)]"
+                                                            }
+                                                            onclick = "[GetScriptedGui('mcc_select_char_sgui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('mcc_target', Character.MakeScope).End)]"
+                                                        }
+                                                    }
+                                                }
+                                            mcc_info_grid = {}
+
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        dynamicgridbox = {
+                            visible = "[GetVariableSystem.HasValue( 'mcc_mode_flag', 'mode2' )]"
+                            datamodel = "[GetPlayer.MakeScope.GetList('mcc_characters_all')]"
+                            datamodel_wrap = 3
+                            flipdirection = yes
+                            setitemsizefromcell = yes
+                            
+                            item = {
+                                container = {
+                                    datacontext = "[Scope.GetCharacter]"
+                                    hbox = {
+                                        spacing = 5
+
+                                        background = {
+                                            using = Background_Area_With_Header
+                                            margin_right = 7
+                                            margin_left = 5
+                                        }
+
+                                        portrait_head = {}
+
+                                        vbox = {
+                                            layoutpolicy_horizontal = expanding
+                                            layoutpolicy_vertical = expanding
+                                            margin_top = 3
+                                            
+                                            hbox = {
+                                                layoutpolicy_horizontal = expanding
+
+                                                text_single = {
+                                                    name = "name"
+                                                    layoutpolicy_horizontal = expanding
+                                                    autoresize = no
+                                                    text = "[Character.GetUINameNoTooltip]"
+                                                    using = Font_Size_Medium
+                                                    align = nobaseline
+                                                    fontsize_min = 14
+                                                    margin_right = 10
+                                                }
+                                                mcc_skills_grid = {}
+                                            }
+
+                                            vbox = {
+                                                layoutpolicy_horizontal = expanding
+                                                margin = { 0 3 }
+                                                margin_bottom = 8
+
+                                                hbox = {
+                                                    layoutpolicy_horizontal = expanding
+                                                    spacing = 3
+
+                                                    warning_icon = {
+                                                        visible = "[And( Character.CourtierWantsToLeaveCourt, Not( Character.IsImprisoned))]"
+                                                        size = { 20 20 }
+                                                        tooltip = "[Character.GetCourtierLeaveDescription]"
+                                                    }
+
+
+                                                    text_single = {
+                                                        name = "relation_to_court_owner"
+                                                        default_format = "#high"
+                                                        align = nobaseline
+                                                        max_width = 300
+                                                        visible = "[Not(Character.IsHostage)]"
+
+                                                        block "description_relation_text" {
+                                                            text = "[Character.GetRelationToString( GetPlayer )]"
+                                                            tooltip = "EXTENDED_RELATIONS_TOOLTIP"
+                                                        }
+
+                                                        background = {
+                                                            visible = "[Character.IsImprisoned]"
+                                                            using = Status_Bad
+                                                            alpha = 0.5
+                                                        }
+                                                    }
+
+                                                    text_single = {
+                                                        name = "relation_to_court_hostage"
+                                                        default_format = "#medium"
+                                                        align = nobaseline
+                                                        visible = "[Character.IsHostage]"
+
+                                                        block "description_relation_text" {
+                                                            text = "[Character.GetRelationToString( GetPlayer )]"
+                                                            tooltip = "EXTENDED_RELATIONS_TOOLTIP"
+                                                        }
+
+                                                        background = {
+                                                            visible = "[Character.IsHostage]"
+                                                            using = Status_Mixed
+                                                            alpha = 0.5
+                                                        }
+                                                    }
+                                                    expand = {}
+
+                                                    text_single = {
+                                                        name = "has_guardian"
+                                                        default_format = "#low"
+                                                        align = nobaseline
+                                                        max_width = 370
+                                                        margin_right = 5
+                                                        visible = "[And( Not(Character.IsAdult), Not(Character.HasGuardian) )]"
+
+                                                        text = "COURT_WINDOW_NO_GUARDIAN"
+                                                        tooltip = "COURT_WINDOW_NO_GUARDIAN_TOOLTIP"
+                                                    }
+                                                }
+                                            }
+
+                                            hbox = {
+                                                layoutpolicy_horizontal = preffered
+                                                spacing = 5
+                                                margin_bottom = 5
+
+                                                block "action_buttons"
+                                                {
+                                                    hbox = {
+                                                        margin = { 0 3 }
+                                                        spacing = 5
+
+                                                        button_round = {
+                                                            button_select_arrow = {
+                                                                parentanchor = center
+                                                                name = "button_mcc_select"
+                                                                size = { 25 25 }
+                                                                onclick = "[GetScriptedGui('mcc_select_char_sgui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('mcc_target', Character.MakeScope).End)]"
+                                                            }
+                                                            onclick = "[GetScriptedGui('mcc_select_char_sgui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('mcc_target', Character.MakeScope).End)]"
+                                                        }
+                                                    }
+                                                }
+                                            mcc_info_grid = {}
+
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        dynamicgridbox = {
+                            visible = "[GetVariableSystem.HasValue( 'mcc_mode_flag', 'mode3' )]"
+                            datamodel = "[GetPlayer.MakeScope.GetList('mcc_characters_all_in_location')]"
+                            datamodel_wrap = 3
                             flipdirection = yes
                             setitemsizefromcell = yes
                             
@@ -405,9 +688,74 @@ window = {
                 }
             }
             vbox = {
-                layoutpolicy_horizontal = expanding
+                layoutpolicy_horizontal = growing
                 layoutpolicy_vertical = expanding
+                min_width = 500
+                vbox = {
+                    background = {
+						using = Background_Area_Dark
+					}
+                    hbox = {
+                        layoutpolicy_horizontal = expanding
+						margin = { 15 0 }
+						spacing = 10
 
+						button_radio = {
+							size = { 30 30 }
+							#onclick = "[GetScriptedGui('mcc_selector_mode').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('mcc_mode_flag', MakeScopeFlag('mode1')).End)]"
+                            onclick = "[GetVariableSystem.Set('mcc_mode_flag', 'mode1')]"
+							frame = "[BoolTo1And2( GetVariableSystem.HasValue( 'mcc_mode_flag', 'mode1' ) )]"
+						}
+
+						text_single = {
+							layoutpolicy_horizontal = expanding
+							text = votc_mcc_selector_mode1
+							align = nobaseline
+							fontsize_min = 10
+                        }
+                        expand = {}
+                    }
+                    hbox = {
+                        layoutpolicy_horizontal = expanding
+						margin = { 15 0 }
+						spacing = 10
+
+						button_radio = {
+							size = { 30 30 }
+							#onclick = "[GetScriptedGui('mcc_selector_mode').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('mcc_mode_flag', MakeScopeFlag('mode1')).End)]"
+                            onclick = "[GetVariableSystem.Set('mcc_mode_flag', 'mode2')]"
+                            frame = "[BoolTo1And2( GetVariableSystem.HasValue( 'mcc_mode_flag', 'mode2' ) )]"
+						}
+
+						text_single = {
+							layoutpolicy_horizontal = expanding
+							text = votc_mcc_selector_mode2
+							align = nobaseline
+							fontsize_min = 10
+                        }
+                        expand = {}
+                    }
+                    hbox = {
+                        layoutpolicy_horizontal = expanding
+						margin = { 15 0 }
+						spacing = 10
+
+						button_radio = {
+							size = { 30 30 }
+							#onclick = "[GetScriptedGui('mcc_selector_mode').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('mcc_mode_flag', MakeScopeFlag('mode1')).End)]"
+                            onclick = "[GetVariableSystem.Set('mcc_mode_flag', 'mode3')]"
+							frame = "[BoolTo1And2( GetVariableSystem.HasValue( 'mcc_mode_flag', 'mode3' ) )]"
+						}
+
+						text_single = {
+							layoutpolicy_horizontal = expanding
+							text = votc_mcc_selector_mode3
+							align = nobaseline
+							fontsize_min = 10
+                        }
+                        expand = {}
+                    }
+                }
                 scrollbox = {
                     name = "mcc_select_characters"
                     using = Animation_Tab_Switch
@@ -419,7 +767,7 @@ window = {
 
                         dynamicgridbox = {
                             datamodel = "[GetPlayer.MakeScope.GetList('mcc_characters_selected')]"
-                            datamodel_wrap = 2
+                            datamodel_wrap = 1
                             flipdirection = yes
                             setitemsizefromcell = yes
                             

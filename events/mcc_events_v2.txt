@@ -50,6 +50,9 @@ mcc_event_v2.1002 = {
 	window = character_event
 
 	immediate = {
+		involved_activity = {
+			save_scope_as = activity
+		}
 		if = {
 			limit = {
 				has_variable_list = talk_scene_flags
@@ -400,12 +403,95 @@ mcc_event_v2.1002 = {
 		name = votc_talk_together
 		trigger_event = mcc_event_v2.9001
 	}
+
+	option ={
+		#trigger = {
+		#	has_global_variable = talk_scene
+		#}
+		name = votc_talk_mcc_selector
+		trigger_event = mcc_event_v2.1003
+	}
 	
 	option ={
 		name = mcc_event.1002.exit
 	}
 }
 
+mcc_event_v2.1003 = {
+	type = character_event
+	theme = diplomacy_family_focus
+	title = mcc_event.1002.title
+	desc = mcc_event.1002.desc
+	window = character_event
+
+	immediate = {
+		clear_variable_list = mcc_characters
+		clear_variable_list = mcc_characters_all
+		clear_variable_list = mcc_characters_all_in_location
+		clear_variable_list = mcc_characters_selected
+		every_pinned_character = {
+			limit = { 
+				is_alive = yes
+				not = { any_player = { this = prev } }
+				this.location = scope:actor.location
+			}
+			scope:actor = {
+				add_to_variable_list = {
+					name = mcc_characters
+					target = prev
+				}
+			}
+		}
+		every_pinned_character = {
+			limit = { 
+				is_alive = yes
+				not = { any_player = { this = prev } }
+			}
+			scope:actor = {
+				add_to_variable_list = {
+					name = mcc_characters_all
+					target = prev
+				}
+			}
+		}
+		scope:actor.location = {
+			every_character_in_location = {
+				limit = { 
+					is_alive = yes
+					not = { any_player = { this = prev } }
+				}
+				scope:actor = {
+					add_to_variable_list = {
+						name = mcc_characters_all_in_location
+						target = prev
+					}
+				}
+			}
+		}
+
+	}
+	
+	widget = {
+        gui = "mcc_select_characters_widget"
+        container = "custom_widgets_container"
+    }
+
+	option ={
+		name = votc_talk_change_mcc_selection
+		trigger_event = mcc_event_v2.1003
+	}
+	option ={
+		#trigger = {
+		#	has_global_variable = talk_scene
+		#}
+		name = votc_talk_selected
+		trigger_event = mcc_event_v2.8999
+	}
+	
+	option ={
+		name = mcc_event.1002.exit
+	}
+}
 #log_backgrounds
 mcc_event_v2.7001 = {
 	type = character_event
@@ -424,6 +510,25 @@ mcc_event_v2.7001 = {
 
 #hidden Event fired when initating conversation with someone. 
 #The only reason this exist is to open the 'event_window_widget_talk' gui event widget, so we can copy the data to the clipboard using the EventWindowData.CopyToClipboard guifunction.
+mcc_event_v2.8999 = {
+	type = character_event
+	title = votc_placeholder
+	theme = clipboard_transfer_event_theme
+	desc = talk_event.9001.desc
+
+	immediate = {
+		scope:recipient = {
+			log_gamedata_v3s = yes
+		}		
+	}
+	
+	#this widget is what calls the EventWindowData.CopyToClipboard guifunction, 
+	widget = {
+        gui = "event_window_widget_talk_v2"
+        container = "custom_widgets_container"
+    }
+}
+
 mcc_event_v2.9000 = {
 	type = character_event
 	title = votc_placeholder
