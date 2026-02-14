@@ -1,4 +1,4 @@
-votc_council_intent = {
+﻿votc_council_intent = {
 	icon = scout_talent_intent
 
 	auto_complete = yes

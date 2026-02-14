@@ -148,7 +148,7 @@ activity_votc_council_gathering_host_desc:0 "Host a council gathering to discuss
 activity_votc_council_gathering_owner:0 "Council Gathering"
 activity_votc_council_gathering_province_desc:0 "A suitable location for a council gathering."
 activity_votc_council_gathering_selection_tooltip:0 "Gather your council to discuss important matters."
-activity_votc_council_gathering_host_an_a: 0 "a"
+activity_votc_council_gathering_host_an_a:0 "a"
 
 # Council Gathering Amenities
 votc_council_gathering_amenities_amount:0 "Duration"

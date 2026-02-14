@@ -1,4 +1,4 @@
-mcc_select_char_sgui = {
+﻿mcc_select_char_sgui = {
     scope = character
     saved_scopes = { mcc_target }
     effect = {

@@ -1,4 +1,4 @@
-activity_votc_council_gathering = {
+﻿activity_votc_council_gathering = {
 	is_shown = {
 		highest_held_title_tier > tier_barony
 		has_council = yes
