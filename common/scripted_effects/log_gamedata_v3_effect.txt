@@ -17,13 +17,24 @@ log_gamedata_v3 = {
 				limit = {
 					is_at_same_location = scope:actor
 					NOT = { this = scope:recipient }
+					NOT = { this = scope:actor }
 				}
 				add_to_global_variable_list = {
 					name = mcc_characters_list_v2
 					target = this
 				}
 			}
-		}	
+		}
+		
+		if = {
+			limit = {
+				any_pinned_character = { this = scope:actor }
+			}
+			add_to_global_variable_list = {
+				name = mcc_characters_list_v2
+				target = this
+			}
+		}
 	}
 
 	every_in_global_list = {
